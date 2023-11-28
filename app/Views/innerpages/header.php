@@ -4,6 +4,7 @@
 <!-- Mirrored from preview.colorlib.com/theme/haircare/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 22 Nov 2023 09:27:19 GMT -->
 <head>
 <title>Rooom Mobile Hair Salon</title>
+<link rel="icon" type="image/x-icon" href="assets/images/fav.png">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
@@ -24,19 +25,23 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 <div class="container">
-<a class="navbar-brand" href="index-2.html"><span class="flaticon-scissors-in-a-hair-salon-badge"></span>Haircare</a>
+<a class="navbar-brand" href="javascript:void(0);"><img src="assets/images/logo.jpg" alt="" style="width:55%;"></a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 <span class="oi oi-menu"></span> Menu
 </button>
 <div class="collapse navbar-collapse" id="ftco-nav">
 <ul class="navbar-nav ml-auto">
-<li class="nav-item active"><a href="index-2.html" class="nav-link">Home</a></li>
-<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-<li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
-<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-<li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+<li class="nav-item active"><a href="javascript:void(0);" class="nav-link">Home</a></li>
+<li class="nav-item"><a href="javascript:void(0);" class="nav-link">Services</a></li>
+<li class="nav-item"><a href="javascript:void(0);" class="nav-link">Gallery</a></li>
+<li class="nav-item"><a href="javascript:void(0);" class="nav-link">About</a></li>
+<li class="nav-item"><a href="javascript:void(0);" class="nav-link">Blog</a></li>
+<li class="nav-item"><a href="javascript:void(0);" class="nav-link">Contact</a></li>
 </ul>
 </div>
 </div>
 </nav>
+<style>
+    .nav-link:hover { color: #fdef09!important; }
+    #read-more:hover { color: #fff!important; }
+</style>
