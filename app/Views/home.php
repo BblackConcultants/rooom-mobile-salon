@@ -6,7 +6,7 @@
 <div class="text text-center">
 <span class="subheading">Welcome to Rooom Mobile Hair Salon</span>
 <h1 class="mb-4"> Premium mobile hair salon that specialises in house calls only</h1>
-<p><a href="#" class="btn btn-primary btn-outline-primary px-4 py-2">Book now</a></p>
+<p><a href="javascript:void(0);" class="btn btn-primary btn-outline-primary px-4 py-2">Book now</a></p>
 </div>
 </div>
 </div>
@@ -20,27 +20,27 @@
 <div class="services-wrap d-flex align-items-center img" style="background-image: url(assets/images/formen.jpg);">
 <div class="text">
 <h3>For Men</h3>
-<p><a href="#" class="btn-custom">Book Now <span class="ion-ios-arrow-round-forward"></span></a></p>
+<p><a href="javascript:void(0);" class="btn-custom">Book Now <span class="ion-ios-arrow-round-forward"></span></a></p>
 </div>
 </div>
 </div>
 <div class="col-md-3 text-center d-flex align-items-stretch">
 <div class="text-about py-5 px-4">
 <h1 class="logo">
-<a href="#"><img src="assets/images/logo_black.jpg" alt=""></a>
+<a href="javascript:void(0);"><img src="assets/images/logo_black.jpg" alt=""></a>
 </h1>
 <h2>Mobile Hairdresser Services</h2>
 <p>We are a premium mobile hair salon that specialises in house calls only. Our prices are inclusive of hairpiece, transportation and labour. <br>
 
 The clients are not required to pay a deposit nor hold the hairpiece. </p>
-<p class="mt-3"><a id="" href="#" class="btn btn-primary" style="">Read more</a></p>
+<p class="mt-3"><a id="" href="javascript:void(0);" class="btn btn-primary" style="">Read more</a></p>
 </div>
 </div>
 <div class="col-md text-center d-flex align-items-stretch">
 <div class="services-wrap d-flex align-items-center img" style="background-image: url(assets/images/forwomen.jpg);">
 <div class="text">
 <h3>For Women</h3>
-<p><a href="#" class="btn-custom">Book Now <span class="ion-ios-arrow-round-forward"></span></a></p>
+<p><a href="javascript:void(0);" class="btn-custom">Book Now <span class="ion-ios-arrow-round-forward"></span></a></p>
 </div>
 </div>
 </div>
@@ -52,8 +52,8 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <div class="row justify-content-center pb-3">
 <div class="col-md-10 heading-section text-center ftco-animate">
 <span class="subheading">Services</span>
-<h2 class="mb-4">Services Menu</h2>
-<p>Our Premium Hairdresser services include the following:</p>
+<h2 class="mb-4">Mobile Hair Salon Services</h2>
+<p>Our Premium Hairdresser services specialize in the following:</p>
 </div>
 </div>
 <div class="row no-gutters d-flex">
@@ -64,7 +64,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 </div>
 <div class="media-body">
 <h3 class="heading mb-3">Braids</h3>
-<p>A small river named Duden flows by their place and supplies.</p>
+<!-- <p>A small river named Duden flows by their place and supplies.</p> -->
 </div>
 </div>
 </div>
@@ -73,7 +73,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <div class="icon"><img src="assets/images/cornrows.png" alt=""></div>
 <div class="media-body">
 <h3 class="heading mb-3">Cornrows</h3>
-<p>A small river named Duden flows by their place and supplies.</p>
+<!-- <p>A small river named Duden flows by their place and supplies.</p> -->
 </div>
 </div>
 </div>
@@ -82,7 +82,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <div class="icon"><img src="assets/images/locs.png" alt=""></div>
 <div class="media-body">
 <h3 class="heading mb-3">Locs</h3>
-<p>A small river named Duden flows by their place and supplies.</p>
+<!-- <p>A small river named Duden flows by their place and supplies.</p> -->
 </div>
 </div>
 </div>
@@ -91,7 +91,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <div class="icon"><img src="assets/images/twist.png" alt=""></div>
 <div class="media-body">
 <h3 class="heading mb-3">Twist</h3>
-<p>A small river named Duden flows by their place and supplies.</p>
+<!-- <p>A small river named Duden flows by their place and supplies.</p> -->
 </div>
 </div>
 </div>
@@ -104,7 +104,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <div class="col-md-10 heading-section text-center ftco-animate">
 <span class="subheading">Book Now</span>
 <h2 class="mb-4">Make an Appointment</h2>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+<p>Please complete the form below to make your booking:</p>
 </div>
 </div>
 <h3 class="vr">Call Us: +27 (83) 594-1822</h3>
@@ -137,10 +137,11 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <div class="select-wrap">
 <div class="icon"><span class="ion-ios-arrow-down"></span></div>
 <select name id class="form-control">
-<option value>Professional Makeup</option>
-<option value>Manicure Pedicure</option>
-<option value>Body Treatment</option>
-<option value>Haircut &amp; Coloring</option>
+<option value>Choose Hairdresser Service</option>
+<option value>Braids</option>
+<option value>Cornrows</option>
+<option value>Locs</option>
+<option value>Twist</option>
 </select>
 </div>
 </div>
@@ -157,7 +158,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 </div>
 </div>
 <div class="form-group">
-<input type="submit" value="Make an Appointment" class="btn btn-primary">
+<input type="button" value="Make an Appointment" class="btn btn-primary">
 </div>
 </form>
 </div>
@@ -166,51 +167,45 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 </section>
 <section class="ftco-section ftco-team">
 <div class="container-fluid px-md-5">
-<div class="row justify-content-center pb-3">
+<!-- <div class="row justify-content-center pb-3">
 <div class="col-md-10 heading-section text-center ftco-animate">
 <span class="subheading">Artistic Director</span>
 <h2 class="mb-4">Makeup Artist</h2>
 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
 </div>
-</div>
+</div> -->
 <div class="row">
 <div class="col-md-12 ftco-animate">
 <div class="carousel-team owl-carousel">
 <div class="item">
-<a href="#" class="team text-center">
-<div class="img" style="background-image: url(assets/images/stylist-1.jpg);"></div>
-<h2>Danica Lewis</h2>
-<span class="position">Hair Stylist</span>
+<a href="javascript:void(0);" class="team text-center">
+<div class="img" style="background-image: url(assets/images/gallery/braids.jpeg);"></div>
+<h2>Braids</h2>
+<span class="position">Book Now</span>
 </a>
 </div>
 <div class="item">
-<a href="#" class="team text-center">
-<div class="img" style="background-image: url(assets/images/stylist-2.jpg);"></div>
-<h2>Nicole Simon</h2>
-<span class="position">Nail Master</span>
+<a href="javascript:void(0);" class="team text-center">
+<div class="img" style="background-image: url(assets/images/gallery/conrows.jpeg);"></div>
+<h2>Cornrows</h2>
+<span class="position">Book Now</span>
 </a>
 </div>
 <div class="item">
-<a href="#" class="team text-center">
-<div class="img" style="background-image: url(assets/images/stylist-3.jpg);"></div>
-<h2>Cloe Meyer</h2>
-<span class="position">Director</span>
+<a href="javascript:void(0);" class="team text-center">
+<div class="img" style="background-image: url(assets/images/gallery/locs.jpeg);"></div>
+<h2>Locs</h2>
+<span class="position">Book Now</span>
 </a>
 </div>
 <div class="item">
-<a href="#" class="team text-center">
-<div class="img" style="background-image: url(assets/images/stylist-4.jpg);"></div>
-<h2>Rachel Clinton</h2>
-<span class="position">Hair Stylist</span>
+<a href="javascript:void(0);" class="team text-center">
+<div class="img" style="background-image: url(assets/images/gallery/twist.jpeg);"></div>
+<h2>Twist</h2>
+<span class="position">Book Now</span>
 </a>
 </div>
-<div class="item">
-<a href="#" class="team text-center">
-<div class="img" style="background-image: url(assets/images/stylist-5.jpg);"></div>
-<h2>Dave Buff</h2>
-<span class="position">Barber</span>
-</a>
-</div>
+
 </div>
 </div>
 </div>
@@ -222,7 +217,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <div class="col-md-6 text-center heading-section ftco-animate">
 <span class="subheading">Gallery</span>
 <h2 class="mb-4">Our gallery</h2>
-<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+<!-- <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> -->
 </div>
 </div>
 </div>
@@ -350,7 +345,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <li>Hair Dresser</li>
 <li>Hair Spa</li>
 </ul>
-<p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Get Offer</a></p>
+<p class="button text-center"><a href="javascript:void(0);" class="btn btn-primary px-4 py-3">Get Offer</a></p>
 </div>
 </div>
 <div class="col-md-3 ftco-animate">
@@ -366,7 +361,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <li>Nails</li>
 <li>Nail Cut</li>
 </ul>
-<p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Get Offer</a></p>
+<p class="button text-center"><a href="javascript:void(0);" class="btn btn-primary px-4 py-3">Get Offer</a></p>
 </div>
 </div>
 <div class="col-md-3 ftco-animate">
@@ -382,7 +377,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <li>Facial Massage</li>
 <li>Facial Spa</li>
 </ul>
-<p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Get Offer</a></p>
+<p class="button text-center"><a href="javascript:void(0);" class="btn btn-primary px-4 py-3">Get Offer</a></p>
 </div>
 </div>
 <div class="col-md-3 ftco-animate">
@@ -398,7 +393,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <li>Body Spa</li>
 <li>Relaxing</li>
 </ul>
-<p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Get Offer</a></p>
+<p class="button text-center"><a href="javascript:void(0);" class="btn btn-primary px-4 py-3">Get Offer</a></p>
 </div>
 </div>
 </div>
@@ -414,7 +409,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <div class="py-md-5">
 <div class="heading-section ftco-animate">
 <span class="subheading">Testimonials</span>
-<h2 class="mb-0">Happy Customer</h2>
+<h2 class="mb-0">Happy Customers</h2>
 </div>
 <div class="carousel-testimony owl-carousel ftco-animate">
 <div class="item">

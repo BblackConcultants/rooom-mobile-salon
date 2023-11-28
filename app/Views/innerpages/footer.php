@@ -4,7 +4,7 @@
 <div class="col-md">
 <div class="ftco-footer-widget mb-4">
 <img src="assets/images/logo.jpg" alt="" style="width:100%;">
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+<p style="margin-top:15px;">We are a premium mobile hair salon that specialises in house calls only. Our prices are inclusive of hairpiece, transportation and labour. The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
