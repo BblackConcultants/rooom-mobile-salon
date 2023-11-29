@@ -37,7 +37,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 </div>
 </div>
 <div class="col-md text-center d-flex align-items-stretch">
-<div class="services-wrap d-flex align-items-center img" style="background-image: url(assets/images/forwomen.jpg);">
+<div class="services-wrap d-flex align-items-center img" style="background-image: url(assets/images/gallery/conrows.jpeg);">
 <div class="text">
 <h3>For Women</h3>
 <p><a href="javascript:void(0);" class="btn-custom">Book Now <span class="ion-ios-arrow-round-forward"></span></a></p>
@@ -327,73 +327,73 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <div class="row justify-content-center pb-3">
 <div class="col-md-10 heading-section text-center ftco-animate">
 <span class="subheading">Pricing</span>
-<h2 class="mb-4">Our Prices</h2>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+<h2 class="mb-4">Our Mobile Hairdresser Fees</h2>
+<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p> -->
 </div>
 </div>
 <div class="row">
 <div class="col-md-3 ftco-animate">
 <div class="pricing-entry pb-5 text-center">
 <div>
-<h3 class="mb-4">Hair Style</h3>
-<p><span class="price">$50.00</span> <span class="per">/ session</span></p>
+<h3 class="mb-4">Braids</h3>
+<p>From <span class="price">R700</span> <span class="per">/ session</span></p>
 </div>
 <ul>
-<li>Hair Dryer</li>
-<li>Hair Coloring</li>
-<li>Hair Cut</li>
-<li>Hair Dresser</li>
-<li>Hair Spa</li>
+<li>Feature</li>
+<li>Feature</li>
+<li>Feature</li>
+<li>Feature</li>
+<li>Feature</li>
 </ul>
-<p class="button text-center"><a href="javascript:void(0);" class="btn btn-primary px-4 py-3">Get Offer</a></p>
+<p class="button text-center"><a href="javascript:void(0);" class="btn btn-primary px-4 py-3">Book Now</a></p>
 </div>
 </div>
 <div class="col-md-3 ftco-animate">
 <div class="pricing-entry pb-5 text-center">
 <div>
-<h3 class="mb-4">Manicure Pedicure</h3>
-<p><span class="price">$34.50</span> <span class="per">/ session</span></p>
+<h3 class="mb-4">Cornrows</h3>
+<p>From <span class="price">R750</span> <span class="per">/ session</span></p>
 </div>
 <ul>
-<li>Manicure</li>
-<li>Pedicure</li>
-<li>Coloring</li>
-<li>Nails</li>
-<li>Nail Cut</li>
+<li>Feature</li>
+<li>Feature</li>
+<li>Feature</li>
+<li>Feature</li>
+<li>Feature</li>
 </ul>
-<p class="button text-center"><a href="javascript:void(0);" class="btn btn-primary px-4 py-3">Get Offer</a></p>
+<p class="button text-center"><a href="javascript:void(0);" class="btn btn-primary px-4 py-3">Book Now</a></p>
 </div>
 </div>
 <div class="col-md-3 ftco-animate">
 <div class="pricing-entry active pb-5 text-center">
 <div>
-<h3 class="mb-4">Makeup</h3>
-<p><span class="price">$54.50</span> <span class="per">/ session</span></p>
+<h3 class="mb-4">Locs</h3>
+<p>From <span class="price">R600</span> <span class="per">/ session</span></p>
 </div>
 <ul>
-<li>Makeup</li>
-<li>Professional Makeup</li>
-<li>Blush On</li>
-<li>Facial Massage</li>
-<li>Facial Spa</li>
+<li>Feature</li>
+<li>Feature</li>
+<li>Feature</li>
+<li>Feature</li>
+<li>Feature</li>
 </ul>
-<p class="button text-center"><a href="javascript:void(0);" class="btn btn-primary px-4 py-3">Get Offer</a></p>
+<p class="button text-center"><a href="javascript:void(0);" class="btn btn-primary px-4 py-3">Book Now</a></p>
 </div>
 </div>
 <div class="col-md-3 ftco-animate">
 <div class="pricing-entry pb-5 text-center">
 <div>
-<h3 class="mb-4">Body Treatment</h3>
-<p><span class="price">$89.50</span> <span class="per">/ session</span></p>
+<h3 class="mb-4">Twist</h3>
+<p>From <span class="price">R750</span> <span class="per">/ session</span></p>
 </div>
 <ul>
-<li>Massage</li>
-<li>Spa</li>
-<li>Foot Spa</li>
-<li>Body Spa</li>
-<li>Relaxing</li>
+<li>Feature</li>
+<li>Feature</li>
+<li>Feature</li>
+<li>Feature</li>
+<li>Feature</li>
 </ul>
-<p class="button text-center"><a href="javascript:void(0);" class="btn btn-primary px-4 py-3">Get Offer</a></p>
+<p class="button text-center"><a href="javascript:void(0);" class="btn btn-primary px-4 py-3">Book Now</a></p>
 </div>
 </div>
 </div>
@@ -403,7 +403,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <div class="container">
 <div class="row ftco-animate justify-content-center">
 <div class="col-md-6 col-lg-5 d-flex">
-<div class="testimony-img" style="background-image: url(assets/images/testimony-img.jpg);"></div>
+<div class="testimony-img" style="background-image: url(assets/images/gallery/braids.jpeg);"></div>
 </div>
 <div class="col-md-6 col-lg-7 py-5 pl-md-5">
 <div class="py-md-5">
@@ -415,7 +415,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <div class="item">
 <div class="testimony-wrap pb-4">
 <div class="text">
-<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+<p class="mb-4">Place Holder Content.</p>
 </div>
 <div class="d-flex">
 <div class="user-img" style="background-image: url(assets/images/stylist-1.jpg)">
@@ -430,7 +430,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <div class="item">
 <div class="testimony-wrap pb-4">
 <div class="text">
-<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+<p class="mb-4">Place Holder Content.</p>
 </div>
 <div class="d-flex">
 <div class="user-img" style="background-image: url(assets/images/stylist-2.jpg)">
@@ -445,7 +445,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <div class="item">
 <div class="testimony-wrap pb-4">
 <div class="text">
-<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+<p class="mb-4">Place Holder Content.</p>
 </div>
 <div class="d-flex">
 <div class="user-img" style="background-image: url(assets/images/stylist-3.jpg)">
@@ -460,7 +460,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <div class="item">
 <div class="testimony-wrap pb-4">
 <div class="text">
-<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+<p class="mb-4">Place Holder Content.</p>
 </div>
 <div class="d-flex">
 <div class="user-img" style="background-image: url(assets/images/stylist-4.jpg)">
@@ -475,7 +475,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <div class="item">
 <div class="testimony-wrap pb-4">
 <div class="text">
-<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+<p class="mb-4">Place Holder Content.</p>
 </div>
 <div class="d-flex">
 <div class="user-img" style="background-image: url(assets/images/stylist-5.jpg)">

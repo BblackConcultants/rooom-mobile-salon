@@ -35,8 +35,9 @@
 <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Services</a></li>
 <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Gallery</a></li>
 <li class="nav-item"><a href="javascript:void(0);" class="nav-link">About</a></li>
-<li class="nav-item"><a href="javascript:void(0);" class="nav-link">Blog</a></li>
-<li class="nav-item"><a href="javascript:void(0);" class="nav-link">Contact</a></li>
+<li class="nav-item"><a href="javascript:void(0);" class="nav-link">Careers</a></li>
+<li class="nav-item"><a href="javascript:void(0);" class="nav-link">Contact Us</a></li>
+<li class="nav-item"><a href="javascript:void(0);" class="nav-link">Login</a></li>
 </ul>
 </div>
 </div>

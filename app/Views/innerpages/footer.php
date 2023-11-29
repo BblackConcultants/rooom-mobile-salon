@@ -6,9 +6,9 @@
 <img src="assets/images/logo.jpg" alt="" style="width:100%;">
 <p style="margin-top:15px;">We are a premium mobile hair salon that specialises in house calls only. Our prices are inclusive of hairpiece, transportation and labour. The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+<li class="ftco-animate"><a href="javascript:void(0);"><span class="icon-twitter"></span></a></li>
+<li class="ftco-animate"><a href="javascript:void(0);"><span class="icon-facebook"></span></a></li>
+<li class="ftco-animate"><a href="javascript:void(0);"><span class="icon-instagram"></span></a></li>
 </ul>
 </div>
 </div>
@@ -16,9 +16,9 @@
 <div class="ftco-footer-widget mb-4 ml-md-5">
 <h2 class="ftco-heading-2">Information</h2>
 <ul class="list-unstyled">
-<li><a href="#" class="py-2 d-block">FAQs</a></li>
-<li><a href="#" class="py-2 d-block">Privacy</a></li>
-<li><a href="#" class="py-2 d-block">Terms Condition</a></li>
+<li><a href="javascript:void(0);" class="py-2 d-block">FAQs</a></li>
+<li><a href="javascript:void(0);" class="py-2 d-block">Privacy</a></li>
+<li><a href="javascript:void(0);" class="py-2 d-block">Terms Condition</a></li>
 </ul>
 </div>
 </div>
@@ -26,12 +26,12 @@
 <div class="ftco-footer-widget mb-4">
 <h2 class="ftco-heading-2">Links</h2>
 <ul class="list-unstyled">
-<li><a href="#" class="py-2 d-block">Home</a></li>
-<li><a href="#" class="py-2 d-block">About</a></li>
-<li><a href="#" class="py-2 d-block">Services</a></li>
-<li><a href="#" class="py-2 d-block">Work</a></li>
-<li><a href="#" class="py-2 d-block">Blog</a></li>
-<li><a href="#" class="py-2 d-block">Contact</a></li>
+<li><a href="javascript:void(0);" class="py-2 d-block">Home</a></li>
+<li><a href="javascript:void(0);" class="py-2 d-block">About</a></li>
+<li><a href="javascript:void(0);" class="py-2 d-block">Services</a></li>
+<li><a href="javascript:void(0);" class="py-2 d-block">Work</a></li>
+<li><a href="javascript:void(0);" class="py-2 d-block">Blog</a></li>
+<li><a href="javascript:void(0);" class="py-2 d-block">Contact</a></li>
 </ul>
 </div>
 </div>
@@ -41,8 +41,8 @@
 <div class="block-23 mb-3">
 <ul>
 <li><span class="icon icon-map-marker"></span><span class="text">288 Kent Avenue, Randburg, Ferndale, 2961</span></li>
-<li><a href="#"><span class="icon icon-phone"></span><span class="text">+27 (83) 594-1822</span></a></li>
-<li><a href="#"><span class="icon icon-envelope"></span><span class="text"><span class="" data-cfemail="">roomfinance@gmail.com</span></span></a></li>
+<li><a href="javascript:void(0);"><span class="icon icon-phone"></span><span class="text">+27 (83) 594-1822</span></a></li>
+<li><a href="javascript:void(0);"><span class="icon icon-envelope"></span><span class="text"><span class="" data-cfemail="">roomfinance@gmail.com</span></span></a></li>
 </ul>
 </div>
 </div>
