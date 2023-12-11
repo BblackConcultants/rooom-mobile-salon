@@ -86,6 +86,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Room 
   gtag('config', 'UA-23581568-13');
 </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.assets/js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"82a0228039f40392","b":1,"version":"2023.10.0","token":"cd0b4b3a733644fc843ef0b185f98241"}' crossorigin="anonymous"></script>
+
+<!-- floating sidebar -->
+
+<script>
+  
+</script>
+
+<!-- ./ -->
 </body>
 
 <!-- Mirrored from preview.colorlib.com/theme/haircare/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 22 Nov 2023 09:37:10 GMT -->

@@ -25,7 +25,7 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 <div class="container">
-<a class="navbar-brand" href="javascript:void(0);"><img src="assets/images/logo.jpg" alt="" style="width:55%;"></a>
+<a class="navbar-brand" href="javascript:void(0);"><img id="brand-logo" src="assets/images/logo_full_color.png" alt="" style="width:55%;"></a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 <span class="oi oi-menu"></span> Menu
 </button>
@@ -45,4 +45,49 @@
 <style>
     .nav-link:hover { color: #fdef09!important; }
     #read-more:hover { color: #fff!important; }
+    @media screen and (max-width: 480px) {
+        #brand-logo {
+            margin-left: 45px;
+        }
+    }
+
+    /* ipad */
+    @media only screen and (max-width: 1080px) and (min-width: 810px) {
+        #brand-logo {
+            margin-left: 200px;
+        }
+    }
+
+    /* kindle */
+    @media only screen and (max-width: 1280px) and (min-width: 800px) {
+        #brand-logo {
+            margin-left: 200px;
+        }
+    }
+    /* floating sidebar */  
+    *{padding:0;margin:0;}
+
+    body{
+        font-family:Verdana, Geneva, sans-serif;
+        font-size:18px;
+        background-color:#CCC;
+    }
+
+    .float{
+        position:fixed;
+        width:60px;
+        height:60px;
+        bottom:40px;
+        right:40px;
+        background-color:#0C9;
+        color:#FFF;
+        border-radius:50px;
+        text-align:center;
+        box-shadow: 2px 2px 3px #999;
+    }
+
+    .my-float{
+        margin-top:22px;
+    }
 </style>
+<a href="#" class="float" style="z-index: 2147483647; position: relative;"> <i class="fa fa-plus my-float"></i></a>
