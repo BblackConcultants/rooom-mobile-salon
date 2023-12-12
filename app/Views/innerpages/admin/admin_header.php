@@ -14,6 +14,9 @@
 
 <link rel="stylesheet" href="assets/admin/dist/css/adminlte.min2167.css?v=3.2.0">
 
+<link rel="stylesheet" href="assets/admin/plugins/select2/css/select2.min.css">
+<link rel="stylesheet" href="assets/admin/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+
 <style>
     a {
         color: #fbf000;
@@ -29,6 +32,14 @@
     }
     .dark-mode .navbar-dark {
         background-color: #000;
+    }
+
+    .dark-mode .main-footer {
+        background-color: #000;
+    }
+
+    .main-footer {
+        color: #fff;
     }
 </style>
 

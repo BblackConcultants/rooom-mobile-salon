@@ -16,5 +16,11 @@ class Inner extends BaseController
         $data['title'] = ucfirst('Rooom Mobile Salon Dashboard ');
         return view('innerpages/admin/dashboard', $data);
     }
+    public function registration()
+    {
+        $data['title'] = ucfirst('Rooom Mobile Salon User Registration ');
+        return view('innerpages/admin/registration', $data);
+    }
+
      
 }

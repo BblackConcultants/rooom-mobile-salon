@@ -205,10 +205,34 @@ Nora Silvester
 
 <div class="col-12 col-sm-6 col-md-3">
 <div class="info-box mb-3">
+<span class="info-box-icon bg-warning elevation-1"><img src="assets/images/hair-dryer.png" alt=""></span>
+<div class="info-box-content">
+<span class="info-box-text">Total Hairdressers</span>
+<span class="info-box-number">60</span>
+</div>
+
+</div>
+
+</div>
+
+<div class="col-12 col-sm-6 col-md-3">
+<div class="info-box mb-3">
 <span class="info-box-icon bg-warning elevation-1"><img src="assets/images/girl.png" alt=""></span>
 <div class="info-box-content">
-<span class="info-box-text">Total Hairstylists</span>
+<span class="info-box-text">Hairdresser Services</span>
 <span class="info-box-number">50</span>
+</div>
+
+</div>
+
+</div>
+
+<div class="col-12 col-sm-6 col-md-3">
+<div class="info-box mb-3">
+<span class="info-box-icon bg-warning elevation-1"><img src="assets/images/chatting.png" alt=""></span>
+<div class="info-box-content">
+<span class="info-box-text">New Messages</span>
+<span class="info-box-number">3</span>
 </div>
 
 </div>
