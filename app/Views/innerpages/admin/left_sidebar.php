@@ -105,7 +105,7 @@ Mailbox
 </a>
 <ul class="nav nav-treeview" style="display: block;">
 <li class="nav-item">
-<a href="pages/mailbox/mailbox.html" class="nav-link">
+<a href="<?php echo base_url('mailbox'); ?>" class="nav-link">
 <i class="far fa-circle nav-icon"></i>
 <p>Inbox</p>
 </a>

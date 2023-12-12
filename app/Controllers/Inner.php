@@ -33,6 +33,12 @@ class Inner extends BaseController
         $data['title'] = ucfirst('Rooom Mobile Salon Recover Password ');
         return view('innerpages/admin/recover_password', $data);
     }
+     public function mailbox()
+    {
+        $data['title'] = ucfirst('Rooom Mobile Salon Mailbox ');
+        $data['page_heading'] = ucfirst('Mailbox ');
+        return view('innerpages/admin/mailbox', $data);
+    }
 
      
 }
