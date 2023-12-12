@@ -12,3 +12,5 @@ $routes->get('registration', 'Inner::registration');
 $routes->get('forgot_password', 'Inner::forgot_password');
 $routes->get('recover_password', 'Inner::recover_password');
 $routes->get('mailbox', 'Inner::mailbox');
+$routes->get('compose', 'Inner::compose');
+$routes->get('read_message', 'Inner::read_message');

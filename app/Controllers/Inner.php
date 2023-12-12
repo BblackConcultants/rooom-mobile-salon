@@ -40,5 +40,19 @@ class Inner extends BaseController
         return view('innerpages/admin/mailbox', $data);
     }
 
+      public function compose()
+    {
+        $data['title'] = ucfirst('Rooom Mobile Salon Compose Message ');
+        $data['page_heading'] = ucfirst('Compose');
+        return view('innerpages/admin/compose', $data);
+    }
+
+      public function read_message()
+    {
+        $data['title'] = ucfirst('Rooom Mobile Salon Read Message ');
+        $data['page_heading'] = ucfirst('Message Details');
+        return view('innerpages/admin/read_message', $data);
+    }
+
      
 }

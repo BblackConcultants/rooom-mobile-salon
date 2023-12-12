@@ -27,7 +27,7 @@ include "navigation.php";
 <section class="content">
 <div class="row">
 <div class="col-md-3">
-<a href="compose.html" class="btn btn-primary btn-block mb-3">Compose</a>
+<a href="<?php echo base_url('compose'); ?>" class="btn btn-primary btn-block mb-3">Compose</a>
 <div class="card">
 <div class="card-header">
 <h3 class="card-title">Folders</h3>

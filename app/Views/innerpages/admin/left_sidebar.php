@@ -111,13 +111,13 @@ Mailbox
 </a>
 </li>
 <li class="nav-item">
-<a href="pages/mailbox/compose.html" class="nav-link">
+<a href="<?php echo base_url('compose'); ?>" class="nav-link">
 <i class="far fa-circle nav-icon"></i>
 <p>Compose</p>
 </a>
 </li>
 <li class="nav-item">
-<a href="pages/mailbox/read-mail.html" class="nav-link">
+<a href="<?php echo base_url('read_message'); ?>" class="nav-link">
 <i class="far fa-circle nav-icon"></i>
 <p>Read</p>
 </a>
