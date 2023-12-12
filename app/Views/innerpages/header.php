@@ -45,10 +45,28 @@
 <style>
     .nav-link:hover { color: #fdef09!important; }
     #read-more:hover { color: #fff!important; }
+    /* floating sidebar */  
+    ul.navbar-right {
+        position: fixed;
+        right: 0;
+        top: 60%;
+        z-index: 500;
+        list-style: none;
+        padding-right: 30px;
+      
+    }
     @media screen and (max-width: 480px) {
         #brand-logo {
             margin-left: 45px;
         }
+        .floating-action {
+            width: 50%; 
+        }
+        ul.navbar-right {
+            top: 15%;
+            padding-right: 0px;
+        }
+        
     }
 
     /* ipad */
@@ -56,6 +74,7 @@
         #brand-logo {
             margin-left: 200px;
         }
+       
     }
 
     /* kindle */
@@ -63,19 +82,12 @@
         #brand-logo {
             margin-left: 200px;
         }
+
     }
-    /* floating sidebar */  
-    ul.navbar-right {
-        position: fixed;
-        right: 0;
-        top: 75%;
-        z-index: 500;
-        list-style: none;
-        padding-right: 30px;
-    }
+    
 </style>
 <ul class="navbar-right">
 
-<li><a href="tel:27630717010"><img src="assets/images/booking.png" alt="" style="width:;"></a></li>
-<li><a href="tel:27630717010"><img src="assets/images/booking.png" alt="" style="width:;"></a></li>
+<li><a href="javascript:void(0);"><img class="floating-action" src="assets/images/booking.png" alt="" style="margin-bottom: 10px; width:;"></a></li>
+<li><a href="javascript:void(0);"><img class="floating-action"  src="assets/images/whatsapp.png" alt="" style="width:;"></a></li>
 </ul>
