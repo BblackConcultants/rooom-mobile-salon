@@ -22,5 +22,17 @@ class Inner extends BaseController
         return view('innerpages/admin/registration', $data);
     }
 
+    public function forgot_password()
+    {
+        $data['title'] = ucfirst('Rooom Mobile Salon Reset Password ');
+        return view('innerpages/admin/forgot_password', $data);
+    }
+
+     public function recover_password()
+    {
+        $data['title'] = ucfirst('Rooom Mobile Salon Recover Password ');
+        return view('innerpages/admin/recover_password', $data);
+    }
+
      
 }

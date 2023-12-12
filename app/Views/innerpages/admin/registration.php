@@ -57,6 +57,28 @@
 </div>
 </div>
 </div>
+<!-- mobile -->
+<div class="input-group mb-3">
+<input name="phone" type="text" class="form-control" placeholder="Phone Number">
+<div class="input-group-append">
+<div class="input-group-text">
+<span class="fas fa-phone"></span>
+</div>
+</div>
+</div>
+<!-- services -->
+<div class="input-group mb-3">
+<select name="speciality" class="form-control">
+    <option>Choose Speciality</option>
+    <option value="Hairdresser">Hairdresser</option>
+    <option value="Nail Technician">Nail Technician</option>
+</select>
+<div class="input-group-append">
+<div class="input-group-text">
+<span class="fas fa-phone"></span>
+</div>
+</div>
+</div>
 <!-- password -->
 <div class="input-group mb-3">
 <input type="password" class="form-control" placeholder="Password">
