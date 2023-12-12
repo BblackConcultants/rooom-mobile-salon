@@ -38,7 +38,7 @@
     <img src="assets/images/logo_black.jpg" alt="">
 </div>
 <div class="card-body">
-<p class="login-box-msg">Register new System User</p>
+<p class="login-box-msg">Register System User</p>
 <form action="" method="post">
 <div class="input-group mb-3">
 <input name="name" type="text" class="form-control" placeholder="Full Name">
@@ -86,31 +86,19 @@
 <div class="icheck-primary">
 <input type="checkbox" id="remember">
 <label for="remember">
-Remember Me
+I agree to the <a href="javascript:void(0);">Rooom Mobile Salon Terms & Conditions</a>
 </label>
 </div>
 </div>
 
 <div class="col-4">
-<button type="submit" class="btn btn-primary btn-block">Sign In</button>
+<button type="submit" class="btn btn-primary btn-block">Register</button>
 </div>
 
 </div>
 </form>
-<div class="social-auth-links text-center mt-2 mb-3">
-<a href="#" class="btn btn-block btn-primary" style="background-color: #007bff;">
-<i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-</a>
-<a href="#" class="btn btn-block btn-danger">
-<i class="fab fa-google mr-2"></i> Sign in using Google
-</a>
-</div>
-
-<p class="mb-1">
-<a href="javascript:void(0);">I forgot my password</a>
-</p>
 <p class="mb-0">
-<a href="javascript:void(0);" class="text-center">Register</a>
+<a href="<?php echo base_url('login') ?>" class="text-center">Login</a>
 </p>
 </div>
 
