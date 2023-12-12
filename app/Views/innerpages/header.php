@@ -65,29 +65,17 @@
         }
     }
     /* floating sidebar */  
-    *{padding:0;margin:0;}
-
-    body{
-        font-family:Verdana, Geneva, sans-serif;
-        font-size:18px;
-        background-color:#CCC;
-    }
-
-    .float{
-        position:fixed;
-        width:60px;
-        height:60px;
-        bottom:40px;
-        right:40px;
-        background-color:#0C9;
-        color:#FFF;
-        border-radius:50px;
-        text-align:center;
-        box-shadow: 2px 2px 3px #999;
-    }
-
-    .my-float{
-        margin-top:22px;
+    ul.navbar-right {
+        position: fixed;
+        right: 0;
+        top: 75%;
+        z-index: 500;
+        list-style: none;
+        padding-right: 30px;
     }
 </style>
-<a href="#" class="float" style="z-index: 2147483647; position: relative;"> <i class="fa fa-plus my-float"></i></a>
+<ul class="navbar-right">
+ <li><a href="mailto:info@uniflexprojects.co.za" target="_blank"><i class="fa fa-envelope" style="color: #f37421;"></i></a></li><a href="mailto:info@uniflexprojects.co.za" target="_blank">
+ <!-- phone --></a><li><a href="javascript:void(0);"  target="_blank"></a><a href="tel:27630717010"><img src="assets/images/booking.png" alt="" style="width:;"></a></li><!-- twitter -->
+
+</ul>
