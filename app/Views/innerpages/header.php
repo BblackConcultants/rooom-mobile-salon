@@ -75,7 +75,7 @@
     }
 </style>
 <ul class="navbar-right">
- <li><a href="mailto:info@uniflexprojects.co.za" target="_blank"><i class="fa fa-envelope" style="color: #f37421;"></i></a></li><a href="mailto:info@uniflexprojects.co.za" target="_blank">
- <!-- phone --></a><li><a href="javascript:void(0);"  target="_blank"></a><a href="tel:27630717010"><img src="assets/images/booking.png" alt="" style="width:;"></a></li><!-- twitter -->
 
+<li><a href="tel:27630717010"><img src="assets/images/booking.png" alt="" style="width:;"></a></li>
+<li><a href="tel:27630717010"><img src="assets/images/booking.png" alt="" style="width:;"></a></li>
 </ul>
