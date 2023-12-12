@@ -18,6 +18,18 @@
     a {
         color: #fbf000;
     }
+    .bg-info {
+         background-color: #fbf000 !important;
+    }
+    .bg-warning {
+        background-color: #fbf000 !important;
+    }
+    .dark-mode .info-box {
+        background-color: #000;
+    }
+    .dark-mode .navbar-dark {
+        background-color: #000;
+    }
 </style>
 
 
