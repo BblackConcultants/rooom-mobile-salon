@@ -59,17 +59,33 @@ Navigation
 </li>
 </ul> -->
 </li>
-<li class="nav-item">
-<a href="pages/widgets.html" class="nav-link">
-<i class="nav-icon fas fa-calendar-alt"></i>
+<li class="nav-item menu-closed">
+<a href="#" class="nav-link">
+<i class="nav-icon far fa-calendar-alt"></i>
 <p>
 Bookings
+<i class="fas fa-angle-down right"></i>
 </p>
+</a>
+<ul class="nav nav-treeview" style="display: block;">
+<li class="nav-item">
+<a href="<?php echo base_url('active_bookings'); ?>" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>Active</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="javascript:void(0);" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>Historical</p>
 </a>
 </li>
 
+</ul>
+</li>
+
 <li class="nav-item">
-<a href="pages/widgets.html" class="nav-link">
+<a href="javascript:void(0);" class="nav-link">
 <i class="nav-icon fas fa-users"></i>
 <p>
 Clients
@@ -79,20 +95,35 @@ Clients
 
 
 <li class="nav-item">
-<a href="pages/widgets.html" class="nav-link">
+<a href="javascript:void(0);" class="nav-link">
 <i class="nav-icon fas fa-users"></i>
 <p>
 Hairdressers
 </p>
 </a>
 </li>
-<li class="nav-item">
-<a href="pages/widgets.html" class="nav-link">
-<i class="nav-icon fas fa-list"></i>
+<li class="nav-item menu-closed">
+<a href="#" class="nav-link">
+<i class="nav-icon fa fa-list"></i>
 <p>
-Hairdresser Services
+Services
+<i class="fas fa-angle-down right"></i>
 </p>
 </a>
+<ul class="nav nav-treeview" style="display: block;">
+<li class="nav-item">
+<a href="javascript:void(0);" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>Hairdresser Services</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="javascript:void(0);" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>Nail Services</p>
+</a>
+</li>
+</ul>
 </li>
 
 <li class="nav-item menu-closed">
@@ -100,7 +131,7 @@ Hairdresser Services
 <i class="nav-icon far fa-envelope"></i>
 <p>
 Mailbox
-<i class="fas fa-angle-left right"></i>
+<i class="fas fa-angle-down right"></i>
 </p>
 </a>
 <ul class="nav nav-treeview" style="display: block;">
@@ -126,7 +157,7 @@ Mailbox
 </li>
 
 <li class="nav-item">
-<a href="pages/widgets.html" class="nav-link">
+<a href="javascript:void(0);" class="nav-link">
 <i class="nav-icon fas fa-file"></i>
 <p>
 Reports
@@ -135,7 +166,7 @@ Reports
 </li>
 
 <li class="nav-item">
-<a href="pages/widgets.html" class="nav-link">
+<a href="<?php echo base_url('login'); ?>" class="nav-link">
 <i class="nav-icon fas fa-unlock"></i>
 <p>
 Logout

@@ -15,3 +15,4 @@ $routes->get('mailbox', 'Inner::mailbox');
 $routes->get('compose', 'Inner::compose');
 $routes->get('read_message', 'Inner::read_message');
 $routes->get('recover_password', 'Inner::recover_password');
+$routes->get('active_bookings', 'Inner::active_bookings');

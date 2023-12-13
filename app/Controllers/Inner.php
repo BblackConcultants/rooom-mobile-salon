@@ -55,5 +55,12 @@ class Inner extends BaseController
         return view('innerpages/admin/read_message', $data);
     }
 
+     public function active_bookings()
+    {
+        $data['title'] = ucfirst('Rooom Mobile Salon Active Bookings ');
+        $data['page_heading'] = ucfirst('Active Bookings');
+        return view('innerpages/admin/active_bookings', $data);
+    }
+
      
 }

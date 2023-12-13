@@ -8,7 +8,7 @@
 <a href="<?php echo base_url('dashboard'); ?>" class="nav-link">Dashboard</a>
 </li>
 <li class="nav-item d-none d-sm-inline-block">
-<a href="javascript:void(0);" class="nav-link">Logout</a>
+<a href="<?php echo base_url('login'); ?>" class="nav-link">Logout</a>
 </li>
 </ul>
 
