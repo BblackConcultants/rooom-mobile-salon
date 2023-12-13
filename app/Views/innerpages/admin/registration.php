@@ -114,7 +114,7 @@ I agree to the <a href="javascript:void(0);">Rooom Mobile Salon Terms & Conditio
 </div>
 
 <div class="col-4">
-<button type="submit" class="btn btn-primary btn-block">Register</button>
+<button type="button" class="btn btn-primary btn-block">Register</button>
 </div>
 
 </div>

@@ -33,7 +33,7 @@
 </div>
 <div class="card-body">
 <p class="login-box-msg">Sign in to start your session</p>
-<form action="" method="post">
+<form  method="post">
 <div class="input-group mb-3">
 <input type="email" class="form-control" placeholder="Email">
 <div class="input-group-append">
@@ -61,16 +61,16 @@ Remember Me
 </div>
 
 <div class="col-4">
-<button type="submit" class="btn btn-primary btn-block">Sign In</button>
+<a href="<?php echo base_url('dashboard'); ?>" class="btn btn-primary btn-block">Sign In</a>
 </div>
 
 </div>
 </form>
 <div class="social-auth-links text-center mt-2 mb-3">
-<a href="#" class="btn btn-block btn-primary" style="background-color: #007bff;">
+<a href="#" class="btn btn-block btn-primary" style="background-color: #4267B2; color: #fff; border-color: #fff;">
 <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
 </a>
-<a href="#" class="btn btn-block btn-danger">
+<a href="#" class="btn btn-block btn-danger" style="">
 <i class="fab fa-google mr-2"></i> Sign in using Google
 </a>
 </div>

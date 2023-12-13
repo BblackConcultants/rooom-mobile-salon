@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AdminLTE 3 | Forgot Password (v2)</title><title>Rooom Mobile Salon | Login</title>
+<title>Rooom Mobile Salon | Login</title>
 <link rel="icon" type="image/x-icon" href="assets/images/fav.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
 
@@ -43,7 +43,7 @@
 </div>
 <div class="row">
 <div class="col-12">
-<button type="button" class="btn btn-primary btn-block">Request new password</button>
+<a href="<?php echo base_url('recover_password'); ?>" class="btn btn-primary btn-block">Request new password</a>
 </div>
 
 </div>
