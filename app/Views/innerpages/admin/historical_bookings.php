@@ -49,7 +49,7 @@ include "navigation.php";
 <div class="container-fluid">
 <div class="row">
 	<div class="col-4">
-	<button type="button" class="btn btn-primary btn-block"><i class="fa fa-calendar-alt"></i>  &nbsp;&nbsp; Make A Booking</button>
+	<button type="button" class="btn btn-primary btn-sm"><i class="fa fa-calendar-alt"></i>  &nbsp;&nbsp; Make A Booking</button>
 </div>
 <div class="col-12">
 

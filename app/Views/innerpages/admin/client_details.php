@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Mirrored from adminlte.io/themes/v3/pages/examples/project-detail.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Oct 2023 06:45:38 GMT -->
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rooom Mobile Hair Salon</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
 <link rel="icon" type="image/x-icon" href="assets/images/fav.png">
+
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
 
 <link rel="stylesheet" href="assets/admin/plugins/fontawesome-free/css/all.min.css">
 
+<link rel="stylesheet" href="assets/admin/dist/css/adminlte.min2167.css?v=3.2.0">
 <link rel="stylesheet" href="assets/admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="assets/admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
 <link rel="stylesheet" href="assets/admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
-
-<link rel="stylesheet" href="assets/admin/dist/css/adminlte.min2167.css?v=3.2.0">
+<link rel="stylesheet" href="assets/admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
+
 <div class="wrapper">
 
 <?php 
 include "left_sidebar.php"; 
 include "navigation.php"; 
 ?>
+
 
 
 
@@ -46,73 +50,112 @@ include "navigation.php";
 </section>
 
 <section class="content">
-<div class="container-fluid">
-<div class="row">
-	<div class="col-4">
-	<button type="button" class="btn btn-primary btn-sm"><i class="fa fa-calendar-alt"></i>  &nbsp;&nbsp; Make A Booking</button>
-</div>
-<div class="col-12">
 
-
-<div class="card" style="margin-top: 10px;">
+<div class="card">
 <div class="card-header">
-	<div class="col-6"><h3 class="card-title"><?php echo $page_heading;?></h3></div>
-
+<h3 class="card-title"><?php echo $page_heading; ?></h3>
+<div class="card-tools">
+<button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+<i class="fas fa-minus"></i>
+</button>
+<button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+<i class="fas fa-times"></i>
+</button>
 </div>
-
+</div>
 <div class="card-body">
+<div class="row">
+<div class="col-12 col-md-12 col-lg-8 order-2 order-md-1">
+<div class="row">
+<div class="col-12 col-sm-4">
+<div class="info-box bg-light">
+<div class="info-box-content">
+<span class="info-box-text text-center text-muted">Total Paid</span>
+<span class="info-box-number text-center text-muted mb-0">R4,500</span>
+</div>
+</div>
+</div>
+<!-- <div class="col-12 col-sm-4">
+<div class="info-box bg-light">
+<div class="info-box-content">
+<span class="info-box-text text-center text-muted">Times Visited</span>
+<span class="info-box-number text-center text-muted mb-0">5</span>
+</div>
+</div>
+</div> -->
+<div class="col-12 col-sm-4">
+<div class="info-box bg-light">
+<div class="info-box-content">
+<span class="info-box-text text-center text-muted">No. Times Visited</span>
+<span class="info-box-number text-center text-muted mb-0">10</span>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<h4>Recent Activity</h4>
 <table id="example1" class="table table-bordered table-striped">
 <thead>
 <tr>
-<th>Client Name</th>
-<th>Service</th>
-<th>Location</th>
-<th>Date</th>
-<th>View</th>
+<th>Hairstyle</th>
+<th>Hairstylist</th>
+<th>Amount Paid</th>
+<th>Rating</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Trish Moyo</td>
-<td>Knotless Braids
+<td>Jozi Locks</td>
+<td>Thendo Mulaudzi
 </td>
-<td>345 Rhodes Street, Randburg, Johannesburg</td>
-<td>18-12-2023 : 1000Hrs</td>
-<td><a href="<?php echo base_url('view_booking'); ?>"><i class="fas fa-eye"></i></a></td>
+<td>R450</td>
+<td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
 </tr>
 <tr>
-<td>Candice</td>
-<td>Knotless Braids
+<td>Knotless Braids</td>
+<td>Linda Dube
 </td>
-<td>340 Walcott Road, Rosebank, Johannesburg</td>
-<td>20-12-2023 : 0600Hrs</td>
-<td><a href="<?php echo base_url('view_booking'); ?>"><i class="fas fa-eye"></i></a></td>
-</tr>
+<td>R300</td>
+<td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
 <tr>
-<td>Mpho</td>
-<td>Jozi Locks
+<td>Jozi Locks</td>
+<td>Joe Malinga
 </td>
-<td>3 Asmara Road, Equestria, Pretoria</td>
-<td>10-12-2023 : 1130Hrs</td>
-<td><a href="<?php echo base_url('view_booking'); ?>"><i class="fas fa-eye"></i></a></td>
+<td>R450</td>
+<td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
 </tr>
 </tbody>
-<!-- <tfoot>
-<tr>
-<th>Client Name</th>
-<th>Service</th>
-<th>Location</th>
-<th>Date</th>
-<th>View</th>
-</tr>
-</tfoot> -->
 </table>
 </div>
-
 </div>
-
 </div>
-
+<div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
+<h3 class="text-primary">Knotless Braids</h3>
+<!-- <p class="text-muted">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</p> -->
+<br>
+<div class="text-muted">
+<p class="text-sm">Client Name
+<b class="d-block">Trish Moyo</b>
+</p>
+<p class="text-sm">Contact Number
+<b class="d-block">+27 60 657 4453</b>
+</p>
+<p class="text-sm">Appointment Date
+<b class="d-block">23 December 2023</b>
+</p>
+<p class="text-sm">Appointment Time
+<b class="d-block">10 AM</b>
+</p>
+<p class="text-sm">Client Address
+<b class="d-block">38 Montrose Avenue, Northgate, 2192, Johannesburg</b>
+</p>
+</div>
+<div class="text-left mt-5 mb-3">
+<a href="<?php echo base_url('clients'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left"></i>  &nbsp;&nbsp; Back</a>
+</div>
+</div>
+</div>
 </div>
 
 </div>
@@ -140,6 +183,9 @@ All rights reserved. System Designed & Developed By <a href="https://bblack.co.z
 
 <script src="assets/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+<script src="assets/admin/dist/js/adminlte.min2167.js?v=3.2.0"></script>
+
+<script src="assets/admin/dist/js/demo.js"></script>
 <script src="assets/admin/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="assets/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="assets/admin/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
@@ -151,12 +197,6 @@ All rights reserved. System Designed & Developed By <a href="https://bblack.co.z
 <script src="assets/admin/plugins/pdfmake/vfs_fonts.js"></script>
 <script src="assets/admin/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="assets/admin/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-<!-- <script src="assets/admin/plugins/datatables-buttons/js/buttons.colVis.min.js"></script> -->
-
-<script src="assets/admin/dist/js/adminlte.min2167.js?v=3.2.0"></script>
-
-<script src="assets/admin/dist/js/demo.js"></script>
-
 <script>
   $(function () {
     $("#example1").DataTable({

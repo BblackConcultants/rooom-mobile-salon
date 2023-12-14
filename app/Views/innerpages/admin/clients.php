@@ -49,7 +49,7 @@ include "navigation.php";
 <div class="container-fluid">
 <div class="row">
 	<div class="col-4">
-	<button type="button" class="btn btn-primary btn-sm"><i class="fa fa-calendar-alt"></i>  &nbsp;&nbsp; Make A Booking</button>
+	<button type="button" class="btn btn-primary btn-sm"><i class="fa fa-user"></i>  &nbsp;&nbsp; Register New Client</button>
 </div>
 <div class="col-12">
 
@@ -65,36 +65,36 @@ include "navigation.php";
 <thead>
 <tr>
 <th>Client Name</th>
-<th>Service</th>
+<th>Phone Number</th>
 <th>Location</th>
-<th>Date</th>
+
 <th>View</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Trish Moyo</td>
-<td>Knotless Braids
+<td>+27 00 111 2222
 </td>
-<td>345 Rhodes Street, Randburg, Johannesburg</td>
-<td>18-12-2023 : 1000Hrs</td>
-<td><a href="<?php echo base_url('view_booking'); ?>"><i class="fas fa-eye"></i></a></td>
+<td>Randburg</td>
+
+<td><a href="<?php echo base_url('client_details'); ?>"><i class="fas fa-eye"></i></a></td>
 </tr>
 <tr>
 <td>Candice</td>
-<td>Knotless Braids
+<td>+27 00 111 2222
 </td>
-<td>340 Walcott Road, Rosebank, Johannesburg</td>
-<td>20-12-2023 : 0600Hrs</td>
-<td><a href="<?php echo base_url('view_booking'); ?>"><i class="fas fa-eye"></i></a></td>
+<td>Johannesburg</td>
+
+<td><a href="<?php echo base_url('client_details'); ?>"><i class="fas fa-eye"></i></a></td>
 </tr>
 <tr>
 <td>Mpho</td>
-<td>Jozi Locks
+<td>+27 00 111 2222
 </td>
-<td>3 Asmara Road, Equestria, Pretoria</td>
-<td>10-12-2023 : 1130Hrs</td>
-<td><a href="<?php echo base_url('view_booking'); ?>"><i class="fas fa-eye"></i></a></td>
+<td>Pretoria</td>
+
+<td><a href="<?php echo base_url('client_details'); ?>"><i class="fas fa-eye"></i></a></td>
 </tr>
 </tbody>
 <!-- <tfoot>

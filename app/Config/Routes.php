@@ -20,3 +20,5 @@ $routes->get('booking_calendar', 'Inner::booking_calendar');
 $routes->get('view_booking', 'Inner::view_booking');
 $routes->get('historical_bookings', 'Inner::historical_bookings');
 $routes->get('historical_booking_details', 'Inner::historical_booking_details');
+$routes->get('clients', 'Inner::clients');
+$routes->get('client_details', 'Inner::client_details');

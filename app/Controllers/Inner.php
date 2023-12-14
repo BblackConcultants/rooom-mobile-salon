@@ -89,5 +89,19 @@ class Inner extends BaseController
         return view('innerpages/admin/historical_booking_details', $data);
     }
 
+    public function clients()
+    {
+        $data['title'] = ucfirst('Rooom Mobile Salon Clients Listing');
+        $data['page_heading'] = ucfirst('Clients Listing');
+        return view('innerpages/admin/clients', $data);
+    }
+
+     public function client_details()
+    {
+        $data['title'] = ucfirst('Rooom Mobile Salon Client Details');
+        $data['page_heading'] = ucfirst('Client Details');
+        return view('innerpages/admin/client_details', $data);
+    }
+
      
 }
