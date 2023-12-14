@@ -101,7 +101,7 @@ Clients
 
 
 <li class="nav-item">
-<a href="javascript:void(0);" class="nav-link">
+<a href="<?php echo base_url('hairdressers'); ?>" class="nav-link">
 <i class="nav-icon fas fa-users"></i>
 <p>
 Hairdressers
