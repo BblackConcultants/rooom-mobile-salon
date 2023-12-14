@@ -151,5 +151,21 @@ class Inner extends BaseController
         return view('innerpages/admin/service_details', $data);
     }
 
+     public function nail_services()
+    {
+        $data['title'] = ucfirst('Rooom Mobile Salon Nail Services Listing');
+        $data['page_heading'] = ucfirst('Nail Services Listing');
+        $data['button_text'] = ucfirst('Nail Technician');
+        return view('innerpages/admin/nail_services', $data);
+    }
+
+     public function nail_service_details()
+    {
+        $data['title'] = ucfirst('Rooom Mobile Salon Nail Services Details');
+        $data['page_heading'] = ucfirst('Nail Services Details');
+        $data['button_text'] = ucfirst('Nail Technician');
+        return view('innerpages/admin/nail_service_details', $data);
+    }
+
      
 }
