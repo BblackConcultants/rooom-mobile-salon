@@ -56,6 +56,7 @@
         z-index: 500;
         list-style: none;
         padding-right: 30px;
+        margin-top: -125px;
       
     }
     @media screen and (max-width: 480px) {
@@ -68,14 +69,16 @@
         ul.navbar-right {
             top: 15%;
             padding-right: 0px;
+            margin-top: 20px;
         }
         
     }
 
     /* ipad */
-    @media only screen and (max-width: 1080px) and (min-width: 810px) {
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
         #brand-logo {
             margin-left: 200px;
+
         }
        
     }
@@ -92,5 +95,6 @@
 <ul class="navbar-right">
 
 <li><a href="javascript:void(0);"><img class="floating-action" src="assets/images/booking.png" alt="" style="margin-bottom: 10px; width:;"></a></li>
+<li><a href="javascript:void(0);"><img class="floating-action" src="assets/images/positive-review.png" alt="" style="margin-bottom: 10px; width:;"></a></li>
 <li><a href="javascript:void(0);"><img class="floating-action"  src="assets/images/whatsapp.png" alt="" style="width:;"></a></li>
 </ul>
