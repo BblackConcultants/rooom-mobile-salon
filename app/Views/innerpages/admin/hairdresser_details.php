@@ -70,24 +70,67 @@ include "navigation.php";
 <div class="col-12 col-sm-4">
 <div class="info-box bg-light">
 <div class="info-box-content">
-<span class="info-box-text text-center text-muted">Total Paid</span>
-<span class="info-box-number text-center text-muted mb-0">R4,500</span>
+<span class="info-box-text text-center text-muted">Total Visits</span>
+<span class="info-box-number text-center text-muted mb-0">15</span>
 </div>
 </div>
 </div>
-<!-- <div class="col-12 col-sm-4">
-<div class="info-box bg-light">
-<div class="info-box-content">
-<span class="info-box-text text-center text-muted">Times Visited</span>
-<span class="info-box-number text-center text-muted mb-0">5</span>
-</div>
-</div>
-</div> -->
 <div class="col-12 col-sm-4">
 <div class="info-box bg-light">
 <div class="info-box-content">
-<span class="info-box-text text-center text-muted">No. Times Visited</span>
+<span class="info-box-text text-center text-muted">Status</span>
+<span class="info-box-number text-center text-muted mb-0 success">Active</span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-4">
+<div class="info-box bg-light">
+<div class="info-box-content">
+<span class="info-box-text text-center text-muted">Total Earned</span>
+<span class="info-box-number text-center text-muted mb-0 success">R6, 500.00</span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-4">
+<div class="info-box bg-light">
+<div class="info-box-content">
+<span class="info-box-text text-center text-muted">Total Commission Paid</span>
+<span class="info-box-number text-center text-muted mb-0 success">R1, 500.00</span>
+</div>
+</div>
+</div>
+<div class="col-12 col-sm-4">
+<div class="info-box bg-light">
+<div class="info-box-content">
+<span class="info-box-text text-center text-muted">Availability Now</span>
+<span class="info-box-number text-center text-muted mb-0">Busy</span>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-sm-4">
+<div class="info-box bg-light">
+<div class="info-box-content">
+<span class="info-box-text text-center text-muted">Completed Tasks</span>
 <span class="info-box-number text-center text-muted mb-0">10</span>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-sm-4">
+<div class="info-box bg-light">
+<div class="info-box-content">
+<span class="info-box-text text-center text-muted">Uncompleted Tasks</span>
+<span class="info-box-number text-center text-muted mb-0">5</span>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-sm-4">
+<div class="info-box bg-light">
+<div class="info-box-content">
+<span class="info-box-text text-center text-muted">Overall Rating</span>
+<span class="info-box-number text-center text-muted mb-0"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
 </div>
 </div>
 </div>
@@ -98,29 +141,33 @@ include "navigation.php";
 <table id="example1" class="table table-bordered table-striped">
 <thead>
 <tr>
+<th>Client Name</th>
+<th>Location</th>
 <th>Hairstyle</th>
-<th>Hairstylist</th>
-<th>Amount Paid</th>
+<th>Amount Earned</th>
 <th>Rating</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Jozi Locks</td>
 <td>Thendo Mulaudzi
+<td>Randburg</td>
+<td>Jozi Locks</td>
 </td>
 <td>R450</td>
 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
 </tr>
 <tr>
+<td>Linda Dube</td>
+<td>Soweto</td>
 <td>Knotless Braids</td>
-<td>Linda Dube
 </td>
 <td>R300</td>
 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
 <tr>
+<td>Joe Malinga</td>
+<td>Northgate</td>
 <td>Jozi Locks</td>
-<td>Joe Malinga
 </td>
 <td>R450</td>
 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
@@ -131,28 +178,34 @@ include "navigation.php";
 </div>
 </div>
 <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
-<h3 class="text-primary">Knotless Braids</h3>
-<!-- <p class="text-muted">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</p> -->
+<h3 class="text-primary">Success Rorisang</h3>
 <br>
 <div class="text-muted">
-<p class="text-sm">Client Name
-<b class="d-block">Trish Moyo</b>
+<p class="text-sm">Specialities
+<b class="d-block"><ul>
+	<li>Braids</li>
+	<li>Dreadlocks</li>
+</ul></b>
 </p>
-<p class="text-sm">Contact Number
-<b class="d-block">+27 60 657 4453</b>
+<p class="text-sm">Location
+<b class="d-block">Sandton</b>
 </p>
-<p class="text-sm">Appointment Date
-<b class="d-block">23 December 2023</b>
+<p class="text-sm">Registration Date
+<b class="d-block">11 January 2023</b>
 </p>
-<p class="text-sm">Appointment Time
-<b class="d-block">10 AM</b>
+<p class="text-sm">Availability
+<b class="d-block">Mon: 10 AM - 9 PM</b>
+<b class="d-block">Tue: 10 AM - 9 PM</b>
+<b class="d-block">Wed: 10 AM - 9 PM</b>
+<b class="d-block">Thu: 10 AM - 9 PM</b>
+<b class="d-block">Fri: 10 AM - 9 PM</b>
+<b class="d-block">Sat: 10 AM - 9 PM</b>
+<b class="d-block">Sun: 10 AM - 9 PM</b>
 </p>
-<p class="text-sm">Client Address
-<b class="d-block">38 Montrose Avenue, Northgate, 2192, Johannesburg</b>
-</p>
-</div>
+	</div>
 <div class="text-left mt-5 mb-3">
-<a href="<?php echo base_url('clients'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left"></i>  &nbsp;&nbsp; Back</a>
+<a href="<?php echo base_url('hairdressers'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left"></i>  &nbsp;&nbsp; Back</a>
+<a href="javascript:void(0);" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i>  &nbsp;&nbsp; Edit <?php echo $button_text; ?> Details</a>
 </div>
 </div>
 </div>

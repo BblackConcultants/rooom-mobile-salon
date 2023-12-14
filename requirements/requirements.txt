@@ -1,0 +1,29 @@
+1. sys admin config link
+2. specialities
+3. Task list for the hairdressers
+4. add allocated clients tab to the dashboard
+
+For the admins dashboard’s tabs 
+
+New clients( we need an algorithm that can assign clients to each admin automatically as they come in)
+
+Assigned Clients( clients the admins have processed and can manage their active booking as to change dates add other services or change services basically modify active bookings)
+
+Historic clients( where admins can see bookings that have happened and see reviews
+
+Hairdressers (each admins list of their own hairdressers with a calendar of their availability slots)
+
+Below there must be a task function that tells the admin which steps are outstanding, how many clients have not been assisted and urgent messages to look out for
+
+Incontact messaging for admins and the clients
+
+For new clients once an admin processes that client there needs to be a security code they put that locs in that client as their own
+
+
+================
+booking process
+================
+Basically the Booking process has steps and all those steps should be completed for it to be a successful booking, if that’s not met it should give an error and go to the To do list eg Error! “Step4” provide confirmation to the client
+
+
+
