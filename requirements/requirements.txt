@@ -30,7 +30,22 @@ From the new clients tab they have been assigned step 1 they should assign a hai
 Step2 
 Once hairdresser confirms then send confirmation to client and wait for client to accept and confirm it as booked
 
+Step 3 will be CRM (Admin has to sign off the booking has happened and client is happy)
+
 No we will send payment link on the day of their booking
+
+=================
+registration
+=================
+so each hairdresser will be assigned to an administrator when they are registered onto the system? 
+
+=================
+general
+=================
+
+Then admins should be able to book hairdressers that are not theirs so when that happens it should show which admin booked them
+
+The hairdresser database should have their availability and who booked them on which days
 
 
 

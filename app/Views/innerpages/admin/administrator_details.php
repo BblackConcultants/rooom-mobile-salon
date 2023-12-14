@@ -70,81 +70,58 @@ include "navigation.php";
 <div class="col-12 col-sm-4">
 <div class="info-box bg-light">
 <div class="info-box-content">
-<span class="info-box-text text-center text-muted">Total Visits</span>
-<span class="info-box-number text-center text-muted mb-0">15</span>
+<span class="info-box-text text-center text-muted">Total Client Allocations To Date</span>
+<span class="info-box-number text-center text-muted mb-0">30</span>
 </div>
 </div>
 </div>
 <div class="col-12 col-sm-4">
 <div class="info-box bg-light">
 <div class="info-box-content">
-<span class="info-box-text text-center text-muted">Status</span>
-<span class="info-box-number text-center text-muted mb-0 success">Active</span>
+<span class="info-box-text text-center text-muted">Completed Bookings</span>
+<span class="info-box-number text-center text-muted mb-0 success">23</span>
 </div>
 </div>
 </div>
 <div class="col-12 col-sm-4">
 <div class="info-box bg-light">
 <div class="info-box-content">
-<span class="info-box-text text-center text-muted">Total Earned</span>
-<span class="info-box-number text-center text-muted mb-0 success">R6, 500.00</span>
+<span class="info-box-text text-center text-muted">Unsuccessful Bookings</span>
+<span class="info-box-number text-center text-muted mb-0 success">7</span>
 </div>
 </div>
 </div>
 <div class="col-12 col-sm-4">
 <div class="info-box bg-light">
 <div class="info-box-content">
-<span class="info-box-text text-center text-muted">Total Commission Paid</span>
-<span class="info-box-number text-center text-muted mb-0 success">R1, 500.00</span>
+<span class="info-box-text text-center text-muted">Active Bookings</span>
+<span class="info-box-number text-center text-muted mb-0 success">5</span>
 </div>
 </div>
 </div>
 <div class="col-12 col-sm-4">
 <div class="info-box bg-light">
 <div class="info-box-content">
-<span class="info-box-text text-center text-muted">Availability Now</span>
-<span class="info-box-number text-center text-muted mb-0">Busy</span>
+<span class="info-box-text text-center text-muted">Total Hairdressers</span>
+<span class="info-box-number text-center text-muted mb-0 success">56</span>
 </div>
 </div>
 </div>
 
-<div class="col-12 col-sm-4">
-<div class="info-box bg-light">
-<div class="info-box-content">
-<span class="info-box-text text-center text-muted">Completed Tasks</span>
-<span class="info-box-number text-center text-muted mb-0">10</span>
-</div>
-</div>
-</div>
 
-<div class="col-12 col-sm-4">
-<div class="info-box bg-light">
-<div class="info-box-content">
-<span class="info-box-text text-center text-muted">Uncompleted Tasks</span>
-<span class="info-box-number text-center text-muted mb-0">5</span>
-</div>
-</div>
-</div>
 
-<div class="col-12 col-sm-4">
-<div class="info-box bg-light">
-<div class="info-box-content">
-<span class="info-box-text text-center text-muted">Overall Rating</span>
-<span class="info-box-number text-center text-muted mb-0"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
-</div>
-</div>
-</div>
+
 </div>
 <div class="row">
 <div class="col-12">
-<h4>Recent Activity</h4>
+<h4>Historic Clients</h4>
 <table id="example1" class="table table-bordered table-striped">
 <thead>
 <tr>
 <th>Client Name</th>
 <th>Location</th>
 <th>Hairstyle</th>
-<th>Amount Earned</th>
+<th>Hairdresser</th>
 <th>Rating</th>
 </tr>
 </thead>
@@ -152,7 +129,7 @@ include "navigation.php";
 <tr>
 <td>Thendo Mulaudzi
 <td>Randburg</td>
-<td>Jozi Locks</td>
+<td>Tendai Moyo</td>
 </td>
 <td>R450</td>
 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
@@ -160,14 +137,14 @@ include "navigation.php";
 <tr>
 <td>Linda Dube</td>
 <td>Soweto</td>
-<td>Knotless Braids</td>
+<td>Judith Monroe</td>
 </td>
 <td>R300</td>
 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
 <tr>
 <td>Joe Malinga</td>
 <td>Northgate</td>
-<td>Jozi Locks</td>
+<td>Mercy Ngwenya</td>
 </td>
 <td>R450</td>
 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
@@ -178,31 +155,13 @@ include "navigation.php";
 </div>
 </div>
 <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
-<h3 class="text-primary">Success Rorisang</h3>
+<h3 class="text-primary">Trymore Mapindu</h3>
 <br>
 <div class="text-muted">
-<p class="text-sm">Specialities
-<b class="d-block"><ul>
-	<li>Braids</li>
-	<li>Dreadlocks</li>
-</ul></b>
-</p>
-<p class="text-sm">Location
-<b class="d-block">Sandton</b>
-</p>
 <p class="text-sm">Registration Date
 <b class="d-block">11 January 2023</b>
 </p>
-<p class="text-sm">Availability
-<b class="d-block">Mon: 10 AM - 9 PM</b>
-<b class="d-block">Tue: 10 AM - 9 PM</b>
-<b class="d-block">Wed: 10 AM - 9 PM</b>
-<b class="d-block">Thu: 10 AM - 9 PM</b>
-<b class="d-block">Fri: 10 AM - 9 PM</b>
-<b class="d-block">Sat: 10 AM - 9 PM</b>
-<b class="d-block">Sun: 10 AM - 9 PM</b>
-</p>
-	</div>
+	</div>	
 <div class="text-left mt-5 mb-3">
 <a href="<?php echo base_url('hairdressers'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left"></i>  &nbsp;&nbsp; Back</a>
 <a href="javascript:void(0);" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i>  &nbsp;&nbsp; Edit <?php echo $button_text; ?> Details</a>
