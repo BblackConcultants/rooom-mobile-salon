@@ -27,3 +27,4 @@ $routes->get('hairdresser_details', 'Inner::hairdresser_details');
 $routes->get('administrators', 'Inner::administrators');
 $routes->get('administrator_details', 'Inner::administrator_details');
 $routes->get('hairdresser_services', 'Inner::hairdresser_services');
+$routes->get('service_details', 'Inner::service_details');
