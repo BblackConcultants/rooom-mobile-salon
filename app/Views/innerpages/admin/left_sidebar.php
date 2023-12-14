@@ -12,7 +12,7 @@
 <img src="assets/admin/dist/img/user.png" class="img-circle elevation-2" alt="User Image">
 </div>
 <div class="info">
-<a href="#" class="d-block">Zweli Mkhize</a>
+<a href="<?php echo base_url('profile'); ?>" class="d-block">Zweli Mkhize</a>
 </div>
 </div>
 
@@ -172,13 +172,34 @@ Mailbox
 </ul>
 </li>
 
-<li class="nav-item">
-<a href="javascript:void(0);" class="nav-link">
-<i class="nav-icon fas fa-file"></i>
+<li class="nav-item menu-closed">
+<a href="#" class="nav-link">
+<i class="nav-icon far fa-envelope"></i>
 <p>
 Reports
+<i class="fas fa-angle-down right"></i>
 </p>
 </a>
+<ul class="nav nav-treeview" style="display: block;">
+<li class="nav-item">
+<a href="javascript:void(0);" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>Report 1</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="javascript:void(0);" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>Report 2</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="javascript:void(0);" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>Report 3</p>
+</a>
+</li>
+</ul>
 </li>
 
 <li class="nav-item">

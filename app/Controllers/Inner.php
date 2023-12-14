@@ -167,5 +167,13 @@ class Inner extends BaseController
         return view('innerpages/admin/nail_service_details', $data);
     }
 
+    public function profile()
+    {
+        $data['title'] = ucfirst('Profile Details');
+        $data['page_heading'] = ucfirst('My Profile');
+        return view('innerpages/admin/profile', $data);
+    }
+
+
      
 }

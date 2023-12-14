@@ -30,3 +30,4 @@ $routes->get('hairdresser_services', 'Inner::hairdresser_services');
 $routes->get('service_details', 'Inner::service_details');
 $routes->get('nail_services', 'Inner::nail_services');
 $routes->get('nail_service_details', 'Inner::nail_service_details');
+$routes->get('profile', 'Inner::profile');
