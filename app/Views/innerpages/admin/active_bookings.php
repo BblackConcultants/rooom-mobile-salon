@@ -48,12 +48,16 @@ include "navigation.php";
 <section class="content">
 <div class="container-fluid">
 <div class="row">
+	<div class="col-4">
+	<button type="button" class="btn btn-primary btn-block"><i class="fa fa-calendar-alt"></i>  &nbsp;&nbsp; Make A Booking</button>
+</div>
 <div class="col-12">
 
 
-<div class="card">
+<div class="card" style="margin-top: 10px;">
 <div class="card-header">
-<h3 class="card-title"><?php echo $page_heading;	 ?></h3>
+	<div class="col-6"><h3 class="card-title"><?php echo $page_heading;?></h3></div>
+
 </div>
 
 <div class="card-body">
@@ -82,6 +86,14 @@ include "navigation.php";
 </td>
 <td>340 Walcott Road, Rosebank, Johannesburg</td>
 <td>20-12-2023 : 0600Hrs</td>
+<td><a href="<?php echo base_url('view_booking'); ?>"><i class="fas fa-eye"></i></a></td>
+</tr>
+<tr>
+<td>Mpho</td>
+<td>Jozi Locks
+</td>
+<td>3 Asmara Road, Equestria, Pretoria</td>
+<td>10-12-2023 : 1130Hrs</td>
 <td><a href="<?php echo base_url('view_booking'); ?>"><i class="fas fa-eye"></i></a></td>
 </tr>
 </tbody>

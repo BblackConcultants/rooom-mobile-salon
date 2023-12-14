@@ -69,15 +69,21 @@ Bookings
 </a>
 <ul class="nav nav-treeview" style="display: block;">
 <li class="nav-item">
+<a href="<?php echo base_url('booking_calendar'); ?>" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>Booking Calendar</p>
+</a>
+</li>
+<li class="nav-item">
 <a href="<?php echo base_url('active_bookings'); ?>" class="nav-link">
 <i class="far fa-circle nav-icon"></i>
-<p>Active</p>
+<p>Active Bookings</p>
 </a>
 </li>
 <li class="nav-item">
 <a href="javascript:void(0);" class="nav-link">
 <i class="far fa-circle nav-icon"></i>
-<p>Historical</p>
+<p>Historical Bookings</p>
 </a>
 </li>
 
