@@ -128,7 +128,7 @@ Services
 </a>
 <ul class="nav nav-treeview" style="display: block;">
 <li class="nav-item">
-<a href="javascript:void(0);" class="nav-link">
+<a href="<?php echo base_url('hairdresser_services'); ?>" class="nav-link">
 <i class="far fa-circle nav-icon"></i>
 <p>Hairdresser Services</p>
 </a>

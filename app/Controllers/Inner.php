@@ -135,5 +135,13 @@ class Inner extends BaseController
         return view('innerpages/admin/administrator_details', $data);
     }
 
+     public function hairdresser_services()
+    {
+        $data['title'] = ucfirst('Rooom Mobile Salon Hairdresser Services Listing');
+        $data['page_heading'] = ucfirst('Hairdresser Services Listing');
+        $data['button_text'] = ucfirst('Hairdresser');
+        return view('innerpages/admin/hairdresser_services', $data);
+    }
+
      
 }
