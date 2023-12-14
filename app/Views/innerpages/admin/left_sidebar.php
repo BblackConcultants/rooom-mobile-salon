@@ -90,14 +90,30 @@ Bookings
 </ul>
 </li>
 
-<li class="nav-item">
-<a href="<?php echo base_url('clients'); ?>" class="nav-link">
-<i class="nav-icon fas fa-users"></i>
+<li class="nav-item menu-closed">
+<a href="#" class="nav-link">
+<i class="nav-icon fa fa-users"></i>
 <p>
 Clients
+<i class="fas fa-angle-down right"></i>
 </p>
 </a>
+<ul class="nav nav-treeview" style="display: block;">
+<li class="nav-item">
+<a href="<?php echo base_url('clients'); ?>" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>All Clients</p>
+</a>
 </li>
+<li class="nav-item">
+<a href="<?php echo base_url('active_clients'); ?>" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>My Active Clients</p>
+</a>
+</li>
+</ul>
+</li>
+
 
 
 <li class="nav-item">

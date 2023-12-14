@@ -31,3 +31,5 @@ $routes->get('service_details', 'Inner::service_details');
 $routes->get('nail_services', 'Inner::nail_services');
 $routes->get('nail_service_details', 'Inner::nail_service_details');
 $routes->get('profile', 'Inner::profile');
+$routes->get('active_clients', 'Inner::active_clients');
+$routes->get('new_service', 'Inner::new_service');

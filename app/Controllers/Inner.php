@@ -175,5 +175,19 @@ class Inner extends BaseController
     }
 
 
+    public function active_clients()
+    {
+        $data['title'] = ucfirst('My Active Clients');
+        $data['page_heading'] = ucfirst('My Active Clients');
+        return view('innerpages/admin/active_clients', $data);
+    }
+
+    public function new_service()
+    {
+        $data['title'] = ucfirst('Add New Service');
+        $data['page_heading'] = ucfirst('New Service Details');
+        return view('innerpages/admin/new_service', $data);
+    }
+
      
 }

@@ -49,7 +49,7 @@ include "navigation.php";
 <div class="container-fluid">
 <div class="row">
 	<div class="col-4">
-	<a href="<?php echo base_url('new_service'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-user"></i>  &nbsp;&nbsp; Register New <?php echo $button_text;  ?> Service</a>
+	<button type="button" class="btn btn-primary btn-sm"><i class="fa fa-user"></i>  &nbsp;&nbsp; Register New Client</button>
 </div>
 <div class="col-12">
 
@@ -64,43 +64,31 @@ include "navigation.php";
 <table id="example1" class="table table-bordered table-striped">
 <thead>
 <tr>
-<th>Date Registered</th>
-<th>Service Name</th>
-<th>Registered By</th>
-<th>Status</th>
+<th>Client Name</th>
+<th>Date Allocated</th>
+<th>Location</th>
+<th>Stage</th>
 <th>View</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>19 Oct 2023</td>
-<td>Braids</td>
-<td>Zweli Mkhize</td>
-<td><label class="text-success">Active</label></td>
-<td><a href="<?php echo base_url('service_details'); ?>"><i class="fas fa-eye"></i></a></td>
-</tr>
-<tr>
-<td>19 Jan 2023</td>
-<td>Locks</td>
-<td>Tariro Marufu</td>
-<td><label class="text-success">Active</label></td>
-<td><a href="<?php echo base_url('service_details'); ?>"><i class="fas fa-eye"></i></a></td>
-</tr>
-<tr>
-<td>19 Nov 2023</td>
-<td>Knotless Braids</td>
-<td>Zweli Mkhize</td>
-<td><label class="text-success">Active</label></td>
-<td><a href="<?php echo base_url('service_details'); ?>"><i class="fas fa-eye"></i></a></td>
-</tr>
-<tr>
-<td>19 Feb 2023</td>
-<td>Twists</td>
-<td>Zweli Mkhize</td>
-<td><label class="text-success">Active</label></td>
-<td><a href="<?php echo base_url('service_details'); ?>"><i class="fas fa-eye"></i></a></td>
+<td>Trish Moyo</td>
+<td>22 Oct 2023</td>
+<td>Randburg</td>
+<td>Hairdresser Assignment</td>
+<td><a href="<?php echo base_url('client_details'); ?>"><i class="fas fa-eye"></i></a></td>
 </tr>
 </tbody>
+<!-- <tfoot>
+<tr>
+<th>Client Name</th>
+<th>Service</th>
+<th>Location</th>
+<th>Date</th>
+<th>View</th>
+</tr>
+</tfoot> -->
 </table>
 </div>
 
