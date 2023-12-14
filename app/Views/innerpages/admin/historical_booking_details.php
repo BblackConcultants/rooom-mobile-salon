@@ -74,8 +74,8 @@ include "navigation.php";
 <div class="col-12 col-sm-4">
 <div class="info-box bg-light">
 <div class="info-box-content">
-<span class="info-box-text text-center text-muted">Estimated Time</span>
-<span class="info-box-number text-center text-muted mb-0">3 Hrs</span>
+<span class="info-box-text text-center text-muted">Completion Time</span>
+<span class="info-box-number text-center text-muted mb-0">2 Hrs</span>
 </div>
 </div>
 </div>
@@ -90,57 +90,23 @@ include "navigation.php";
 </div>
 <div class="row">
 <div class="col-12">
-<h4>Recent Activity</h4>
+<h4>Review</h4>
 <div class="post">
 <div class="user-block">
 <i class="fa fa-user-alt fa-2x"></i>
 <span class="username">
 <a href="javascript:void(0);">Trish Moyo</a>
 </span>
-<span class="description">Shared with Admin - 7:45 PM yesterday</span>
+<span class="description">Posted - 7:45 PM 14-12-2023 : 0816Hrs</span>
+<span class="description"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span>
 </div>
 
 <p>
-Confirmed Booking
-</p>
-<!-- <p>
-<a href="javascript:void(0);" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 1 v2</a>
-</p> -->
-</div>
-<div class="post clearfix">
-<div class="user-block">
-<img class="img-circle img-bordered-sm" src="assets/admin/dist/img/user.png" alt="User Image">
-<span class="username">
-<a href="javascript:void(0);">System Administrator</a>
-</span>
-<span class="description">Sent you a message - Today</span>
-</div>
+I had a fantastic experience with Loveness! The level of professionalism and skill demonstrated by her was exceptional. I had a vague idea of what I wanted, and the stylist took the time to consult with me, offering expert advice and suggestions. The end result exceeded my expectations – my hair looks amazing!
 
-<p>
-Hi Trish, thank you for confirming the booking, we will now proceed and allocate a specialist who will come through to you. 
+I highly recommend Loveness to anyone looking for a top-notch salon experience. 
 </p>
-<!-- <p>
-<a href="javascript:void(0);" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 2</a>
-</p> -->
 </div>
-<!-- <div class="post">
-<div class="user-block">
-<img class="img-circle img-bordered-sm" src="assets/admin/dist/img/user1-128x128.jpg" alt="user image">
-<span class="username">
-<a href="javascript:void(0);">Jonathan Burke Jr.</a>
-</span>
-<span class="description">Shared publicly - 5 days ago</span>
-</div>
-
-<p>
-Lorem ipsum represents a long-held tradition for designers,
-typographers and the like. Some people hate it and argue for
-its demise, but others ignore.
-</p>
-<p>
-<a href="javascript:void(0);" class="link-black text-sm"><i class="fas fa-link mr-1"></i> Demo File 1 v1</a>
-</p>
-</div> -->
 </div>
 </div>
 </div>
@@ -165,15 +131,8 @@ its demise, but others ignore.
 <b class="d-block">38 Montrose Avenue, Northgate, 2192, Johannesburg</b>
 </p>
 </div>
-<h5 class="mt-5 text-muted">Style Example Images</h5>
-<ul class="list-unstyled">
-<li>
-<a href class="btn-link text-secondary"><i class="far fa-fw fa-image "></i> my_niece.png</a>
-</li>
-</ul>
 <div class="text-left mt-5 mb-3">
-<a href="javascript:void(0);" class="btn btn-sm btn-primary">Add files</a>
-<a href="javascript:void(0);" class="btn btn-sm btn-warning" style="background-color: #faef00; border-color: #faef00;">Change Hairdresser</a>
+<a href="<?php echo base_url('historical_bookings'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left"></i>  &nbsp;&nbsp; Back</a>
 </div>
 </div>
 </div>

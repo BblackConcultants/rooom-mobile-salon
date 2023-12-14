@@ -81,7 +81,7 @@ Bookings
 </a>
 </li>
 <li class="nav-item">
-<a href="javascript:void(0);" class="nav-link">
+<a href="<?php echo base_url('historical_bookings'); ?>" class="nav-link">
 <i class="far fa-circle nav-icon"></i>
 <p>Historical Bookings</p>
 </a>

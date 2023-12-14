@@ -18,3 +18,5 @@ $routes->get('recover_password', 'Inner::recover_password');
 $routes->get('active_bookings', 'Inner::active_bookings');
 $routes->get('booking_calendar', 'Inner::booking_calendar');
 $routes->get('view_booking', 'Inner::view_booking');
+$routes->get('historical_bookings', 'Inner::historical_bookings');
+$routes->get('historical_booking_details', 'Inner::historical_booking_details');
