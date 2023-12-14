@@ -66,7 +66,7 @@ require_once "left_sidebar.php";
 <div class="info-box mb-3">
 <span class="info-box-icon bg-info elevation-1"><img src="assets/images/clients.png" alt=""></span>
 <div class="info-box-content">
-<span class="info-box-text">Clients</span>
+<span class="info-box-text">Total Clients</span>
 <span class="info-box-number">760</span>
 </div>
 

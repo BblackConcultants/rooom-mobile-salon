@@ -118,5 +118,22 @@ class Inner extends BaseController
         $data['button_text'] = ucfirst('Hairdresser');
         return view('innerpages/admin/hairdresser_details', $data);
     }
+
+     public function administrators()
+    {
+        $data['title'] = ucfirst('Rooom Mobile Salon Administrator Listing');
+        $data['page_heading'] = ucfirst('Administrator Listing');
+        $data['button_text'] = ucfirst('Administrator');
+        return view('innerpages/admin/administrators', $data);
+    }
+
+     public function administrator_details()
+    {
+        $data['title'] = ucfirst('Rooom Mobile Salon Administrator Details');
+        $data['page_heading'] = ucfirst('Administrator Details');
+        $data['button_text'] = ucfirst('Administrator');
+        return view('innerpages/admin/administrator_details', $data);
+    }
+
      
 }

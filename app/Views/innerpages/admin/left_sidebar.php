@@ -101,6 +101,15 @@ Clients
 
 
 <li class="nav-item">
+<a href="<?php echo base_url('administrators'); ?>" class="nav-link">
+<i class="nav-icon fas fa-users"></i>
+<p>
+Administrators
+</p>
+</a>
+</li>
+
+<li class="nav-item">
 <a href="<?php echo base_url('hairdressers'); ?>" class="nav-link">
 <i class="nav-icon fas fa-users"></i>
 <p>
@@ -108,6 +117,7 @@ Hairdressers
 </p>
 </a>
 </li>
+
 <li class="nav-item menu-closed">
 <a href="#" class="nav-link">
 <i class="nav-icon fa fa-list"></i>

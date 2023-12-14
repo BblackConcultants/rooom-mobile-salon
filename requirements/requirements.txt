@@ -25,5 +25,12 @@ booking process
 ================
 Basically the Booking process has steps and all those steps should be completed for it to be a successful booking, if that’s not met it should give an error and go to the To do list eg Error! “Step4” provide confirmation to the client
 
+From the new clients tab they have been assigned step 1 they should assign a hairdresser based on the specifications the client provided 
+
+Step2 
+Once hairdresser confirms then send confirmation to client and wait for client to accept and confirm it as booked
+
+No we will send payment link on the day of their booking
+
 
 
