@@ -1,3 +1,16 @@
+<style type="text/css">
+      .select2-container--default .select2-selection--multiple {
+            background-color: transparent !important;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            cursor: text;
+            font-size: 16px!important;
+            color: #563b4c !important;
+            padding: 0 20px !important; 
+            border-radius: 5px!important;
+
+        }
+</style>
 <section class="hero-wrap js-fullheight" style="background-image: url(assets/images/bg-2.jpg);" data-stellar-background-ratio="0.5">
 <div class="overlay"></div>
 <div class="container">
@@ -151,7 +164,17 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <input type="text" class="form-control" id="phone" placeholder="Phone">
 </div>
 </div>
-<div class="col-md-12">
+<div class="col-sm-6">
+<!-- <div class="form-group"> -->
+  <select id="multiple" class="js-states form-control" multiple>
+    <option>Expression (R50)</option>
+    <option>Brazilian Bundle (R700)</option>
+    <option>Beads (R25 per pack)</option>
+    <option>Undo (R100)</option>
+  </select>
+<!-- </div> -->
+</div>
+<div class="col-md-12" style="margin-top:30px;">
 <div class="form-group">
 <textarea name id cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
 </div>
@@ -493,3 +516,15 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 </div>
 </div>
 </section>
+<script src="assets/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script>
+      $("#single").select2({
+          placeholder: "Select optional services",
+          allowClear: true
+      });
+      $("#multiple").select2({
+          placeholder: "Select optional services",
+          allowClear: true
+      });
+    </script>

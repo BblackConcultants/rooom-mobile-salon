@@ -113,10 +113,18 @@ include "navigation.php";
 <td>Thendo Mulaudzi
 </td>
 <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
-<td>Awesome ser...</td>
+<td>Awesome ser...<a href="#" class="" data-toggle="modal" data-target="#modal-success">Read More</a></td>
 
 </tr>
+<tr>
+  <td>10 Oct 2023</td>
+<td>Twists</td>
+<td>Lillian Moyo
+</td>
+<td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
+<td>Very disappoi...<a href="#" class="" data-toggle="modal" data-target="#modal-success">Read More</a></td>
 
+</tr>
 </tbody>
 </table>
 </div>
@@ -127,24 +135,19 @@ include "navigation.php";
 <!-- <p class="text-muted">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</p> -->
 <br>
 <div class="text-muted">
-<p class="text-sm">Client Name
-<b class="d-block">Trish Moyo</b>
-</p>
+
 <p class="text-sm">Contact Number
 <b class="d-block">+27 60 657 4453</b>
 </p>
 <p class="text-sm">Appointment Date
 <b class="d-block">23 December 2023</b>
 </p>
-<p class="text-sm">Appointment Time
-<b class="d-block">10 AM</b>
-</p>
 <p class="text-sm">Client Address
 <b class="d-block">38 Montrose Avenue, Northgate, 2192, Johannesburg</b>
 </p>
 </div>
 <div class="text-left mt-5 mb-3">
-<a href="<?php echo base_url('clients'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left"></i>  &nbsp;&nbsp; Back</a>
+<a href="<?php echo base_url('historical_clients'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left"></i>  &nbsp;&nbsp; Back</a>
 </div>
 </div>
 </div>
@@ -169,7 +172,27 @@ All rights reserved. System Designed & Developed By <a href="https://bblack.co.z
 </aside>
 
 </div>
+<div class="modal fade" id="modal-success">
+<div class="modal-dialog">
+<div class="modal-content bg-success">
+<div class="modal-header">
+<h4 class="modal-title">View Comment Details</h4>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<p>I had a fantastic experience with Loveness! The level of professionalism and skill demonstrated by her was exceptional. I had a vague idea of what I wanted, and the stylist took the time to consult with me, offering expert advice and suggestions. The end result exceeded my expectations – my hair looks amazing! I highly recommend Loveness to anyone looking for a top-notch salon experience. &hellip;</p>
+</div>
+<div class="modal-footer justify-content-between">
+<button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
+<!-- <button type="button" class="btn btn-outline-light">Save changes</button> -->
+</div>
+</div>
 
+</div>
+
+</div>
 
 <script src="assets/admin/plugins/jquery/jquery.min.js"></script>
 

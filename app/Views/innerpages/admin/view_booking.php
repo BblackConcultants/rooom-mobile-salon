@@ -149,6 +149,9 @@ its demise, but others ignore.
 <!-- <p class="text-muted">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</p> -->
 <br>
 <div class="text-muted">
+<p class="text-sm">Optional Services
+<b class="d-block">Beads, Undo</b>
+</p
 <p class="text-sm">Client Name
 <b class="d-block">Trish Moyo</b>
 </p>
@@ -172,7 +175,7 @@ its demise, but others ignore.
 </li>
 </ul>
 <div class="text-left mt-5 mb-3">
-<a href="javascript:void(0);" class="btn btn-sm btn-primary">Add files</a>
+<a href="javascript:void(0);" class="btn btn-sm btn-primary">Edit Booking</a>
 <a href="javascript:void(0);" class="btn btn-sm btn-warning" style="background-color: #faef00; border-color: #faef00;">Change Hairdresser</a>
 </div>
 </div>
