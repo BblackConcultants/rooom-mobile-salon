@@ -505,8 +505,21 @@ include "navigation.php";
 <div id='calendar'></div>
   
 </section>
- 
+ <style type="text/css">
+     footer {
+            background-color: #000;
+            width: 100%;
+            bottom: 0;
+            position: fixed;
+            left: 250px;
+            z-index: 999;
+        }
+ </style>
+  <footer style="color: #fff; padding: 15px;">
+    <strong style="color: #fff;">Copyright &copy; 2023 <a href="javascript:void(0);" style="color:#faef00;">Rooom Mobile Salon</a>.</strong>
+All rights reserved. System Designed & Developed By <a href="https://bblack.co.za/" target="_blank" style="color:#faef00;">BrightBlack</a>
 
+    </footer>
 
 <div id="calendar-popup">
  
