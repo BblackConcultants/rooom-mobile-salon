@@ -34,3 +34,5 @@ $routes->get('profile', 'Inner::profile');
 $routes->get('active_clients', 'Inner::active_clients');
 $routes->get('new_service', 'Inner::new_service');
 $routes->get('booking_details', 'Inner::booking_details');
+$routes->get('historical_clients', 'Inner::historical_clients');
+$routes->get('historical_client_details', 'Inner::historical_client_details');

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- Mirrored from adminlte.io/themes/v3/pages/examples/project-detail.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Oct 2023 06:45:38 GMT -->
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -92,105 +94,36 @@ include "navigation.php";
 </div>
 <div class="row">
 <div class="col-12">
-  <h4>Recent Activity</h4>
-<div class="timeline">
+<h4>Ratings & Comments</h4>
+<table id="example1" class="table table-bordered table-striped">
+<thead>
+<tr>
+<th>Date</th>
+<th>Hairstyle</th>
+<th>Hairstylist</th>
+<th>Rating</th>
+<th>Comment</th>
 
-<div class="time-label">
-<span class="bg-red">10 Feb. 2023</span>
-</div>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>10 Dec 2023</td>
+<td>Jozi Locks</td>
+<td>Thendo Mulaudzi
+</td>
+<td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
+<td>Awesome ser...</td>
 
+</tr>
 
-<div>
-<i class="fas fa-envelope bg-blue"></i>
-<div class="timeline-item">
-<span class="time"><i class="fas fa-clock"></i> 12:05</span>
-<h3 class="timeline-header"><a href="#">Support Team</a> sent you an email</h3>
-<div class="timeline-body">
-Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
-weebly ning heekya handango imeem plugg dopplr jibjab, movity
-jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
-quora plaxo ideeli hulu weebly balihoo...
-</div>
-<div class="timeline-footer">
-<a class="btn btn-primary btn-sm">Read more</a>
-<a class="btn btn-danger btn-sm">Delete</a>
-</div>
-</div>
-</div>
-
-
-<div>
-<i class="fas fa-user bg-green"></i>
-<div class="timeline-item">
-<span class="time"><i class="fas fa-clock"></i> 5 mins ago</span>
-<h3 class="timeline-header no-border"><a href="#">Sarah Young</a> accepted your friend request</h3>
-</div>
-</div>
-
-
-<div>
-<i class="fas fa-comments bg-yellow"></i>
-<div class="timeline-item">
-<span class="time"><i class="fas fa-clock"></i> 27 mins ago</span>
-<h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
-<div class="timeline-body">
-Take me to your leader!
-Switzerland is small and neutral!
-We are more like Germany, ambitious and misunderstood!
-</div>
-<div class="timeline-footer">
-<a class="btn btn-warning btn-sm">View comment</a>
-</div>
-</div>
-</div>
-
-
-<div class="time-label">
-<span class="bg-green">3 Jan. 2023</span>
-</div>
-
-
-<div>
-<i class="fa fa-camera bg-purple"></i>
-<div class="timeline-item">
-<span class="time"><i class="fas fa-clock"></i> 2 days ago</span>
-<h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
-<div class="timeline-body">
-<img src="https://placehold.it/150x100" alt="...">
-<img src="https://placehold.it/150x100" alt="...">
-<img src="https://placehold.it/150x100" alt="...">
-<img src="https://placehold.it/150x100" alt="...">
-<img src="https://placehold.it/150x100" alt="...">
-</div>
-</div>
-</div>
-
-
-<div>
-<i class="fas fa-video bg-maroon"></i>
-<div class="timeline-item">
-<span class="time"><i class="fas fa-clock"></i> 5 days ago</span>
-<h3 class="timeline-header"><a href="#">Mr. Doe</a> shared a video</h3>
-<div class="timeline-body">
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tMWkeBIohBs" allowfullscreen=""></iframe>
-</div>
-</div>
-<div class="timeline-footer">
-<a href="#" class="btn btn-sm bg-maroon">See comments</a>
-</div>
-</div>
-</div>
-
-<div>
-<i class="fas fa-clock bg-gray"></i>
-</div>
-</div>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
-<h3 class="text-primary">Knotless Braids</h3>
+<h3 class="text-primary">Trish Moyo</h3>
 <!-- <p class="text-muted">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</p> -->
 <br>
 <div class="text-muted">
@@ -212,7 +145,6 @@ We are more like Germany, ambitious and misunderstood!
 </div>
 <div class="text-left mt-5 mb-3">
 <a href="<?php echo base_url('clients'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left"></i>  &nbsp;&nbsp; Back</a>
-<a href="javascript:void(0);" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i>  &nbsp;&nbsp; Edit Client Details</a>
 </div>
 </div>
 </div>

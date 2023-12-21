@@ -195,6 +195,18 @@ class Inner extends BaseController
         $data['page_heading'] = ucfirst('Booking Details');
         return view('innerpages/admin/booking_details', $data);
     }
+     public function historical_clients()
+    {
+        $data['title'] = ucfirst('My Historical Clients');
+        $data['page_heading'] = ucfirst('Historical Clients');
+        return view('innerpages/admin/historical_clients', $data);
+    }
 
-     
+       public function historical_client_details()
+    {
+        $data['title'] = ucfirst('My Historical Client Details');
+        $data['page_heading'] = ucfirst('View Historical Client');
+        return view('innerpages/admin/historical_client_details', $data);
+    }
+
 }
