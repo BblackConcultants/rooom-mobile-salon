@@ -111,7 +111,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 </div>
 </div>
 </section>
-<section class="ftco-section ftco-booking bg-light">
+<section id="book-now" class="ftco-section ftco-booking bg-light">
 <div class="container ftco-relative">
 <div class="row justify-content-center pb-3">
 <div class="col-md-10 heading-section text-center ftco-animate">
