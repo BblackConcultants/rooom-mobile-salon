@@ -33,7 +33,7 @@
 <div class="services-wrap d-flex align-items-center img" style="background-image: url(assets/images/formen.jpg);">
 <div class="text">
 <h3>For Men</h3>
-<p><a href="javascript:void(0);" class="btn-custom">Book Now <span class="ion-ios-arrow-round-forward"></span></a></p>
+<p><a href="#book-now" class="btn-custom">Book Now <span class="ion-ios-arrow-round-forward"></span></a></p>
 </div>
 </div>
 </div>
@@ -53,7 +53,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <div class="services-wrap d-flex align-items-center img" style="background-image: url(assets/images/gallery/conrows.jpeg);">
 <div class="text">
 <h3>For Women</h3>
-<p><a href="javascript:void(0);" class="btn-custom">Book Now <span class="ion-ios-arrow-round-forward"></span></a></p>
+<p><a href="#book-now" class="btn-custom">Book Now <span class="ion-ios-arrow-round-forward"></span></a></p>
 </div>
 </div>
 </div>
@@ -201,28 +201,28 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <div class="col-md-12 ftco-animate">
 <div class="carousel-team owl-carousel">
 <div class="item">
-<a href="javascript:void(0);" class="team text-center">
+<a href="#book-now" class="team text-center">
 <div class="img" style="background-image: url(assets/images/gallery/braids.jpeg);"></div>
 <h2>Braids</h2>
 <span class="position">Book Now</span>
 </a>
 </div>
 <div class="item">
-<a href="javascript:void(0);" class="team text-center">
+<a href="#book-now" class="team text-center">
 <div class="img" style="background-image: url(assets/images/gallery/conrows.jpeg);"></div>
 <h2>Cornrows</h2>
 <span class="position">Book Now</span>
 </a>
 </div>
 <div class="item">
-<a href="javascript:void(0);" class="team text-center">
+<a href="#book-now" class="team text-center">
 <div class="img" style="background-image: url(assets/images/gallery/locs.jpeg);"></div>
 <h2>Locs</h2>
 <span class="position">Book Now</span>
 </a>
 </div>
 <div class="item">
-<a href="javascript:void(0);" class="team text-center">
+<a href="#book-now" class="team text-center">
 <div class="img" style="background-image: url(assets/images/gallery/twist.jpeg);"></div>
 <h2>Twist</h2>
 <span class="position">Book Now</span>
