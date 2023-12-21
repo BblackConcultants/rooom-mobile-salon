@@ -124,7 +124,7 @@ Administrators
 <a href="<?php echo base_url('hairdressers'); ?>" class="nav-link">
 <i class="nav-icon fas fa-users"></i>
 <p>
-Hairdressers
+My Hairdressers
 </p>
 </a>
 </li>

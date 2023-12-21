@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+<title>Rooom Mobile Hair Salon</title>
+<link rel="icon" type="image/x-icon" href="assets/images/fav.png">
+  
   <style type="text/css">
     .btn{
   display:inline-block !important;
@@ -77,8 +79,9 @@
   width: 100%;
 }
 #calendar{
-    margin: -54px 5px;
     position: absolute;
+    width: 70%;
+    margin-left: 255px;
 
 }
 .search-field:placeholder-shown {
@@ -251,7 +254,7 @@ background: #5555;
 #calendar-popup div.prong div.top-prong-lt {
   position: relative;
   top: -6px;
-  left: 2px;
+  left: 200px;
   width: 0;
 
   border: 8px solid;
@@ -433,34 +436,83 @@ body {
   text-align: left;
   background-color: #fff;
 }
+.fc-left h2 {
+  color: #000;
+}
 .fc-event, .fc-event:hover, .ui-widget .fc-event {
   color: #000!important;
   text-decoration: none;
 }
+#simplemodal {
+  margin-left: 135px;
+}
+#calendar-popup {
+  top: 50%;
+   left: 50%!important;
+   transform: translate(-50%, -50%);
+}
   </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
+
+<link rel="stylesheet" href="assets/admin/plugins/fontawesome-free/css/all.min.css">
+
+<link rel="stylesheet" href="assets/admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+
+
+<link rel="stylesheet" href="assets/admin/dist/css/adminlte.min2167.css?v=3.2.0">
   <link rel='stylesheet' href='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.css' />
 </head>
-<body>
+<body class="hold-transition sidebar-mini">
+  <div class="wrapper">
+
+<?php 
+include "left_sidebar.php"; 
+include "navigation.php"; 
+?>
+
+<section class="content-header">
+<div class="container-fluid">
+<div class="row mb-2">
+<div class="col-sm-6">
+<h1><?php echo $page_heading; ?></h1>
+</div>
+<div class="col-sm-6">
+<ol class="breadcrumb float-sm-right">
+<li class="breadcrumb-item"><a href="<?php echo base_url('dashboard'); ?>">Home</a></li>
+<li class="breadcrumb-item active"><?php echo $title; ?></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section style="margin-left:275px;">
+  <div>
+    <h4><strong>Hairdresser:</strong> Linda Dube</h4>
+  </div>
+</section>
 <div class="site-header autocomplete">
-  <div class="input-wrapper">
+  <!-- <div class="input-wrapper">
     <input type="text" placeholder="Search" class="search-field">
       <span class="close">Cancel</span>
 
     <div class="focus-background"></div>
-  </div>
+  </div> -->
    <div class="dialog">   
   </div>
   
 </div>
-
-  
+<section class="content">
 <div id='calendar'></div>
+  
+</section>
+ 
+
 
 <div id="calendar-popup">
  
   <form id="event-form">
      <div class='calander_popip_title'><i class="fa fa-calendar" aria-hidden="true"></i>
-Add Event</div>
+Add Booking </div>
     <ul>
       <li>
         <label for="event-start"><i class="fa fa-bell-o" aria-hidden="true"></i>
@@ -476,7 +528,7 @@ To</label>
       </li>
       <li>
         <label for="event-title"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i>
-Event Name</label>
+Hairstyle</label>
         <input id="event-title"  class='form-control' type="text" name="title"/>
       </li>
       <li>
@@ -535,11 +587,11 @@ Details:</p>
 
     <div class='modal-header'>
         <span class='close-btn' id='close-btnid'>&times</span>
-      <h2>Edit Event</h2>
+      <h2>Edit Booking</h2>
     </div>
    <div class='modal-body'>
   
-     <lable for='eventname'>Event Name</lable>
+     <lable for='eventname'>Add Booking</lable>
      <input type='text' name='eventname' id='eventname' class='form-control'>
      <lable for='location'>Location</lable>
      <input type='text' name='location' id='location' class='form-control'>
@@ -562,8 +614,9 @@ Details:</p>
   
 </div>
 
-<div id='search_result'>result</div>
-<button class='btn btn-primary'>Add Events</button>
+<!-- <div id='search_result'>result</div> -->
+
+<!-- <button class='btn btn-primary' style="">Add Events</button> -->
 </body>
 <script src="assets/admin/plugins/jquery/jquery.min.js"></script>
 <script src='https://fullcalendar.io/js/fullcalendar-3.1.0/lib/moment.min.js'></script>
@@ -712,7 +765,7 @@ $(document).ready(function() {
       let arr = parselocalstorage('events')  
       callback(arr);
     },
-    eventColor: '#dec5c9',
+    eventColor: '#f9ee00',
     eventClick: function (calEvent, jsEvent) {
       
       renderPopup(jsEvent, calEvent.start, calEvent.end, calEvent);
@@ -720,11 +773,11 @@ $(document).ready(function() {
       
     },
     eventRender: function(event, element) {
-            element.append( `<span class='I_delete'><i class="fa fa-remove fa-2x"></i></span>` );
-            element.append( `<span class='I_edit'><i class="fa fa-edit fa-2x"></i></span>` );
+            element.append( `<span class='I_delete'><img src="assets/images/delete.png" alt=""></span>` );
+            element.append( `<span class='I_edit'><img src="assets/images/edit.png" alt=""></span>` );
             element.find(".I_delete").click(function() {
             $('#calendar-popup').hide();
-            if(confirm('are you sure want to delete event?')) {
+            if(confirm('are you sure want to delete this booking?')) {
              $('#calendar').fullCalendar('removeEvents',event._id);
             var index=events.map(function(x){ return x.id; }).indexOf(event.id);
             events.splice(index,1);
@@ -862,9 +915,9 @@ var str=  localStorage.getItem('events');
       console.log('what is in aarrr1',events)
 if(events.length===0){
   events.push(
-  {id:1,title: 'event1', start: year + '-' + month + '-' + today + 'T07:00', end: year + '-' + month + '-' + today + 'T10:00', location: 'The Moon', details: 'There will be cheese'},
-  {id:2,title: 'event2', start: year + '-' + month + '-' + tomorrow + 'T03:00', end: year + '-' + month + '-' + tomorrow + 'T08:00', location: 'The Moon', details: 'There will be cheese'},
-  {id:3,title: 'event3', start: year + '-' + month + '-' + yesterday + 'T20:00', end: year + '-' + month + '-' + today + 'T05:00', location: 'The Moon', details: 'There will be cheese'}
+  {id:1,title: 'Twists - JHB', start: year + '-' + month + '-' + today + 'T07:00', end: year + '-' + month + '-' + today + 'T10:00', location: 'The Moon', details: 'There will be cheese'},
+  {id:2,title: 'Locs - PTA', start: year + '-' + month + '-' + tomorrow + 'T03:00', end: year + '-' + month + '-' + tomorrow + 'T08:00', location: 'The Moon', details: 'There will be cheese'},
+  {id:3,title: 'Locs - JHB', start: year + '-' + month + '-' + yesterday + 'T20:00', end: year + '-' + month + '-' + today + 'T05:00', location: 'The Moon', details: 'There will be cheese'}
 );
 }
 /*events.push(
