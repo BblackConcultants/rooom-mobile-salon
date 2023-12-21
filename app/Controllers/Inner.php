@@ -189,5 +189,12 @@ class Inner extends BaseController
         return view('innerpages/admin/new_service', $data);
     }
 
+    public function booking_details()
+    {
+        $data['title'] = ucfirst('Booking Details');
+        $data['page_heading'] = ucfirst('Booking Details');
+        return view('innerpages/admin/booking_details', $data);
+    }
+
      
 }

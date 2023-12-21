@@ -38,26 +38,15 @@ Navigation
 
 </p>
 </a>
-<!-- <ul class="nav nav-treeview">
+<ul class="nav nav-treeview">	
 <li class="nav-item">
-<a href="index-2.html" class="nav-link">
+<a href="<?php echo base_url('dashboard'); ?>" class="nav-link active">
 <i class="far fa-circle nav-icon"></i>
-<p>Dashboard v1</p>
+<p>Dashboard</p>
 </a>
 </li>
-<li class="nav-item">
-<a href="index2.html" class="nav-link active">
-<i class="far fa-circle nav-icon"></i>
-<p>Dashboard v2</p>
-</a>
-</li>
-<li class="nav-item">
-<a href="<?php echo base_url('dashboard'); ?>" class="nav-link">
-<i class="far fa-circle nav-icon"></i>
-<p>Dashboard v3</p>
-</a>
-</li>
-</ul> -->
+
+</ul>
 </li>
 <li class="nav-item menu-closed">
 <a href="#" class="nav-link">
@@ -109,6 +98,12 @@ Clients
 <a href="<?php echo base_url('active_clients'); ?>" class="nav-link">
 <i class="far fa-circle nav-icon"></i>
 <p>My Active Clients</p>
+</a>
+</li>
+<li class="nav-item">
+<a href="<?php echo base_url('historical_clients'); ?>" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>My Historical Clients</p>
 </a>
 </li>
 </ul>

@@ -75,12 +75,13 @@ require_once "left_sidebar.php";
 </div>
 <div class="col-12 col-sm-6 col-md-3">
 <div class="info-box mb-3">
-<span class="info-box-icon bg-info elevation-1"><img src="assets/images/clients.png" alt=""></span>
+<span class="info-box-icon bg-info elevation-1"><img src="assets/images/clients.png" alt="" ></span>
+<a href="<?php echo base_url('active_clients'); ?>"style="color:#fff!important;">
 <div class="info-box-content">
 <span class="info-box-text">Active Clients</span>
 <span class="info-box-number">760</span>
 </div>
-
+</a>
 </div>
 
 </div>
@@ -117,6 +118,19 @@ require_once "left_sidebar.php";
 <span class="info-box-number">3</span>
 </div>
 
+</div>
+
+</div>
+
+<div class="col-12 col-sm-6 col-md-3">
+<div class="info-box mb-3">
+<span class="info-box-icon bg-info elevation-1"><img src="assets/images/clients.png" alt="" ></span>
+<a href="<?php echo base_url('booking_calendar'); ?>"style="color:#fff!important;">
+<div class="info-box-content">
+<span class="info-box-text">My Calendar</span>
+<span class="info-box-number">60 Active Bookings</span>
+</div>
+</a>
 </div>
 
 </div>

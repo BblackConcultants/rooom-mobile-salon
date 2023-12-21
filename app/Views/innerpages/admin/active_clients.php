@@ -77,7 +77,7 @@ include "navigation.php";
 <td>22 Oct 2023</td>
 <td>Randburg</td>
 <td>Hairdresser Assignment</td>
-<td><a href="<?php echo base_url('client_details'); ?>"><i class="fas fa-eye"></i></a></td>
+<td><a href="<?php echo base_url('booking_details'); ?>"><i class="fas fa-edit"></i></a></td>
 </tr>
 </tbody>
 <!-- <tfoot>
