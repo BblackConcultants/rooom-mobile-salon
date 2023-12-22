@@ -52,48 +52,14 @@ include "navigation.php";
 </div>
 <div class="card-body">
 <div class="form-group">
-<label for="inputName">Service Name</label>
+<label for="inputName">Full Name</label>
 <input type="text" id="inputName" class="form-control">
 </div>
 <div class="form-group">
-<label for="inputStatus">Parent Service</label>
-<select id="inputStatus" class="form-control custom-select">
-<option selected disabled>Select one</option>
-<option>None</option>
-<option>Braids</option>
-<option>Cornrow</option>
-<option>Locks</option>
-<option>Twists</option>
-</select>
-</div>
-<div class="form-group">
-<label for="inputStatus">Service Type</label>
-<select id="inputStatus" class="form-control custom-select">
-<option selected disabled>Select one</option>
-<option>Core</option>
-<option>Optional</option>
-</select>
-</div>
-<div class="form-group">
-<label for="inputDescription">Service Description</label>
-<textarea id="inputDescription" class="form-control" rows="4"></textarea>
-</div>
-<div class="form-group">
-<label for="inputStatus">Status</label>
-<select id="inputStatus" class="form-control custom-select">
-<option selected disabled>Select one</option>
-<option>Published</option>
-<option>Draft</option>
-</select>
-</div>
-<div class="form-group">
-<label for="inputName">Average Duration</label>
+<label for="inputName">Username</label>
 <input type="text" id="inputName" class="form-control">
 </div>
-<div class="form-group">
-<label for="inputDescription">Notes</label>
-<textarea id="inputDescription" class="form-control" rows="4"></textarea>
-</div>
+
 </div>
 
 </div>
@@ -102,7 +68,7 @@ include "navigation.php";
 <div class="col-md-6">
 <div class="card card-secondary">
 <div class="card-header">
-<h3 class="card-title">Pricing</h3>
+<h3 class="card-title">User Role</h3>
 <div class="card-tools">
 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
 <i class="fas fa-minus"></i>
@@ -111,8 +77,13 @@ include "navigation.php";
 </div>
 <div class="card-body">
 <div class="form-group">
-<label for="inputEstimatedBudget">Base Fee</label>
-<input type="number" id="inputEstimatedBudget" class="form-control">
+<select class="form-control">
+	<option>Choose User Type</option>
+	<option>Data Capturer</option>
+	<option>Hairdresser</option>
+	<option>Nail Technician</option>
+	<option>System Administrator</option>
+</select>
 </div>
 </div>
 
@@ -122,8 +93,9 @@ include "navigation.php";
 </div>
 <div class="row">
 <div class="col-12">
-<a href="javascript:void(0);" class="btn btn-secondary">Cancel</a>
-<input type="button" value="Create Service" class="btn btn-success float-right">
+<a href="<?php echo base_url('user_management'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left"></i>  &nbsp;&nbsp; Back</a>
+<a href="javascript:void(0);" class="btn btn-success btn-sm"><i class="fa fa-user-plus"></i>  &nbsp;&nbsp; Create User</a>
+<a href="<?php echo base_url('user_management'); ?>" class="btn btn-danger btn-sm"><i class="fa fa-user-times"></i>  &nbsp;&nbsp; Cancel</a>
 </div>
 </div>
 </section>

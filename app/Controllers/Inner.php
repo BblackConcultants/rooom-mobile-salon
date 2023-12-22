@@ -229,5 +229,17 @@ class Inner extends BaseController
         $data['page_heading'] = ucfirst('Bookings Progress');
         return view('innerpages/admin/booking_process', $data);
     }
+         public function user_management()
+    {
+        $data['title'] = ucfirst('User Management');
+        $data['page_heading'] = ucfirst('User Listing');
+        return view('innerpages/admin/user_management', $data);
+    }
+        public function new_user()
+    {
+        $data['title'] = ucfirst('User Management');
+        $data['page_heading'] = ucfirst('Register New System User');
+        return view('innerpages/admin/new_user', $data);
+    }
 
 }

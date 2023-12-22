@@ -191,7 +191,7 @@ Mailbox
 
 <li class="nav-item menu-closed">
 <a href="#" class="nav-link">
-<i class="nav-icon far fa-envelope"></i>
+<i class="nav-icon far fa-file"></i>
 <p>
 Reports
 <i class="fas fa-angle-down right"></i>
@@ -216,6 +216,25 @@ Reports
 <p>Report 3</p>
 </a>
 </li>
+</ul>
+</li>
+
+<li class="nav-item menu-closed">
+<a href="#" class="nav-link">
+<i class="nav-icon fa fa-cog"></i>
+<p>
+System Configurations
+<i class="fas fa-angle-down right"></i>
+</p>
+</a>
+<ul class="nav nav-treeview" style="display: block;">
+<li class="nav-item">
+<a href="<?php echo base_url('user_management'); ?>" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>User Management</p>
+</a>
+</li>
+
 </ul>
 </li>
 
