@@ -48,17 +48,22 @@ require_once "left_sidebar.php";
 
 </div>
 
+<!-- active Bookings -->
+
 <div class="col-12 col-sm-6 col-md-3">
 <div class="info-box mb-3">
 <span class="info-box-icon bg-info elevation-1"><img src="assets/images/calendar.png" alt=""></span>
+<a href="<?php echo base_url('booking_processing'); ?>">
 <div class="info-box-content">
-<span class="info-box-text">Upcoming Bookings This Week</span>
-<span class="info-box-number">500</span>
+<span class="info-box-text">Bookings In Progress</span>
+<span class="info-box-number">10</span>
+</div>
+</a>
 </div>
 
 </div>
 
-</div>
+<!-- ./ -->
 
 
 <div class="clearfix hidden-md-up"></div>

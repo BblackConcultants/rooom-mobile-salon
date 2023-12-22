@@ -216,4 +216,18 @@ class Inner extends BaseController
         return view('innerpages/admin/hairdresser_availability', $data);
     }
 
+        public function booking_processing()
+    {
+        $data['title'] = ucfirst('Bookings In Progress');
+        $data['page_heading'] = ucfirst('Bookings Being Processed');
+        return view('innerpages/admin/booking_processing', $data);
+    }
+
+         public function booking_process()
+    {
+        $data['title'] = ucfirst('View Booking Progress');
+        $data['page_heading'] = ucfirst('Bookings Progress');
+        return view('innerpages/admin/booking_process', $data);
+    }
+
 }

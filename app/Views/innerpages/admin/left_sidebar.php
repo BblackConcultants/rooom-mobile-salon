@@ -64,6 +64,12 @@ Bookings
 </a>
 </li>
 <li class="nav-item">
+<a href="<?php echo base_url('booking_processing'); ?>" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>Bookings In Progress</p>
+</a>
+</li>
+<li class="nav-item">
 <a href="<?php echo base_url('active_bookings'); ?>" class="nav-link">
 <i class="far fa-circle nav-icon"></i>
 <p>Active Bookings</p>

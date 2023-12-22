@@ -37,3 +37,5 @@ $routes->get('booking_details', 'Inner::booking_details');
 $routes->get('historical_clients', 'Inner::historical_clients');
 $routes->get('historical_client_details', 'Inner::historical_client_details');
 $routes->get('hairdresser_availability', 'Inner::hairdresser_availability');
+$routes->get('booking_processing', 'Inner::booking_processing');
+$routes->get('booking_process', 'Inner::booking_process');
