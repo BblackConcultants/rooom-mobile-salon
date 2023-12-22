@@ -247,5 +247,10 @@ class Inner extends BaseController
         $data['page_heading'] = ucfirst('User Details');
         return view('innerpages/admin/user_details', $data);
     }
-
+          public function user_roles()
+    {
+        $data['title'] = ucfirst('User Management');
+        $data['page_heading'] = ucfirst('Manage User Privilleges');
+        return view('innerpages/admin/user_roles', $data);
+    }
 }

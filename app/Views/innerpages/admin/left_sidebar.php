@@ -234,7 +234,12 @@ System Configurations
 <p>User Management</p>
 </a>
 </li>
-
+<li class="nav-item">
+<a href="<?php echo base_url('user_roles'); ?>" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>User Roles</p>
+</a>
+</li>
 </ul>
 </li>
 
