@@ -10,7 +10,119 @@
             border-radius: 5px!important;
 
         }
+        .demo{ background: #273a61; }
+.modal-box{ font-family: 'Ubuntu', sans-serif; }
+.modal-box .show-modal{
+    color: #fff;
+    background: ##198754;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    margin: 80px auto 0;
+    border: none;
+    outline: none;
+    display: block;
+    transition: all 0.3s;
+}
+.modal-box .show-modal:hover{
+    color: #fff;
+    box-shadow: 0 0 10px #000;
+    border: none;
+}
+.modal-box .modal{ top: 90px !important; }
+.modal-box .modal-dialog{
+    width: 400px;
+    margin: 20px auto 10px;
+}
+.modal-box .modal-dialog .modal-content{
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+.modal-box .modal-dialog .modal-content:before{
+    content: "";
+    background: #198754;
+    width: 100%;
+    height: 170px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.modal-box .modal-dialog .modal-content .close{
+    color: #000;
+    background-color: #fff;
+    font-size: 30px;
+    text-shadow: none;
+    padding: 1px 3px 10px 24px;
+    opacity: 1;
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    transition: all 0.3s;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+.modal-box .modal-dialog .modal-content .close span{
+    margin: -5px 0 0;
+    display: block;
+}
+.modal-box .modal-dialog .modal-content .modal-body{ padding: 25px 0 30px !important; }
+.modal-box .modal-dialog .modal-content .modal-body .icon{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 110px;
+    height: 120px;
+    width: 120px;
+    margin: 0 auto 40px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+.modal-box .modal-dialog .modal-content .modal-body .title{
+    color: #000;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin: 0 0 10px 0;
+}
+.modal-box .modal-dialog .modal-content .modal-body .description{
+    color: #333;
+    font-size: 15px;
+    text-transform: capitalize;
+    margin: 0 15px 25px;
+}
+.modal-box .modal-dialog .modal-content .modal-body .subscribe{
+    color: #fff;
+    background: #198754;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 50px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+.modal-box .modal-dialog .modal-content .modal-body .subscribe:hover{
+    text-shadow: 0 0 3px #000;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+}
+.modal-box .modal-dialog .modal-content .modal-body .subscribe:before{
+    content: "";
+    background: #fbf000;
+    width: 10px;
+    height: 10px;
+    transform: translateX(-50%)translateY(-50%)rotate(45deg);
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+}
+.modal-box .modal-dialog .modal-content .modal-body .subscribe i{ margin-right:8px; }
+@media only screen and (max-width: 576px){
+    .modal-dialog{ width: 93% !important; }
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <section class="hero-wrap js-fullheight" style="background-image: url(assets/images/bg-2.jpg);" data-stellar-background-ratio="0.5">
 <div class="overlay"></div>
 <div class="container">
@@ -181,7 +293,8 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 </div>
 </div>
 <div class="form-group">
-<input type="button" value="Make an Appointment" class="btn btn-primary">
+<input type="button" value="Make an Appointment" class="btn btn-primary show-modal" data-toggle="modal" data-target="#myModal">
+
 </div>
 </form>
 </div>
@@ -516,8 +629,31 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 </div>
 </div>
 </section>
+<!-- modal -->
+<div class="modal-box">
+    
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="background-color: #fff;">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <div class="modal-body">
+                    <div class="icon">
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <h3 class="title">Congrats!</h3>
+                    <p class="description">We have received your booking information and an admin will contact you shortly.</p>
+                    <button class="subscribe"><i class="fa fa-check" aria-hidden="true"></i>Back To Website</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ./ -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script>
       $("#single").select2({
           placeholder: "Select optional services",
