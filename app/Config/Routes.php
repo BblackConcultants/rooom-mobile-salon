@@ -41,3 +41,4 @@ $routes->get('booking_processing', 'Inner::booking_processing');
 $routes->get('booking_process', 'Inner::booking_process');
 $routes->get('user_management', 'Inner::user_management');
 $routes->get('new_user', 'Inner::new_user');
+$routes->get('view_user', 'Inner::view_user');
