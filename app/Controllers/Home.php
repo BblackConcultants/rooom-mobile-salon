@@ -28,5 +28,12 @@ class Home extends BaseController {
 		$data['main_content']	= 'gallery';	// page name
 		echo view('innerpages/template', $data);
 	}
+	public function services() {
+		$data = [];
+		$data['title'] 		= 'Room Mobile Salon | Services';
+		$data['heading']	= 'Our services';
+		$data['main_content']	= 'services';	// page name
+		echo view('innerpages/template', $data);
+	}
 
 }

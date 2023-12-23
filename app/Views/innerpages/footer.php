@@ -87,6 +87,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Room 
 
   gtag('config', 'UA-23581568-13');
 </script>
+<script>
+      $("#single").select2({
+          placeholder: "Select optional services",
+          allowClear: true
+      });
+      $("#multiple").select2({
+          placeholder: "Select optional services",
+          allowClear: true
+      });
+
+    </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.assets/js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"82a0228039f40392","b":1,"version":"2023.10.0","token":"cd0b4b3a733644fc843ef0b185f98241"}' crossorigin="anonymous"></script>
 <!-- floating sidebar -->
 

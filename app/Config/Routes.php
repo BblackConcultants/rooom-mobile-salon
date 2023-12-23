@@ -9,6 +9,7 @@ $routes->get('/', 'Home::index');
 $routes->get('login', 'Inner::login');
 $routes->get('about', 'Home::about');
 $routes->get('gallery', 'Home::gallery');
+$routes->get('services', 'Home::services');
 $routes->get('dashboard', 'Inner::dashboard');
 $routes->get('registration', 'Inner::registration');
 $routes->get('forgot_password', 'Inner::forgot_password');
