@@ -123,7 +123,7 @@
     .modal-dialog{ width: 93% !important; }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<section class="hero-wrap js-fullheight" style="background-image: url(assets/images/bg-1.jpg);" data-stellar-background-ratio="0.5">
+<section class="hero-wrap js-fullheight" style="background-image: url(assets/images/banner-1.jpg);" data-stellar-background-ratio="0.5">
 <div class="overlay"></div>
 <div class="container">
 <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
@@ -131,7 +131,7 @@
 <div class="text text-center">
 <span class="subheading">Welcome to Rooom Mobile Hair Salon</span>
 <h1 class="mb-4"> Premium mobile hair salon that specialises in house calls only</h1>
-<p><a href="javascript:void(0);" class="btn btn-primary btn-outline-primary px-4 py-2">Book now</a></p>
+<p><a href="#book-now" class="btn btn-primary btn-outline-primary px-4 py-2">Book now</a></p>
 </div>
 </div>
 </div>
@@ -516,7 +516,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <li>Feature</li>
 <li>Feature</li>
 </ul>
-<p class="button text-center"><a href="javascript:void(0);" class="btn btn-primary px-4 py-3">Book Now</a></p>
+<p class="button text-center"><a href="#book-now" class="btn btn-primary px-4 py-3">Book Now</a></p>
 </div>
 </div>
 <div class="col-md-3 ftco-animate">
@@ -532,7 +532,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <li>Feature</li>
 <li>Feature</li>
 </ul>
-<p class="button text-center"><a href="javascript:void(0);" class="btn btn-primary px-4 py-3">Book Now</a></p>
+<p class="button text-center"><a href="#book-now" class="btn btn-primary px-4 py-3">Book Now</a></p>
 </div>
 </div>
 <div class="col-md-3 ftco-animate">
@@ -548,7 +548,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <li>Feature</li>
 <li>Feature</li>
 </ul>
-<p class="button text-center"><a href="javascript:void(0);" class="btn btn-primary px-4 py-3">Book Now</a></p>
+<p class="button text-center"><a href="#book-now" class="btn btn-primary px-4 py-3">Book Now</a></p>
 </div>
 </div>
 <div class="col-md-3 ftco-animate">
@@ -564,7 +564,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <li>Feature</li>
 <li>Feature</li>
 </ul>
-<p class="button text-center"><a href="javascript:void(0);" class="btn btn-primary px-4 py-3">Book Now</a></p>
+<p class="button text-center"><a href="#book-now" class="btn btn-primary px-4 py-3">Book Now</a></p>
 </div>
 </div>
 </div>
