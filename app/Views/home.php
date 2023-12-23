@@ -25,7 +25,7 @@
 </div>
 </div>
 <div class="col-md-3 text-center d-flex align-items-stretch">
-<div class="text-about py-5 px-4">
+<div class="text-about py-5 px-4" style="background-color: #f5f2ea;">
 <h1 class="logo">
 <a href="javascript:void(0);"><img src="assets/images/logo_black.jpg" alt=""></a>
 </h1>
@@ -47,7 +47,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 </div>
 </div>
 </section>
-<section class="services-section ftco-section">
+<section class="services-section ftco-section" style="background-color: #f5f2ea;">
 <div class="container">
 <div class="row justify-content-center pb-3">
 <div class="col-md-10 heading-section text-center ftco-animate">
@@ -99,7 +99,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 </div>
 </section>
 <?php include "booking_form.php"; ?>
-<section class="ftco-section ftco-team">
+<section class="ftco-section ftco-team" style="background-color: #f5f2ea!important;">
 <div class="container-fluid px-md-5">
 <!-- <div class="row justify-content-center pb-3">
 <div class="col-md-10 heading-section text-center ftco-animate">
@@ -256,83 +256,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 </div>
 </div>
 </section>
-<section class="ftco-section ftco-pricing">
-<div class="container">
-<div class="row justify-content-center pb-3">
-<div class="col-md-10 heading-section text-center ftco-animate">
-<span class="subheading">Pricing</span>
-<h2 class="mb-4">Our Mobile Hairdresser Fees</h2>
-<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p> -->
-</div>
-</div>
-<div class="row">
-<div class="col-md-3 ftco-animate">
-<div class="pricing-entry pb-5 text-center">
-<div>
-<h3 class="mb-4">Braids</h3>
-<p>From <span class="price">R700</span> <span class="per">/ session</span></p>
-</div>
-<ul>
-<li>Feature</li>
-<li>Feature</li>
-<li>Feature</li>
-<li>Feature</li>
-<li>Feature</li>
-</ul>
-<p class="button text-center"><a href="#book-now" class="btn btn-primary px-4 py-3">Book Now</a></p>
-</div>
-</div>
-<div class="col-md-3 ftco-animate">
-<div class="pricing-entry pb-5 text-center">
-<div>
-<h3 class="mb-4">Cornrows</h3>
-<p>From <span class="price">R750</span> <span class="per">/ session</span></p>
-</div>
-<ul>
-<li>Feature</li>
-<li>Feature</li>
-<li>Feature</li>
-<li>Feature</li>
-<li>Feature</li>
-</ul>
-<p class="button text-center"><a href="#book-now" class="btn btn-primary px-4 py-3">Book Now</a></p>
-</div>
-</div>
-<div class="col-md-3 ftco-animate">
-<div class="pricing-entry active pb-5 text-center">
-<div>
-<h3 class="mb-4">Locs</h3>
-<p>From <span class="price">R600</span> <span class="per">/ session</span></p>
-</div>
-<ul>
-<li>Feature</li>
-<li>Feature</li>
-<li>Feature</li>
-<li>Feature</li>
-<li>Feature</li>
-</ul>
-<p class="button text-center"><a href="#book-now" class="btn btn-primary px-4 py-3">Book Now</a></p>
-</div>
-</div>
-<div class="col-md-3 ftco-animate">
-<div class="pricing-entry pb-5 text-center">
-<div>
-<h3 class="mb-4">Twist</h3>
-<p>From <span class="price">R750</span> <span class="per">/ session</span></p>
-</div>
-<ul>
-<li>Feature</li>
-<li>Feature</li>
-<li>Feature</li>
-<li>Feature</li>
-<li>Feature</li>
-</ul>
-<p class="button text-center"><a href="#book-now" class="btn btn-primary px-4 py-3">Book Now</a></p>
-</div>
-</div>
-</div>
-</div>
-</section>
+<?php include "price_list.php"; ?>
 <section class="testimony-section bg-light">
 <div class="container">
 <div class="row ftco-animate justify-content-center">
