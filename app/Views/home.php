@@ -123,7 +123,7 @@
     .modal-dialog{ width: 93% !important; }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<section class="hero-wrap js-fullheight" style="background-image: url(assets/images/bg-2.jpg);" data-stellar-background-ratio="0.5">
+<section class="hero-wrap js-fullheight" style="background-image: url(assets/images/bg-1.jpg);" data-stellar-background-ratio="0.5">
 <div class="overlay"></div>
 <div class="container">
 <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
@@ -238,10 +238,16 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <form action="#" class="appointment-form">
 <div class="row">
 <div class="col-sm-6">
+<div class="form-group"
+><input type="text" class="form-control" id="appointment_name" placeholder="First Name">
+</div>
+</div>
+<div class="col-sm-6">
 <div class="form-group">
-<input type="text" class="form-control" id="appointment_name" placeholder="Name">
+<input type="text" class="form-control" id="appointment_name" placeholder="Surname">
 </div>
 </div>
+
 <div class="col-sm-6">
 <div class="form-group">
 <input type="text" class="form-control" id="appointment_email" placeholder="Email">
@@ -254,7 +260,13 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 </div>
 <div class="col-sm-6">
 <div class="form-group">
-<input type="text" class="form-control appointment_time" placeholder="Time">
+<input id="appointment-time" type="text" class="form-control appointment_time" placeholder="Time">
+<i id="uber" style="padding-bottom: 10px; color: red;">Please note that you will be charged an additional R350 Uber fee for all bookings after 1pm.</i>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<input type="text" class="form-control" id="phone" placeholder="Phone">
 </div>
 </div>
 <div class="col-sm-6">
@@ -262,7 +274,7 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <div class="select-wrap">
 <div class="icon"><span class="ion-ios-arrow-down"></span></div>
 <select name id class="form-control">
-<option value>Choose Hairdresser Service</option>
+<option value>Pick A Hairstyle</option>
 <option value>Braids</option>
 <option value>Cornrows</option>
 <option value>Locs</option>
@@ -273,7 +285,31 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 </div>
 <div class="col-sm-6">
 <div class="form-group">
-<input type="text" class="form-control" id="phone" placeholder="Phone">
+<div class="select-wrap">
+<div class="icon"><span class="ion-ios-arrow-down"></span></div>
+<select name id class="form-control">
+<option value>Choose Hairstyle Size</option>
+<option value>Regular</option>
+<option value>Thin</option>
+</select>
+</div>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">
+<div class="select-wrap">
+<div class="icon"><span class="ion-ios-arrow-down"></span></div>
+<select name id class="form-control">
+<option value>Choose Hairstyle Color</option>
+<option value>Black</option>
+<option value>Brown</option>
+<option value>Blond</option>
+<option>Ginger</option>
+<option>Red</option>
+<option value>White / Gray</option>
+
+</select>
+</div>
 </div>
 </div>
 <div class="col-sm-6">
@@ -284,7 +320,6 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
     <option>Beads (R25 per pack)</option>
     <option>Undo (R100)</option>
   </select>
-<!-- </div> -->
 </div>
 <div class="col-md-12" style="margin-top:30px;">
 <div class="form-group">
@@ -663,4 +698,11 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
           placeholder: "Select optional services",
           allowClear: true
       });
+
+     
+
+      $("#appointment").change(function(){
+          alert("The text has been changed.");
+        });
     </script>
+   

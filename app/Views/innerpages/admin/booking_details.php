@@ -365,13 +365,29 @@ Hi, I have uploaded the images, please let me know if you need anything else fro
 <div class="form-group row">
 <label for="inputSkills" class="col-sm-2 col-form-label">Service</label>
 <div class="col-sm-10">
-<!-- <input type="text" class="form-control" id="inputSkills" placeholder="Skills" value="<?= "Knotless Braids"; ?>"> -->
+
 <select class="form-control">
 	<option>Knotless Braids</option>
 	<option>Cornrows</option>
 	<option>Locs</option>
 	<option>Twist</option>
 </select>
+</div>
+</div>
+<div class="form-group row">
+<label for="inputSkills" class="col-sm-2 col-form-label">Size</label>
+<div class="col-sm-10">
+
+<select class="form-control">
+	<option>Regular</option>
+	<option>Thin</option>
+</select>
+</div>
+</div>
+<div class="form-group row">
+<label for="inputTime" class="col-sm-2 col-form-label">Color</label>
+<div class="col-sm-10">
+<input type="text" class="form-control" id="inputEmail" placeholder="" value="Black">
 </div>
 </div>
 <div class="form-group row">

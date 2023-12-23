@@ -342,7 +342,11 @@
 	  'autoclose': true
 	});
 
-	$('.appointment_time').timepicker();
+	// $('.appointment_time').timepicker();
+	$('.appointment_time').timepicker({
+          minTime: "08:00",
+          maxTime: "11:00 pm"
+        });
 
 
 })(jQuery);
