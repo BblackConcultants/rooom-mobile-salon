@@ -151,7 +151,6 @@ The clients are not required to pay a deposit nor hold the hairpiece. </p>
 <div class="col-md-6 text-center heading-section ftco-animate">
 <span class="subheading">Gallery</span>
 <h2 class="mb-4">Our gallery</h2>
-<!-- <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> -->
 </div>
 </div>
 </div>
