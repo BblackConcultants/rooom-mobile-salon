@@ -222,7 +222,7 @@
 
 <li><a href="#book-now"><img class="floating-action" src="assets/images/booking.png" alt="" style="margin-bottom: 10px; width:;"></a></li>
 <li><a href="<?php echo base_url('rating'); ?>"><img class="floating-action" src="assets/images/positive-review.png" alt="" style="margin-bottom: 10px; width:;"></a></li>
-<li><a href=""><img class="floating-action"  src="assets/images/whatsapp.png" alt="" style="width:;"></a></li>
+<li><a href="https://wa.me/27835941822" target="_blank"><img class="floating-action"  src="assets/images/whatsapp.png" alt="" style="width:;"></a></li>
 </ul>
 <!-- booking modal -->
 <div class="modal-box">
