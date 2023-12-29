@@ -161,9 +161,9 @@
 <div class="collapse navbar-collapse" id="ftco-nav">
 <ul class="navbar-nav ml-auto">
 <li class="nav-item active"><a href="<?php echo base_url(); ?>" class="nav-link">Home</a></li>
+<li class="nav-item"><a href="<?php echo base_url('about'); ?>" class="nav-link">About</a></li>
 <li class="nav-item"><a href="<?php echo base_url('services'); ?>" class="nav-link">Services</a></li>
 <li class="nav-item"><a href="<?php echo base_url('gallery'); ?>" class="nav-link">Gallery</a></li>
-<li class="nav-item"><a href="<?php echo base_url('about'); ?>" class="nav-link">About</a></li>
 <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Careers</a></li>
 <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Contact Us</a></li>
 <li class="nav-item"><a href="<?php echo base_url('login'); ?>" class="nav-link">Login</a></li>
