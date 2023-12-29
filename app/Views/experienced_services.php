@@ -277,5 +277,8 @@ p.service_text{
           </div>
         </div>
       </div>
+          <div class="row" style="padding-bottom: 20px;margin-left: 10px;">
+            <a href="#book-now" class="btn btn-primary show-modal" style="padding-left: 30px; padding-right: 30px;">Book Now</a>
+        </div>
     </div>
   </div>
