@@ -35,5 +35,27 @@ class Home extends BaseController {
 		$data['main_content']	= 'services';	// page name
 		echo view('innerpages/template', $data);
 	}
+	public function contact() {
+		$data = [];
+		$data['title'] 		= 'Room Mobile Salon | Contact Us';
+		$data['heading']	= 'Contact Us';
+		$data['main_content']	= 'contact';	// page name
+		echo view('innerpages/template', $data);
+	}
+	public function careers() {
+		$data = [];
+		$data['title'] 		= 'Room Mobile Salon | Careers';
+		$data['heading']	= 'Join Us';
+		$data['main_content']	= 'careers';	// page name
+		echo view('innerpages/template', $data);
+	}
+
+	public function rating() {
+		$data = [];
+		$data['title'] 		= 'Room Mobile Salon | Rate Our Service';
+		$data['heading']	= 'Rate Us';
+		$data['main_content']	= 'rating';	// page name
+		echo view('innerpages/template', $data);
+	}
 
 }

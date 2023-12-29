@@ -164,8 +164,8 @@
 <li class="nav-item"><a href="<?php echo base_url('about'); ?>" class="nav-link">About</a></li>
 <li class="nav-item"><a href="<?php echo base_url('services'); ?>" class="nav-link">Services</a></li>
 <li class="nav-item"><a href="<?php echo base_url('gallery'); ?>" class="nav-link">Gallery</a></li>
-<li class="nav-item"><a href="javascript:void(0);" class="nav-link">Careers</a></li>
-<li class="nav-item"><a href="javascript:void(0);" class="nav-link">Contact Us</a></li>
+<li class="nav-item"><a href="<?php echo base_url('careers'); ?>" class="nav-link">Careers</a></li>
+<li class="nav-item"><a href="<?php echo base_url('contact'); ?>" class="nav-link">Contact Us</a></li>
 <li class="nav-item"><a href="<?php echo base_url('login'); ?>" class="nav-link">Login</a></li>
 </ul>
 </div>
@@ -221,7 +221,7 @@
 <ul class="navbar-right">
 
 <li><a href="#book-now"><img class="floating-action" src="assets/images/booking.png" alt="" style="margin-bottom: 10px; width:;"></a></li>
-<li><a href="javascript:void(0);"><img class="floating-action" src="assets/images/positive-review.png" alt="" style="margin-bottom: 10px; width:;"></a></li>
+<li><a href="<?php echo base_url('rating'); ?>"><img class="floating-action" src="assets/images/positive-review.png" alt="" style="margin-bottom: 10px; width:;"></a></li>
 <li><a href=""><img class="floating-action"  src="assets/images/whatsapp.png" alt="" style="width:;"></a></li>
 </ul>
 <!-- booking modal -->
@@ -230,19 +230,37 @@
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content" style="background-color: #fff;">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                <div class="modal-body">
-                    <div class="icon">
-                        <i class="fa fa-check"></i>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content" style="background-color: #fff;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <div class="modal-body">
+                        <div class="icon">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <h3 class="title">Congrats!</h3>
+                        <p class="description">We have received your booking information and an admin will contact you shortly.</p>
+                        <button class="subscribe"><i class="fa fa-check" aria-hidden="true"></i>Back To Website</button>
                     </div>
-                    <h3 class="title">Congrats!</h3>
-                    <p class="description">We have received your booking information and an admin will contact you shortly.</p>
-                    <button class="subscribe"><i class="fa fa-check" aria-hidden="true"></i>Back To Website</button>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- ./ -->
+    <!-- Job Application Moday-->
+    <div class="modal fade" id="jobModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content" style="background-color: #fff;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <div class="modal-body">
+                        <div class="icon">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <h3 class="title">Congrats!</h3>
+                        <p class="description">We have received your job application and we will contact you soon.</p>
+                        <button class="subscribe"><i class="fa fa-check" aria-hidden="true"></i>Back To Website</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./ -->
+
