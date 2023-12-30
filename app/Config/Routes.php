@@ -49,3 +49,5 @@ $routes->get('user_management', 'Inner::user_management');
 $routes->get('new_user', 'Inner::new_user');
 $routes->get('view_user', 'Inner::view_user');
 $routes->get('user_roles', 'Inner::user_roles');
+// make booking
+$routes->post('makeBooking','BookingController::makeBooking',['as'=>'make.booking']);

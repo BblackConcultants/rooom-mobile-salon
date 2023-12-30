@@ -58,4 +58,50 @@ class Home extends BaseController {
 		echo view('innerpages/template', $data);
 	}
 
+	public function make_booking(){
+        $bookingModel = new \App\Models\Booking();
+        $validation = \Config\Services::validation();
+        $this->validate([
+            'name'=>[
+                'rules'=>'required',
+                'errors'=>[
+                    'required'=>'Your First Name is required'
+                ]
+            ],
+            'email'=>[
+                'rules'=>'required|is_unique[bookings.email]|valid_email',
+                'errors'=>[
+                    'required'=>'Your Email address is required',
+                    'is_unique'=>'This email address already exists'
+                ]
+            ]
+             
+        ]);
+
+        if($validation->run() == FALSE){
+            $errors = $validation->getErrors();
+            echo json_encode(['code'=>0, 'error'=>$errors]);
+        }else{
+             $data = [
+                 'name'=>$this->request->getPost('name'),
+                 'surname'=>$this->request->getPost('surname'),
+                 'email'=>$this->request->getPost('email'),
+                 'booking_date'=>$this->request->getPost('booking_date'),
+                 'booking_time'=>$this->request->getPost('booking_time'),
+                 'phone'=>$this->request->getPost('phone'),
+                 'hairstyle'=>$this->request->getPost('hairstyle'),
+                 'hairstyle_size'=>$this->request->getPost('hairstyle-size'),
+                 'hairstyle_color'=>$this->request->getPost('hairstyle-color'),
+                 'optional_services'=>$this->request->getPost('options'),
+                 'notes'=>$this->request->getPost('notes'),
+             ];
+             $query = $bookingModel->insert($data);
+             if($query){
+                 echo json_encode(['code'=>1,'msg'=>'Your Booking has been successfully reserved. We wil be contacting you shortly']);
+             }else{
+                 echo json_encode(['code'=>0,'msg'=>'Something went wrong']);
+             }
+        }
+    }
+
 }
