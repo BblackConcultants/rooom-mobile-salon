@@ -51,6 +51,7 @@ class BookingController extends BaseController
              $query = $bookingModel->insert($data);
              if($query){
                  echo json_encode(['code'=>1,'msg'=>'Your Booking has been successfully reserved. We wil be contacting you shortly']);
+
              }else{
                  echo json_encode(['code'=>0,'msg'=>'Something went wrong']);
              }
@@ -145,6 +146,7 @@ class BookingController extends BaseController
 
             if($query){
                 echo json_encode(['code'=>1, 'msg'=>'Country info have been updated successfully']);
+                redirect('home',refresh);
             }else{
                 echo json_encode(['code'=>0, 'msg'=>'Something went wrong']);
             }

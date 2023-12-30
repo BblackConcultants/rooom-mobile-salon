@@ -110,10 +110,12 @@
 </div>
 </div>
 </section>
+<script src="assets/js/jquery.min.js"></script>
 <script>
    //make new booking
    $('#make-booking').submit(function(e){
         e.preventDefault();
+
         
         // $('#name-err').hide();
         // $('#email-err').hide();
