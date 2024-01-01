@@ -18,6 +18,7 @@
 <div class="wrapper">
 
 <?php 
+include "admin_header_lite.php"; 
 include "left_sidebar.php"; 
 include "navigation.php"; 
 ?>
@@ -61,8 +62,7 @@ include "navigation.php";
 <div class="form-group col-md-6">
 <label for="parent_service">Parent Service</label>
 <select id="parent_service" name="parent_service" class="form-control custom-select">
-<option selected disabled>Select one</option>
-<option value="">None</option>
+<option selected >None</option>
 <?php  
 
 	foreach ($services as $key => $service) {
@@ -101,8 +101,8 @@ include "navigation.php";
 <label for="inputStatus">Status</label>
 <select id="status" name="status" class="form-control custom-select">
 <option selected disabled>Select one</option>
-<option>Published</option>
-<option>Draft</option>
+<option value="Published">Published</option>
+<option value="Draft">Draft</option>
 </select>
 </div>
 <div class="form-group col-md-6">
@@ -124,7 +124,7 @@ include "navigation.php";
 <div class="row">
 <div class="col-12">
 <a href="javascript:void(0);" class="btn btn-secondary">Cancel</a>
-<input type="submit" value="Create Service" class="btn btn-success float-right">
+<input id="create-btn" type="submit" value="Create Service" class="btn btn-success float-right submitting">
 </div>
 </form>
 </div>
@@ -160,7 +160,7 @@ All rights reserved. System Designed & Developed By <a href="https://bblack.co.z
 <script>
 
 $(document).ready(function() {
-  $('.fee').keypress(function(event) {
+  $('#fee').keypress(function(event) {
 	    var charCode = (event.which) ? event.which : event.keyCode
 
 	    if (
@@ -175,11 +175,7 @@ $(document).ready(function() {
 	});
 
 $(function () {
-  $.validator.setDefaults({
-    submitHandler: function () {
-      alert( "Form successful submitted!" );
-    }
-  });
+
   $('#create-service').validate({
     rules: {
       service_name: {
@@ -197,6 +193,7 @@ $(function () {
       avg_duration: {
         required: true,
       },
+
     },
     messages: {
       service_name: {
@@ -228,6 +225,51 @@ $(function () {
     }
   });
 });
+
+// now lets do the shandice!
+$('#create-service').submit(function(e){
+        $('#create-btn').html("Creating Service...");
+
+        e.preventDefault();
+         var Toast = Swal.mixin({
+	      toast: true,
+	      position: 'top-end',
+	      showConfirmButton: false,
+	      timer: 3000
+	    });
+        // $(':input[type="submit"]').prop("Creating Service...");
+
+        var form = this;
+        $.ajax({
+           url:$(form).attr('action'),
+           method:$(form).attr('method'),
+           data:new FormData(form),
+           processData:false,
+           dataType:'json',
+           contentType:false,
+           beforeSend:function(){
+              $(form).find('span.error-text').text('');
+           },
+           success:function(data){
+                 if($.isEmptyObject(data.error)){
+                     if(data.code == 1){
+                         $(form)[0].reset();
+                         Toast.fire({
+					        icon: 'success',
+					        title: 'The service has been successfully created!'
+					      })
+                         $("#create-btn").html("Create Service");
+                         
+                     }else{
+                     }
+                 }else{
+                     $.each(data.error, function(prefix, val){
+                         $(form).find('span.'+prefix+'_error').text(val);
+                     });
+                 }
+           }
+        });
+   });
 </script>
 </body>
 
