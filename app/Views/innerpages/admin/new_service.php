@@ -41,7 +41,7 @@ include "navigation.php";
 
 <section class="content">
 <div class="row">
-<div class="col-md-6">
+<div class="col-md-12">
 <div class="card card-primary">
 <div class="card-header">
 <h3 class="card-title">Basic Information</h3>
@@ -53,12 +53,13 @@ include "navigation.php";
 </div>
 <div class="card-body">
 <form action="<?= route_to('create.service'); ?>" method="post" id="create-service" autocomplete="off" class="">
-<div class="form-group">
+<div class="input-group">
+<div class="form-group col-md-6">
 <label for="inputName">Service Name</label>
 <input type="text" id="service_name" name="service_name" class="form-control">
 </div>
-<div class="form-group">
-<label for="inputStatus">Parent Service</label>
+<div class="form-group col-md-6">
+<label for="parent_service">Parent Service</label>
 <select id="parent_service" name="parent_service" class="form-control custom-select">
 <option selected disabled>Select one</option>
 <option value="">None</option>
@@ -71,8 +72,10 @@ include "navigation.php";
 ?>
 </select>
 </div>
-<div class="form-group">
-<label for="inputStatus">Service Type</label>
+</div>
+<div class="input-group">
+<div class="form-group col-md-6">
+<label for="service_type">Service Type</label>
 <select id="service_type" name="service_type" class="form-control custom-select">
 <option selected disabled>Select one</option>
 <?php  
@@ -84,11 +87,17 @@ include "navigation.php";
 ?>
 </select>
 </div>
+<div class="form-group col-md-6">
+<label for="fee">Base Fee</label>
+<input type="text" id="fee" name="fee" class="form-control">
+</div>
+</div>
 <div class="form-group">
 <label for="inputDescription">Service Description</label>
 <textarea id="desc" name="desc" class="form-control" rows="4"></textarea>
 </div>
-<div class="form-group">
+<div class="input-group">
+<div class="form-group col-md-6">
 <label for="inputStatus">Status</label>
 <select id="status" name="status" class="form-control custom-select">
 <option selected disabled>Select one</option>
@@ -96,9 +105,10 @@ include "navigation.php";
 <option>Draft</option>
 </select>
 </div>
-<div class="form-group">
-<label for="inputName">Average Duration</label>
-<input type="text" id="avg_duration" name="avg_duration" class="form-control">
+<div class="form-group col-md-6">
+<label for="inputName">Average Duration (Hrs)</label>
+<input type="number" id="avg_duration" name="avg_duration" class="form-control">
+</div>
 </div>
 <div class="form-group">
 <label for="inputDescription">Notes</label>
@@ -109,26 +119,7 @@ include "navigation.php";
 </div>
 
 </div>
-<div class="col-md-6">
-<div class="card card-secondary">
-<div class="card-header">
-<h3 class="card-title">Pricing</h3>
-<div class="card-tools">
-<button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-<i class="fas fa-minus"></i>
-</button>
-</div>
-</div>
-<div class="card-body">
-<div class="form-group">
-<label for="inputEstimatedBudget">Base Fee</label>
-<input type="number" id="fee" name="fee" class="form-control">
-</div>
-</div>
 
-</div>
-
-</div>
 </div>
 <div class="row">
 <div class="col-12">
@@ -165,7 +156,24 @@ All rights reserved. System Designed & Developed By <a href="https://bblack.co.z
 <script src="assets/admin/dist/js/demo.js"></script>
 
 <?php include "admin_footer_lite.php"; ?>
+
 <script>
+
+$(document).ready(function() {
+  $('.fee').keypress(function(event) {
+	    var charCode = (event.which) ? event.which : event.keyCode
+
+	    if (
+	      (charCode != 45 || $(this).val().indexOf('-') != -1) && // “-” CHECK MINUS, AND ONLY ONE.
+	      (charCode != 46 || $(this).val().indexOf('.') != -1) && // “.” CHECK DOT, AND ONLY ONE.
+	      (charCode < 48 || charCode > 57))
+	      return false;
+
+	    return true;
+
+	  });
+	});
+
 $(function () {
   $.validator.setDefaults({
     submitHandler: function () {
@@ -177,13 +185,35 @@ $(function () {
       service_name: {
         required: true,
       },
-      
+      fee: {
+        required: true,
+      },
+      service_type: {
+        required: true,
+      },
+      status: {
+        required: true,
+      },
+      avg_duration: {
+        required: true,
+      },
     },
     messages: {
       service_name: {
         required: "Please enter the service name"
       },
-      
+      fee: {
+        required: "Please enter the service fee"
+      },
+      service_type: {
+        required: "Please select the service type"
+      },
+      status: {
+        required: "Please select the service status"
+      },
+      avg_duration: {
+        required: "Please enter the average time it takes to finish the service"
+      },
     },
     errorElement: 'span',
     errorPlacement: function (error, element) {
