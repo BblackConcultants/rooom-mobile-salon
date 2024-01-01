@@ -16,7 +16,7 @@ class OptionsController extends BaseController
         $optionModal = new \App\Models\Option();
         $validation = \Config\Services::validation();
         $this->validate([
-            'optional-service'=>[
+            'optional_service'=>[
                 'rules'=>'required',
                 'errors'=>[
                     'required'=>'Optional service is required'
@@ -36,7 +36,7 @@ class OptionsController extends BaseController
             echo json_encode(['code'=>0, 'error'=>$errors]);
         }else{
              $data = [
-                 'optional_service'=>$this->request->getPost('optional-service'),
+                 'optional_service'=>$this->request->getPost('optional_service'),
                  'fee'=>$this->request->getPost('fee'),
              ];
              $query = $optionModal->insert($data);

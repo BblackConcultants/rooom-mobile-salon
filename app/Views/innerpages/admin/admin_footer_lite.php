@@ -130,7 +130,6 @@
                  if($.isEmptyObject(data.error)){
                      if(data.code == 1){
                          $(form)[0].reset();
-                         $("#options-modal").modal("hide");
                          Toast.fire({
                             icon: 'success',
                             title: 'The Hairstyle option has been successfully added!'

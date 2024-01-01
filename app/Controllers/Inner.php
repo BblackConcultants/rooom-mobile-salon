@@ -96,6 +96,15 @@ class Inner extends BaseController
         return view('innerpages/admin/add_hairstyle_size', $data);
     }
 
+       public function add_hairstyle_options()
+    {
+        $data['title'] = ucfirst('Rooom Mobile Salon Add Hairstyle Options ');
+        $data['page_heading'] = ucfirst('Hairstyle Options');
+        $options = $this->db->table('optional_services')->get()->getResult();
+        $data['options'] = $options;
+        return view('innerpages/admin/add_hairstyle_options', $data);
+    }
+
       public function read_message()
     {
         $data['title'] = ucfirst('Rooom Mobile Salon Read Message ');

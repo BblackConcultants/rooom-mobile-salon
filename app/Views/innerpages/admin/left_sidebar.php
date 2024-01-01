@@ -70,9 +70,9 @@ Quick Links
 </a>
 </li>
 <li class="nav-item">
-<a href="#" class="nav-link"  data-toggle="modal" data-target="#options-modal">
+<a href="<?php echo base_url('add_hairstyle_options'); ?>" class="nav-link">
 <i class="far fa-circle nav-icon"></i>
-<p>Add Optional Services</p>
+<p>Add Hairstyle Options</p>
 </a>
 </li>
 </ul>

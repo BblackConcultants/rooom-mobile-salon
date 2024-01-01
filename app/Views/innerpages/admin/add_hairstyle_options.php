@@ -45,7 +45,7 @@ include "navigation.php";
 <div class="col-md-12">
 <div class="card card-primary">
 <div class="card-header">
-<h3 class="card-title">Available Hairstyle Sizes</h3>
+<h3 class="card-title">Available Hairstyle Options</h3>
 <div class="card-tools">
 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
 <i class="fas fa-minus"></i>
@@ -54,8 +54,8 @@ include "navigation.php";
 </div>
 <div class="card-body">
   <div class="input-group">
-    <?php foreach ($sizes as $key => $size) {
-       echo '<div class="col-md-2">'. $size->hairstyle_size.' <i class="fa fa-trash text-danger"></i></div>';
+    <?php foreach ($options as $key => $option) {
+       echo '<div class="col-md-2">'. $option->optional_service.' <i class="fa fa-trash text-danger"></i></div>';
     }  ?>
   </div>
 
@@ -66,7 +66,7 @@ include "navigation.php";
 <div class="col-md-12">
 <div class="card card-primary">
 <div class="card-header">
-<h3 class="card-title">Add New Hairstyle Size</h3>
+<h3 class="card-title">Add New Hairstyle Option</h3>
 <div class="card-tools">
 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
 <i class="fas fa-minus"></i>
@@ -74,11 +74,18 @@ include "navigation.php";
 </div>
 </div>
 <div class="card-body">
-<form  action="<?= route_to('create.size'); ?>" method="post" id="create-size" autocomplete="off"  class="form-horizontal">
+<form  action="<?= route_to('create.option'); ?>" method="post" id="create-option" autocomplete="off"  class="form-horizontal">
 <div class="form-group row">
-<label for="color" class="col-sm-2 col-form-label">Hairstyle Size</label>
+<label for="color" class="col-sm-2 col-form-label">Optional Service</label>
 <div class="col-sm-10">
-<input type="text" class="form-control" id="hairstyle_size" name="hairstyle_size" placeholder="Name" required>
+<input type="text" class="form-control" id="optional_service" name="optional_service" placeholder="Optional Service" required>
+</div>
+</div>
+<div class="form-group row">
+
+<label for="fee" class="col-sm-2 col-form-label">Optional Service Fee</label>
+<div class="col-sm-10">
+<input type="text" class="form-control decimal" id="fee" name="fee" placeholder="Fee" required>
 </div>
 </div>
 <div class="form-group row">
@@ -89,7 +96,7 @@ include "navigation.php";
 </div>
 <div class="modal-footer justify-content-between">
 <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
-<button id="add-size" type="submit" class="btn btn-primary">Add Hairstyle Size</button>
+<button id="add-option" type="submit" class="btn btn-primary">Add Optional Service</button>
 </form>
 </div>
 </section>
@@ -123,32 +130,27 @@ All rights reserved. System Designed & Developed By <a href="https://bblack.co.z
 <script>
 
 $(document).ready(function() {
-  $('#fee').keypress(function(event) {
-	    var charCode = (event.which) ? event.which : event.keyCode
-
-	    if (
-	      (charCode != 45 || $(this).val().indexOf('-') != -1) && // “-” CHECK MINUS, AND ONLY ONE.
-	      (charCode != 46 || $(this).val().indexOf('.') != -1) && // “.” CHECK DOT, AND ONLY ONE.
-	      (charCode < 48 || charCode > 57))
-	      return false;
-
-	    return true;
-
-	  });
+ 
 	});
 
 $(function () {
 
-  $('#create-size').validate({
+  $('#create-option').validate({
     rules: {
-      hairstyle_size: {
+      optional_service: {
+        required: true,
+      },
+      fee: {
         required: true,
       },
       
     },
     messages: {
-      hairstyle_size: {
-        required: "Please enter the hairstyle size"
+      optional_service: {
+        required: "Please enter the hairstyle option"
+      },
+      fee: {
+        required: "Please enter the hairstyle option fee"
       },
     },
     errorElement: 'span',
