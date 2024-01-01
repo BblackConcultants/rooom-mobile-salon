@@ -55,7 +55,7 @@ include "navigation.php";
 <div class="card-body">
   <div class="input-group">
     <?php foreach ($colors as $key => $color) {
-       echo '<div class="col-md-2">'. $color->hair_color.' <i class="fa fa-trash text-danger"></i></div>';
+       echo '<div class="col-md-2">'. $color->hair_color.' <i class="fa fa-edit text-info"></i>&nbsp;<i class="fa fa-trash text-danger"></i></div>';
     }  ?>
   </div>
 

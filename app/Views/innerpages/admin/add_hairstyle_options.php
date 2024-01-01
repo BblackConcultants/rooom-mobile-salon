@@ -55,7 +55,7 @@ include "navigation.php";
 <div class="card-body">
   <div class="input-group">
     <?php foreach ($options as $key => $option) {
-       echo '<div class="col-md-2">'. $option->optional_service.' <i class="fa fa-trash text-danger"></i></div>';
+       echo '<div class="col-md-2">'. $option->optional_service.' (R'.$option->fee.') '.' <i class="fa fa-edit text-info"></i>&nbsp;<i class="fa fa-trash text-danger"></i></div>';
     }  ?>
   </div>
 
