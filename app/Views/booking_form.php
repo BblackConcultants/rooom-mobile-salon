@@ -1,3 +1,9 @@
+<style type="text/css">
+  .input-err {
+    border-color: red !important;
+  }
+</style>
+<link href="http://code.jquery.com/ui/1.9.2/themes/smoothness/jquery-ui.css" rel="stylesheet" />
 <section id="book-now" class="ftco-section ftco-booking bg-light" style="background-color: #ebe8de!important;">
 <div class="container ftco-relative">
 <div class="row justify-content-center pb-3">
@@ -14,46 +20,46 @@
 <div class="row">
 <div class="col-sm-6">
 <div class="form-group"
-><input type="text" class="form-control" id="name" name="name" placeholder="First Name">
+><input type="text" class="form-control" id="name" name="name" placeholder="First Name" required>
 </div>
 </div>
 <div class="col-sm-6">
 <div class="form-group">
-<input type="text" class="form-control" id="surname" name="surname" placeholder="Surname">
+<input type="text" class="form-control" id="surname" name="surname" placeholder="Surname" required>
 </div>
 </div>
 
 <div class="col-sm-6">
 <div class="form-group">
-<input type="text" class="form-control" id="email" name="email" placeholder="Email">
+<input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
 </div>
 </div>
 <div class="col-sm-6">
 <div class="form-group">
-<input type="text" class="form-control appointment_date" id="booking_date" name="booking_date" placeholder="Date">
+<input type="text" class="form-control appointment_date" id="booking_date" name="booking_date" placeholder="Date" required>
 </div>
 </div>
 <div class="col-sm-6">
 <div class="form-group">
-<input id="appointment-time" type="text" id="booking_time" name="booking_time" class="form-control appointment_time" placeholder="Time">
+<input id="appointment-time" type="text" id="booking_time" name="booking_time" class="form-control appointment_time" placeholder="Time" required>
 <i id="uber" style="padding-bottom: 10px; color: red;">Please note that you will be charged an additional R350 Uber fee for all bookings after 1pm.</i>
 </div>
 </div>
 <div class="col-sm-6">
 <div class="form-group">
-<input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
+<input type="text" class="form-control" id="phone" name="phone" minlength="10" placeholder="Phone" required>
 </div>
 </div>
 <div class="col-sm-6">
 <div class="form-group">
 <div class="select-wrap">
 <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-<select name="hairstyle" id="hairstyle" class="form-control">
-<option value>Pick A Hairstyle</option>
-<option value>Braids</option>
-<option value>Cornrows</option>
-<option value>Locs</option>
-<option value>Twist</option>
+<select name="hairstyle" id="hairstyle" class="form-control" required>
+<option value="">Pick A Hairstyle</option>
+<option value="Braids">Braids</option>
+<option value="Cornrows">Cornrows</option>
+<option value="Locs">Locs</option>
+<option value="Twist">Twist</option>
 </select>
 </div>
 </div>
@@ -62,10 +68,10 @@
 <div class="form-group">
 <div class="select-wrap">
 <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-<select name="hairstyle-size" id="hairstyle-size" class="form-control">
-<option value>Choose Hairstyle Size</option>
-<option value>Regular</option>
-<option value>Thin</option>
+<select name="hairstyle-size" id="hairstyle-size" class="form-control" required>
+<option value="">Choose Hairstyle Size</option>
+<option value="Regular">Regular</option>
+<option value="Thin">Thin</option>
 </select>
 </div>
 </div>
@@ -74,14 +80,14 @@
 <div class="form-group">
 <div class="select-wrap">
 <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-<select name="hairstyle-color" id="hairstyle-color" class="form-control">
-<option value>Choose Hairstyle Color</option>
-<option value>Black</option>
+<select name="hairstyle-color" id="hairstyle-color" class="form-control" required>
+<option value="">Choose Hairstyle Color</option>
+<option value="Black">Black</option>
 <option value>Brown</option>
-<option value>Blond</option>
-<option>Ginger</option>
-<option>Red</option>
-<option value>White / Gray</option>
+<option value="Brown">Blond</option>
+<option value="Ginger">Ginger</option>
+<option value="Red">Red</option>
+<option value="White / Gray">White / Gray</option>
 
 </select>
 </div>
@@ -89,15 +95,15 @@
 </div>
 <div class="col-sm-6">
   <select id="multiple" name="options" class="js-states form-control" multiple>
-    <option>Expression (R50)</option>
-    <option>Brazilian Bundle (R700)</option>
-    <option>Beads (R25 per pack)</option>
-    <option>Undo (R100)</option>
+    <option value="Expression (R50)">Expression (R50)</option>
+    <option value="Brazilian Bundle (R700)">Brazilian Bundle (R700)</option>
+    <option value="Beads (R25 per pack)">Beads (R25 per pack)</option>
+    <option value="Undo (R100)">Undo (R100)</option>
   </select>
 </div>
 <div class="col-md-12" style="margin-top:30px;">
 <div class="form-group">
-<textarea name="notes" id="notes" cols="30" rows="7" class="form-control" placeholder="Special Notes"></textarea>
+<textarea name="notes" id="notes" cols="30" rows="7" class="form-control" placeholder="Special Notes" required></textarea>
 </div>
 </div>
 </div>
@@ -111,50 +117,34 @@
 </div>
 </section>
 <script src="assets/js/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
 <script>
+  $(document).ready(function(){
+    
+
+  })
+
+  $('#phone').keydown(function(event){
+        var kc, num, rt = false;
+        kc = event.keyCode;
+        if(kc == 8 || ((kc > 47 && kc < 58) || (kc > 95 && kc < 106))) rt = true;
+        return rt;
+    })
+    .bind('blur', function(){
+        num = parseInt($(this).val());
+        num = isNaN(num) ? '' : num;
+        if(num && num < 0) num = num*-1;
+        $(this).val(num);
+    });
+
    //make new booking
    $('#make-booking').submit(function(e){
         e.preventDefault();
-
-        
-        // $('#name-err').hide();
-        // $('#email-err').hide();
-        // $('#phone-err').hide();
-        // $('#cat-err').hide();
-        // $('#country-err').hide();
-
-        // if(!$('#name').val()){
-        //   $('#name-err').show();
-        //   $('#name').focus();
-        //   return;
-        // }
-        // if(!$('#email').val()){
-        //   $('#email-err').show();
-        //   $('#email').focus();
-
-        //   return;
-        // }
-        // if(!$('#phone').val()){
-        //   $('#phone-err').show();
-        //   $('#phone').focus();
-
-        //   return;
-        // }
-        // if ($("#category").val() === "") {
-        //     $("#cat-err").show();
-        //     $('#category').focus();
-
-        //     return;
-        // }
-        // if ($("#country").val() === "") {
-        //     $("#country-err").show();
-        //     $('#country').focus();
-            
-        //     return;
-        // }
-        $('#add-booking-btn').prop('disabled', true);
+        if(!('#name').val()){
+            $('#name').addClass('input-err');
+        }
         $("#add-booking-btn").html("Booking Your Appointment...");
-
         var form = this;
         $.ajax({
            url:$(form).attr('action'),
@@ -170,7 +160,7 @@
                  if($.isEmptyObject(data.error)){
                      if(data.code == 1){
                          $(form)[0].reset();
-                         alert("Congratulations! Your booking has been successfully reserved.");
+                         $('#myModal').modal('show'); 
                          $('#make-booking').trigger("reset");
                          $("#add-booking-btn").html("Make An Appointment");
 
@@ -185,3 +175,11 @@
         });
    });
 </script>
+ <script>
+        var today, datepicker;
+        today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+        datepicker = $('#booking_date').datepicker({
+            minDate: today,
+            format: 'yyyy-mm-dd'
+        });
+    </script>

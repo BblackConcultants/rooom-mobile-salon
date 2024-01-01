@@ -2,10 +2,17 @@
 
 namespace App\Controllers;
 use CodeIgniter\Exceptions\PageNotFoundException;
+use App\Models\ServiceCategories as CategoriesModel;
 
 class Inner extends BaseController
 {
-     
+    private $db;
+    
+    public function __construct()
+        {
+            $this->db = db_connect();
+        }
+
       public function login()
     {
         $data['title'] = ucfirst('Rooom Mobile Salon Login ');
@@ -184,8 +191,19 @@ class Inner extends BaseController
 
     public function new_service()
     {
+        $serviceCatModel = new \App\Models\ServiceCategories();
+        
         $data['title'] = ucfirst('Add New Service');
-        $data['page_heading'] = ucfirst('New Service Details');
+        $data['page_heading'] = ucfirst('Rooom Mobile Salon | Create Service');
+
+        // get all the service types
+        $service_categories = $this->db->table('service_category')->get()->getResult();
+        $data['service_categories'] = $service_categories;
+
+        // get all the services
+        $services = $this->db->table('services')->get()->getResult();
+        $data['services'] = $services;
+
         return view('innerpages/admin/new_service', $data);
     }
 
