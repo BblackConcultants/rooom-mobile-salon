@@ -85,13 +85,13 @@
 <div class="icon"><span class="ion-ios-arrow-down"></span></div>
 <select name="hairstyle-color" id="hairstyle-color" class="form-control" required>
 <option value="">Choose Hairstyle Color</option>
-<option value="Black">Black</option>
-<option value>Brown</option>
-<option value="Brown">Blond</option>
-<option value="Ginger">Ginger</option>
-<option value="Red">Red</option>
-<option value="White / Gray">White / Gray</option>
+<?php  
 
+    foreach ($services as $key => $service) {
+        echo '<option value='.$service->service_name.'>'.$service->service_name.'</option>';
+    }
+
+?>
 </select>
 </div>
 </div>

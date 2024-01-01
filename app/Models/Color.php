@@ -5,7 +5,7 @@ use CodeIgniter\Model;
 
 class Color extends Model
 {
-    protected $table = 'hair_colors ';
+    protected $table = 'hair_colors';
     protected $primaryKey = 'id';
     protected $allowedFields = ['hair_color'];
 }

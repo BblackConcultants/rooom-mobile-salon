@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use App\Models\ServiceCategories as CategoriesModel;
+use App\Models\Color as ColorsModel;
 
 class Inner extends BaseController
 {
@@ -21,6 +22,11 @@ class Inner extends BaseController
 
     public function dashboard()
     {
+       
+        $colors = $this->db->table('hair_colors')->get()->getResult();
+        $data['colors'] = $colors;
+        $sizes = $this->db->table('hairstyle_sizes')->get()->getResult();
+        $data['sizes'] = $sizes;
         $data['title'] = ucfirst('Rooom Mobile Salon Dashboard ');
         return view('innerpages/admin/dashboard', $data);
     }
@@ -144,6 +150,10 @@ class Inner extends BaseController
 
      public function hairdresser_services()
     {
+        $colorsModel = new \App\Models\Color();
+        // get all colors
+        $colors = $this->db->table('hair_colors')->get()->getResult();
+        $data['colors'] = $colors;
         $data['title'] = ucfirst('Rooom Mobile Salon Hairdresser Services Listing');
         $data['page_heading'] = ucfirst('Hairdresser Services Listing');
         $data['button_text'] = ucfirst('Hairdresser');
@@ -192,7 +202,6 @@ class Inner extends BaseController
     public function new_service()
     {
         $serviceCatModel = new \App\Models\ServiceCategories();
-        
         $data['title'] = ucfirst('Add New Service');
         $data['page_heading'] = ucfirst('Rooom Mobile Salon | Create Service');
 

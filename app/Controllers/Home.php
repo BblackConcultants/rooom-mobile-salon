@@ -17,9 +17,10 @@ class Home extends BaseController {
 		$data['title'] 		= 'Room Mobile Salon';
 		$data['heading']	= 'Welcome to Rooom Mobile Salon';
 		$data['main_content']	= 'home';	
-		// get all services
 		$services = $this->db->table('services')->get()->getResult();
+		$hair_colors = $this->db->table('hair_colors')->get()->getResult();
         $data['services'] = $services;
+        $data['hair_colors'] = $hair_colors;
 		echo view('innerpages/template', $data);
 	}
 
