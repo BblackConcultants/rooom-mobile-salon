@@ -41,7 +41,10 @@
 </div>
 <div class="col-sm-6">
 <div class="form-group">
-<input id="appointment-time" type="text" id="booking_time" name="booking_time" class="form-control appointment_time" placeholder="Time" required>
+<!-- <input id="appointment-time" type="text" id="booking_time" name="booking_time" class="form-control appointment_time" placeholder="Time" required> -->
+<select class="form-control" id="booking_time" name="booking_time" required>
+    <option value="">Please select time slot</option>
+</select>
 <i id="uber" style="padding-bottom: 10px; color: red;">Please note that you will be charged an additional R350 Uber fee for all bookings after 1pm.</i>
 </div>
 </div>
@@ -135,6 +138,7 @@
     
 
   })
+
 
   $('#phone').keydown(function(event){
         var kc, num, rt = false;

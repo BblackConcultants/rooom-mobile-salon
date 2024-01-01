@@ -56,11 +56,35 @@ class Inner extends BaseController
         return view('innerpages/admin/mailbox', $data);
     }
 
+      public function working_hours()
+    {
+        $colors = $this->db->table('hair_colors')->get()->getResult();
+        $data['colors'] = $colors;
+        $data['title'] = ucfirst('Rooom Mobile Working Hours ');
+        $data['page_heading'] = ucfirst('Working Hours');
+        $sizes = $this->db->table('hairstyle_sizes')->get()->getResult();
+        $data['sizes'] = $sizes;
+        $optional_services = $this->db->table('optional_services')->get()->getResult();
+        $data['optional_services'] = $optional_services;
+        $working_hours = $this->db->table('working_hours')->get()->getResult();
+        $data['working_hours'] = $working_hours;
+        return view('innerpages/admin/working_hours', $data);
+    }
+
       public function compose()
     {
         $data['title'] = ucfirst('Rooom Mobile Salon Compose Message ');
         $data['page_heading'] = ucfirst('Compose');
         return view('innerpages/admin/compose', $data);
+    }
+
+      public function add_hairstyle_color()
+    {
+        $data['title'] = ucfirst('Rooom Mobile Salon Add Hairstyle Color ');
+        $data['page_heading'] = ucfirst('Hairstyle Colors');
+        $colors = $this->db->table('hair_colors')->get()->getResult();
+        $data['colors'] = $colors;
+        return view('innerpages/admin/add_hairstyle_color', $data);
     }
 
       public function read_message()

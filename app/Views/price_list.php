@@ -21,7 +21,7 @@
 <div class="col-md-8 col-lg-6">
   <h3>HAIRSTYLES</h3>
 <div id="accordion" class="myaccordion w-100">
-
+<?php { ?>
 <div class="card">
 <div class="card-header py-3 px-4" id="headingOne">
 <h2 class="mb-0">
@@ -62,6 +62,7 @@ One Million. Xpression can be arranged at R50 extra on the total price.</strong>
 </div>
 </div>
 </div>
+<?php } ?>
 <div class="card">
 <div class="card-header py-3 px-4" id="headingTwo">
 <h2 class="mb-0">

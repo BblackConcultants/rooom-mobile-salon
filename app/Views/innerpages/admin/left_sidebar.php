@@ -58,13 +58,13 @@ Quick Links
 </a>
 <ul class="nav nav-treeview" style="display: block;">
 <li class="nav-item">
-<a href="#" class="nav-link"  data-toggle="modal" data-target="#color-modal">
+<a href="<?php echo base_url('add_hairstyle_color'); ?>" class="nav-link">
 <i class="far fa-circle nav-icon"></i>
 <p>Add Hair Color</p>
 </a>
 </li>
 <li class="nav-item">
-<a href="#" class="nav-link"  data-toggle="modal" data-target="#size-modal">
+<a href="<?php echo base_url('add_hairstyle_size'); ?>" class="nav-link">
 <i class="far fa-circle nav-icon"></i>
 <p>Add Hairstyle Size</p>
 </a>
@@ -269,6 +269,12 @@ System Configurations
 <p>User Roles</p>
 </a>
 </li>
+<li class="nav-item">
+<a href="<?php echo base_url('working_hours'); ?>" class="nav-link">
+<i class="fa fa-clock nav-icon"></i>
+<p>Working Hours</p>
+</a>
+</li>
 </ul>
 </li>
 
@@ -287,266 +293,3 @@ Logout
 
 </aside>
 <?php include "admin_footer_lite.php"; ?>
-<!-- addd haircolor modal -->
-<div class="modal fade" id="color-modal">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header" style="background-color: #007bff; color: #fff;">
-<h4 class="modal-title">Add Hair Color</h4>
-<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-<span aria-hidden="true">&times;</span>
-</button>
-</div>
-<div class="modal-body">
-<h4> Available Hair Colors</h4>
-<p>
-	<?php foreach ($colors as $key => $color) {
-		 echo $color->hair_color.', ';
-	}  ?>
-		
-</p>
-<form  action="<?= route_to('create.color'); ?>" method="post" id="create-color" autocomplete="off"  class="form-horizontal">
-<div class="form-group row">
-<label for="color" class="col-sm-2 col-form-label">Color</label>
-<div class="col-sm-10">
-<input type="text" class="form-control" id="color" name="color" placeholder="Name" required>
-</div>
-</div>
-<div class="form-group row">
-<div class="offset-sm-2 col-sm-10">
-
-</div>
-</div>
-</div>
-<div class="modal-footer justify-content-between">
-<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<button id="add-color" type="submit" class="btn btn-primary">Add Color</button>
-</form>
-</div>
-</div>
-</div>
-</div>
-<!-- size modal -->
-<div class="modal fade" id="size-modal">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header" style="background-color: #007bff; color: #fff;">
-<h4 class="modal-title">Add Hairstyle Size</h4>
-<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-<span aria-hidden="true">&times;</span>
-</button>
-</div>
-<div class="modal-body">
-<h4> Available Hairstyle Sizes</h4>
-<p>
-   <?php  
-
-        foreach ($sizes as $key => $size) {
-            echo '<option value='.$size->hairstyle_size.'>'.$size->hairstyle_size.'</option>';
-        }
-
-    ?>
-
-        
-</p>
-<form  action="<?= route_to('create.size'); ?>" method="post" id="create-size" autocomplete="off"  class="form-horizontal">
-<div class="form-group row">
-<label for="color" class="col-sm-2 col-form-label">Hairstyle Size</label>
-<div class="col-sm-10">
-<input type="text" class="form-control" id="hairstyle_size" name="hairstyle_size" placeholder="Name" required>
-</div>
-</div>
-<div class="form-group row">
-<div class="offset-sm-2 col-sm-10">
-
-</div>
-</div>
-</div>
-<div class="modal-footer justify-content-between">
-<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<button id="add-size" type="submit" class="btn btn-primary">Add Hairstyle Size</button>
-</form>
-</div>
-</div>
-</div>
-</div>
-<!-- options modal -->
-<div class="modal fade" id="options-modal">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header" style="background-color: #007bff; color: #fff;">
-<h4 class="modal-title">Add Optional Services</h4>
-<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-<span aria-hidden="true">&times;</span>
-</button>
-</div>
-<div class="modal-body">
-<h4> Available Optional Services</h4>
-<p>
-   <?php  
-
-        foreach ($optional_services as $key => $options) {
-            echo '<option value='.$options->optional_service.'>'.$options->optional_service.'</option>';
-        }
-
-    ?>
-
-        
-</p>
-<form  action="<?= route_to('create.option'); ?>" method="post" id="create-option" autocomplete="off"  class="form-horizontal">
-<div class="form-group row">
-<label for="color" class="col-sm-2 col-form-label">Optional Service</label>
-<div class="col-sm-10">
-<input type="text" class="form-control" id="optional-service" name="optional-service" placeholder="Optional Service" required>
-</div>
-<label for="fee" class="col-sm-2 col-form-label">Optional Service Fee</label>
-<div class="col-sm-10">
-<input type="text" class="form-control decimal" id="fee" name="fee" placeholder="Fee" required>
-</div>
-</div>
-<div class="form-group row">
-<div class="offset-sm-2 col-sm-10">
-
-</div>
-</div>
-</div>
-<div class="modal-footer justify-content-between">
-<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<button id="add-option" type="submit" class="btn btn-primary">Add Optional Service</button>
-</form>
-</div>
-</div>
-</div>
-</div>
-
-<script type="text/javascript">
-	$('#create-color').submit(function(e){
-        $('#add-color').html("Creating Color...");
-
-        e.preventDefault();
-         var Toast = Swal.mixin({
-	      toast: true,
-	      position: 'top-end',
-	      showConfirmButton: false,
-	      timer: 3000
-	    });
-
-        var form = this;
-        $.ajax({
-           url:$(form).attr('action'),
-           method:$(form).attr('method'),
-           data:new FormData(form),
-           processData:false,
-           dataType:'json',
-           contentType:false,
-           beforeSend:function(){
-              $(form).find('span.error-text').text('');
-           },
-           success:function(data){
-                 if($.isEmptyObject(data.error)){
-                     if(data.code == 1){
-                         $(form)[0].reset();
-                         $("#color-modal").modal("hide");
-                         Toast.fire({
-					        icon: 'success',
-					        title: 'The color has been successfully added!'
-					      })
-                         $("#add-color").html("Add Color");
-                         
-                     }else{
-                     }
-                 }else{
-                     $.each(data.error, function(prefix, val){
-                         $(form).find('span.'+prefix+'_error').text(val);
-                     });
-                 }
-           }
-        });
-   });
-    $('#create-size').submit(function(e){
-        $('#add-size').html("Creating Hairstyle Size...");
-
-        e.preventDefault();
-         var Toast = Swal.mixin({
-          toast: true,
-          position: 'top-end',
-          showConfirmButton: false,
-          timer: 3000
-        });
-
-        var form = this;
-        $.ajax({
-           url:$(form).attr('action'),
-           method:$(form).attr('method'),
-           data:new FormData(form),
-           processData:false,
-           dataType:'json',
-           contentType:false,
-           beforeSend:function(){
-              $(form).find('span.error-text').text('');
-           },
-           success:function(data){
-                 if($.isEmptyObject(data.error)){
-                     if(data.code == 1){
-                         $(form)[0].reset();
-                         $("#size-modal").modal("hide");
-                         Toast.fire({
-                            icon: 'success',
-                            title: 'The Hairstyle Size has been successfully added!'
-                          })
-                         $("#add-size").html("Add Hairstyle Size");
-                         
-                     }else{
-                     }
-                 }else{
-                     $.each(data.error, function(prefix, val){
-                         $(form).find('span.'+prefix+'_error').text(val);
-                     });
-                 }
-           }
-        });
-   });
-     $('#create-option').submit(function(e){
-        $('#add-option').html("Creating Option...");
-
-        e.preventDefault();
-         var Toast = Swal.mixin({
-          toast: true,
-          position: 'top-end',
-          showConfirmButton: false,
-          timer: 3000
-        });
-
-        var form = this;
-        $.ajax({
-           url:$(form).attr('action'),
-           method:$(form).attr('method'),
-           data:new FormData(form),
-           processData:false,
-           dataType:'json',
-           contentType:false,
-           beforeSend:function(){
-              $(form).find('span.error-text').text('');
-           },
-           success:function(data){
-                 if($.isEmptyObject(data.error)){
-                     if(data.code == 1){
-                         $(form)[0].reset();
-                         $("#options-modal").modal("hide");
-                         Toast.fire({
-                            icon: 'success',
-                            title: 'The Hairstyle option has been successfully added!'
-                          })
-                         $("#add-size").html("Add Hairstyle Option");
-                         
-                     }else{
-                     }
-                 }else{
-                     $.each(data.error, function(prefix, val){
-                         $(form).find('span.'+prefix+'_error').text(val);
-                     });
-                 }
-           }
-        });
-   });
-</script>
