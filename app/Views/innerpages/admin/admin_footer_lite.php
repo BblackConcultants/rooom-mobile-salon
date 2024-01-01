@@ -88,7 +88,6 @@
                  if($.isEmptyObject(data.error)){
                      if(data.code == 1){
                          $(form)[0].reset();
-                         $("#size-modal").modal("hide");
                          Toast.fire({
                             icon: 'success',
                             title: 'The Hairstyle Size has been successfully added!'

@@ -45,7 +45,7 @@ include "navigation.php";
 <div class="col-md-12">
 <div class="card card-primary">
 <div class="card-header">
-<h3 class="card-title">Available Hair Colors</h3>
+<h3 class="card-title">Available Hairstyle Sizes</h3>
 <div class="card-tools">
 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
 <i class="fas fa-minus"></i>
@@ -54,8 +54,8 @@ include "navigation.php";
 </div>
 <div class="card-body">
   <div class="input-group">
-    <?php foreach ($colors as $key => $color) {
-       echo '<div class="col-md-2">'. $color->hair_color.' <i class="fa fa-trash text-danger"></i></div>';
+    <?php foreach ($sizes as $key => $size) {
+       echo '<div class="col-md-2">'. $size->hairstyle_size.' <i class="fa fa-trash text-danger"></i></div>';
     }  ?>
   </div>
 
@@ -66,7 +66,7 @@ include "navigation.php";
 <div class="col-md-12">
 <div class="card card-primary">
 <div class="card-header">
-<h3 class="card-title">Add New Color</h3>
+<h3 class="card-title">Add New Hairstyle Size</h3>
 <div class="card-tools">
 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
 <i class="fas fa-minus"></i>
@@ -74,11 +74,11 @@ include "navigation.php";
 </div>
 </div>
 <div class="card-body">
-<form  action="<?= route_to('create.color'); ?>" method="post" id="create-color" autocomplete="off"  class="form-horizontal">
+<form  action="<?= route_to('create.size'); ?>" method="post" id="create-size" autocomplete="off"  class="form-horizontal">
 <div class="form-group row">
-<label for="color" class="col-sm-2 col-form-label">Color</label>
+<label for="color" class="col-sm-2 col-form-label">Hairstyle Size</label>
 <div class="col-sm-10">
-<input type="text" class="form-control" id="color" name="color" placeholder="Name" required>
+<input type="text" class="form-control" id="hairstyle_size" name="hairstyle_size" placeholder="Name" required>
 </div>
 </div>
 <div class="form-group row">
@@ -89,7 +89,7 @@ include "navigation.php";
 </div>
 <div class="modal-footer justify-content-between">
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<button id="add-color" type="submit" class="btn btn-primary">Add Color</button>
+<button id="add-size" type="submit" class="btn btn-primary">Add Hairstyle Size</button>
 </form>
 </div>
 </section>
@@ -139,16 +139,16 @@ $(document).ready(function() {
 
 $(function () {
 
-  $('#create-color').validate({
+  $('#create-size').validate({
     rules: {
-      color: {
+      hairstyle_size: {
         required: true,
       },
       
     },
     messages: {
-      color: {
-        required: "Please enter the hairstyle color"
+      hairstyle_size: {
+        required: "Please enter the hairstyle size"
       },
     },
     errorElement: 'span',

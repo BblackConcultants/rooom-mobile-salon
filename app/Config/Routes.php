@@ -40,6 +40,7 @@ $routes->get('nail_service_details', 'Inner::nail_service_details');
 $routes->get('profile', 'Inner::profile');
 $routes->get('active_clients', 'Inner::active_clients');
 $routes->get('add_hairstyle_color', 'Inner::add_hairstyle_color');
+$routes->get('add_hairstyle_size', 'Inner::add_hairstyle_size');
 $routes->get('new_service', 'Inner::new_service');
 $routes->get('booking_details', 'Inner::booking_details');
 $routes->get('historical_clients', 'Inner::historical_clients');
