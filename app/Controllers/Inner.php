@@ -27,6 +27,8 @@ class Inner extends BaseController
         $data['colors'] = $colors;
         $sizes = $this->db->table('hairstyle_sizes')->get()->getResult();
         $data['sizes'] = $sizes;
+        $optional_services = $this->db->table('optional_services')->get()->getResult();
+        $data['optional_services'] = $optional_services;
         $data['title'] = ucfirst('Rooom Mobile Salon Dashboard ');
         return view('innerpages/admin/dashboard', $data);
     }

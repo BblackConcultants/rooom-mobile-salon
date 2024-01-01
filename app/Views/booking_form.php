@@ -73,8 +73,13 @@
 <div class="icon"><span class="ion-ios-arrow-down"></span></div>
 <select name="hairstyle-size" id="hairstyle-size" class="form-control" required>
 <option value="">Choose Hairstyle Size</option>
-<option value="Regular">Regular</option>
-<option value="Thin">Thin</option>
+<?php  
+
+    foreach ($sizes as $key => $size) {
+        echo '<option value='.$size->hairstyle_size.'>'.$size->hairstyle_size.'</option>';
+    }
+
+?>
 </select>
 </div>
 </div>
@@ -98,10 +103,13 @@
 </div>
 <div class="col-sm-6">
   <select id="multiple" name="options" class="js-states form-control" multiple>
-    <option value="Expression (R50)">Expression (R50)</option>
-    <option value="Brazilian Bundle (R700)">Brazilian Bundle (R700)</option>
-    <option value="Beads (R25 per pack)">Beads (R25 per pack)</option>
-    <option value="Undo (R100)">Undo (R100)</option>
+    <?php  
+
+        foreach ($optional_services as $key => $option) {
+            echo '<option value='.$option->optional_service.'>'.$option->optional_service.' (R'.$option->fee.' )'.'</option>';
+        }
+
+    ?>
   </select>
 </div>
 <div class="col-md-12" style="margin-top:30px;">

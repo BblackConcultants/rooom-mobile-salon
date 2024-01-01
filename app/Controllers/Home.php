@@ -19,8 +19,12 @@ class Home extends BaseController {
 		$data['main_content']	= 'home';	
 		$services = $this->db->table('services')->get()->getResult();
 		$hair_colors = $this->db->table('hair_colors')->get()->getResult();
+		$sizes = $this->db->table('hairstyle_sizes')->get()->getResult();
+        $data['sizes'] = $sizes;
         $data['services'] = $services;
         $data['hair_colors'] = $hair_colors;
+        $optional_services = $this->db->table('optional_services')->get()->getResult();
+        $data['optional_services'] = $optional_services;
 		echo view('innerpages/template', $data);
 	}
 
