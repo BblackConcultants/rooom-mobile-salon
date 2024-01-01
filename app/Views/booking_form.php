@@ -56,10 +56,13 @@
 <div class="icon"><span class="ion-ios-arrow-down"></span></div>
 <select name="hairstyle" id="hairstyle" class="form-control" required>
 <option value="">Pick A Hairstyle</option>
-<option value="Braids">Braids</option>
-<option value="Cornrows">Cornrows</option>
-<option value="Locs">Locs</option>
-<option value="Twist">Twist</option>
+<?php  
+
+    foreach ($services as $key => $service) {
+        echo '<option value='.$service->service_name.'>'.$service->service_name.'</option>';
+    }
+
+?>
 </select>
 </div>
 </div>
@@ -175,11 +178,3 @@
         });
    });
 </script>
- <script>
-        var today, datepicker;
-        today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
-        datepicker = $('#booking_date').datepicker({
-            minDate: today,
-            format: 'yyyy-mm-dd'
-        });
-    </script>

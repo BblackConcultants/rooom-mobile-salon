@@ -2,14 +2,24 @@
 
 namespace App\Controllers;
 use App\Controllers\BaseController;
+use App\Models\Service as ServicesModel;
+
 
 class Home extends BaseController {
-
+	private $db;
+    
+    public function __construct()
+        {
+            $this->db = db_connect();
+        }
 	public function index() {
 		$data = [];
 		$data['title'] 		= 'Room Mobile Salon';
 		$data['heading']	= 'Welcome to Rooom Mobile Salon';
-		$data['main_content']	= 'home';	// page name
+		$data['main_content']	= 'home';	
+		// get all services
+		$services = $this->db->table('services')->get()->getResult();
+        $data['services'] = $services;
 		echo view('innerpages/template', $data);
 	}
 

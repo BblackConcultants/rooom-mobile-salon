@@ -50,6 +50,25 @@ Navigation
 </li>
 <li class="nav-item menu-closed">
 <a href="#" class="nav-link">
+<i class="nav-icon fa fa-link"></i>
+<p>
+Quick Links
+<i class="fas fa-angle-down right"></i>
+</p>
+</a>
+<ul class="nav nav-treeview" style="display: block;">
+<li class="nav-item">
+<a href="#" class="nav-link"  data-toggle="modal" data-target="#color-modal">
+<i class="far fa-circle nav-icon"></i>
+<p>Add Hair Color</p>
+</a>
+</li>
+
+
+</ul>
+</li>
+<li class="nav-item menu-closed">
+<a href="#" class="nav-link">
 <i class="nav-icon far fa-calendar-alt"></i>
 <p>
 Bookings
@@ -251,11 +270,90 @@ Logout
 </p>
 </a>
 </li>
-
-
 </ul>
 </nav>
 
 </div>
 
 </aside>
+<?php include "admin_footer_lite.php"; ?>
+<!-- addd haircolor modal -->
+<div class="modal fade" id="color-modal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title">Rooom Mobile Salon | Add Hair Color</h4>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<h4> Available Hair Colors</h4>
+<p>One fine body&hellip;</p>
+<form  action="<?= route_to('create.color'); ?>" method="post" id="create-color" autocomplete="off"  class="form-horizontal">
+<div class="form-group row">
+<label for="color" class="col-sm-2 col-form-label">Color</label>
+<div class="col-sm-10">
+<input type="text" class="form-control" id="color" name="color" placeholder="Name" required>
+</div>
+</div>
+<div class="form-group row">
+<div class="offset-sm-2 col-sm-10">
+
+</div>
+</div>
+</div>
+<div class="modal-footer justify-content-between">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<button id="add-color" type="submit" class="btn btn-primary">Add Color</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+	$('#create-color').submit(function(e){
+        $('#add-color').html("Creating Color...");
+
+        e.preventDefault();
+         var Toast = Swal.mixin({
+	      toast: true,
+	      position: 'top-end',
+	      showConfirmButton: false,
+	      timer: 3000
+	    });
+        // $(':input[type="submit"]').prop("Creating Service...");
+
+        var form = this;
+        $.ajax({
+           url:$(form).attr('action'),
+           method:$(form).attr('method'),
+           data:new FormData(form),
+           processData:false,
+           dataType:'json',
+           contentType:false,
+           beforeSend:function(){
+              $(form).find('span.error-text').text('');
+           },
+           success:function(data){
+                 if($.isEmptyObject(data.error)){
+                     if(data.code == 1){
+                         $(form)[0].reset();
+                         $("#color-modal").modal("hide");
+                         Toast.fire({
+					        icon: 'success',
+					        title: 'The color has been successfully added!'
+					      })
+                         $("#add-color").html("Add Color");
+                         
+                     }else{
+                     }
+                 }else{
+                     $.each(data.error, function(prefix, val){
+                         $(form).find('span.'+prefix+'_error').text(val);
+                     });
+                 }
+           }
+        });
+   });
+</script>

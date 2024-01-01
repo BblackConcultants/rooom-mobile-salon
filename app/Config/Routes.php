@@ -52,4 +52,5 @@ $routes->get('user_roles', 'Inner::user_roles');
 // make booking
 $routes->post('makeBooking','BookingController::makeBooking',['as'=>'make.booking']);
 $routes->post('createService','ServiceController::createService',['as'=>'create.service']);
+$routes->post('createColor','ColorController::createColor',['as'=>'create.color']);
 
