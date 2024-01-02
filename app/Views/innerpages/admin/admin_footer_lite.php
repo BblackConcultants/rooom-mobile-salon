@@ -177,7 +177,7 @@
                             icon: 'success',
                             title: 'The Hairstyle option has been successfully added!'
                           })
-                         $("#add-size").html("Add Hairstyle Option");
+                         $("#add-user-type").html("Add User Type");
                          
                      }else{
                      }

@@ -78,7 +78,7 @@ include "navigation.php";
 <td><?php echo $user->date_created; ?></td>
 <td><?php echo strtoupper($user->first_name.' '.$user->surname); ?></td>
 <td><?php echo strtoupper($user->username); ?></td>
-<td><?php echo strtoupper($user->username); ?></td>
+<td><?php echo strtoupper($user->user_type); ?></td>
 <td><?php echo $user->status; ?></td>
 <td><a href="<?php echo base_url('view_user'); ?>"><i class="fa fa-eye fa-2x text-primary"></i></a></td>
 </tr>

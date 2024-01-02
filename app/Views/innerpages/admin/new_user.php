@@ -75,7 +75,7 @@ include "navigation.php";
 <select id="user_type" name="user_type" class="form-control custom-select">
 <?php  
 	foreach ($user_types as $key => $user_type) {
-		echo '<option value='.$user_type->user_type.'>'.$user_type->user_type.'</option>';
+    echo "<option value='".$user_type->user_type."'>" . $user_type->user_type. "</option>";
 	}
 ?>
 </select>
