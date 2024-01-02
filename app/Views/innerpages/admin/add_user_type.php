@@ -66,7 +66,7 @@ include "navigation.php";
 <div class="col-md-12">
 <div class="card card-primary">
 <div class="card-header">
-<h3 class="card-title">Add New User Type</h3>
+<h3 class="card-title">Add New Hairstyle Option</h3>
 <div class="card-tools">
 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
 <i class="fas fa-minus"></i>
@@ -74,11 +74,11 @@ include "navigation.php";
 </div>
 </div>
 <div class="card-body">
-<form  action="<?= route_to('create.user_type'); ?>" method="post" id="create-user-type" autocomplete="off"  class="form-horizontal">
+<form  action="<?= route_to('create.user-type'); ?>" method="post" id="create-user-type" autocomplete="off"  class="form-horizontal">
 <div class="form-group row">
 <label for="color" class="col-sm-2 col-form-label">User Type</label>
 <div class="col-sm-10">
-<input type="text" class="form-control" id="user_type" name="user_type" placeholder="Name" required>
+<input type="text" class="form-control" id="user_type" name="user_type" placeholder="Optional Service" required>
 </div>
 </div>
 <div class="form-group row">
@@ -88,7 +88,7 @@ include "navigation.php";
 </div>
 </div>
 <div class="modal-footer justify-content-between">
-<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
 <button id="add-user-type" type="submit" class="btn btn-primary">Add User Type</button>
 </form>
 </div>
@@ -123,7 +123,7 @@ All rights reserved. System Designed & Developed By <a href="https://bblack.co.z
 <script>
 
 $(document).ready(function() {
-  
+ 
 	});
 
 $(function () {
@@ -133,7 +133,7 @@ $(function () {
       user_type: {
         required: true,
       },
-      
+            
     },
     messages: {
       user_type: {

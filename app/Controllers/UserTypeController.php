@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class ColorController extends BaseController
+class UserTypeController extends BaseController
 {
 
     public function __construct(){
@@ -11,7 +11,8 @@ class ColorController extends BaseController
     }
 
     
-     public function createUserType(){
+    public function createUserType(){
+                 
         $userTypeModel = new \App\Models\UserType();
         $validation = \Config\Services::validation();
         $this->validate([
@@ -30,6 +31,7 @@ class ColorController extends BaseController
         }else{
              $data = [
                  'user_type'=>$this->request->getPost('user_type'),
+                 'fee'=>$this->request->getPost('fee'),
              ];
              $query = $userTypeModel->insert($data);
              if($query){
@@ -40,4 +42,5 @@ class ColorController extends BaseController
              }
         }
     }
+
 }
