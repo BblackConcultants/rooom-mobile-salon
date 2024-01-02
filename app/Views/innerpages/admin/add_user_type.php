@@ -55,7 +55,7 @@ include "navigation.php";
 <div class="card-body">
   <div class="input-group">
     <?php foreach ($user_types as $key => $user_type) {
-       echo '<div class="col-md-2">'. $user_type->user_type.' <i class="fa fa-edit text-info"></i>&nbsp;<i class="fa fa-trash text-danger"></i></div>';
+       echo '<div class="col-md-3">'. $user_type->user_type.' <i class="fa fa-edit text-info"></i>&nbsp;<i class="fa fa-trash text-danger"></i></div>';
     }  ?>
   </div>
 

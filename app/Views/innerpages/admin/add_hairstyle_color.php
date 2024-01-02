@@ -88,7 +88,7 @@ include "navigation.php";
 </div>
 </div>
 <div class="modal-footer justify-content-between">
-<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<button type="button" class="btn btn-default" onclick="javascript:location.href='<?php echo base_url("user_management"); ?>'">Close</button>
 <button id="add-color" type="submit" class="btn btn-primary">Add Color</button>
 </form>
 </div>

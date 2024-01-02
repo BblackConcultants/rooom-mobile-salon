@@ -1,9 +1,10 @@
+<?php  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rooom Mobile Hair Salon</title>
+<title><?php echo $page_heading; ?></title>
 <link rel="icon" type="image/x-icon" href="assets/images/fav.png">
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
@@ -17,6 +18,7 @@
 <div class="wrapper">
 
 <?php 
+include "admin_header_lite.php"; 
 include "left_sidebar.php"; 
 include "navigation.php"; 
 ?>
@@ -40,7 +42,7 @@ include "navigation.php";
 
 <section class="content">
 <div class="row">
-<div class="col-md-6">
+<div class="col-md-12">
 <div class="card card-primary">
 <div class="card-header">
 <h3 class="card-title">Basic Information</h3>
@@ -51,52 +53,45 @@ include "navigation.php";
 </div>
 </div>
 <div class="card-body">
-<div class="form-group">
-<label for="inputName">Full Name</label>
-<input type="text" id="inputName" class="form-control">
+<form action="<?= route_to('create.user'); ?>" method="post" id="create-user" autocomplete="off" class="">
+<div class="input-group">
+<div class="form-group col-md-6">
+<label for="first_name">First Name</label>
+<input type="text" id="first_name" name="first_name" class="form-control">
 </div>
-<div class="form-group">
-<label for="inputName">Username</label>
-<input type="text" id="inputName" class="form-control">
+<div class="form-group col-md-6">
+<label for="surname">Surname</label>
+<input type="text" id="surname" name="surname" class="form-control">
+</div>
+</div>
+<div class="input-group">
+<div class="form-group col-md-6">
+<label for="surname">Username</label>
+<input type="text" id="username" name="username" class="form-control">
 </div>
 
-</div>
-
-</div>
-
-</div>
-<div class="col-md-6">
-<div class="card card-secondary">
-<div class="card-header">
-<h3 class="card-title">User Role</h3>
-<div class="card-tools">
-<button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-<i class="fas fa-minus"></i>
-</button>
-</div>
-</div>
-<div class="card-body">
-<div class="form-group">
-<select class="form-control">
-	<option>Choose User Type</option>
-	<option>Data Capturer</option>
-	<option>Hairdresser</option>
-	<option>Nail Technician</option>
-	<option>System Administrator</option>
+<div class="form-group col-md-6">
+<label for="user_type">User Type</label>
+<select id="user_type" name="user_type" class="form-control custom-select">
+<?php  
+	foreach ($user_types as $key => $user_type) {
+		echo '<option value='.$user_type->user_type.'>'.$user_type->user_type.'</option>';
+	}
+?>
 </select>
 </div>
 </div>
-
 </div>
-
+</div>
 </div>
 </div>
 <div class="row">
-<div class="col-12">
-<a href="<?php echo base_url('user_management'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left"></i>  &nbsp;&nbsp; Back</a>
-<a href="javascript:void(0);" class="btn btn-success btn-sm"><i class="fa fa-user-plus"></i>  &nbsp;&nbsp; Create User</a>
-<a href="<?php echo base_url('user_management'); ?>" class="btn btn-danger btn-sm"><i class="fa fa-user-times"></i>  &nbsp;&nbsp; Cancel</a>
-</div>
+<div class="modal-footer justify-content-between">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<button id="create-user-btn" type="submit" class="btn btn-primary" style="float-right">Create User</button>
+</form>
+</div>  
+</form>
 </div>
 </section>
 
@@ -124,7 +119,106 @@ All rights reserved. System Designed & Developed By <a href="https://bblack.co.z
 <script src="assets/admin/dist/js/adminlte.min2167.js?v=3.2.0"></script>
 
 <script src="assets/admin/dist/js/demo.js"></script>
+
+<?php include "admin_footer_lite.php"; ?>
+
+<script>
+
+$(document).ready(function() {
+
+});
+
+$(function () {
+
+  $('#create-user').validate({
+    rules: {
+      first_name: {
+        required: true,
+      },
+      surname: {
+        required: true,
+      },
+      username: {
+        required: true,
+      },
+      user_type: {
+        required: true,
+      },
+      
+    },
+    messages: {
+      first_name: {
+        required: "Please enter the first name of the user"
+      },
+      surname: {
+        required: "Please enter the surname of the user"
+      },
+      username: {
+        required: "Please enter the username of the user"
+      },
+      user_type: {
+        required: "Please select the user type"
+      },
+     
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  });
+});
+
+// now lets do the shandice!
+$('#create-user').submit(function(e){
+        $('#create-user-btn').html("Creating User...");
+
+        e.preventDefault();
+         var Toast = Swal.mixin({
+	      toast: true,
+	      position: 'top-end',
+	      showConfirmButton: false,
+	      timer: 3000
+	    });
+
+        var form = this;
+        $.ajax({
+           url:$(form).attr('action'),
+           method:$(form).attr('method'),
+           data:new FormData(form),
+           processData:false,
+           dataType:'json',
+           contentType:false,
+           beforeSend:function(){
+              $(form).find('span.error-text').text('');
+           },
+           success:function(data){
+                 if($.isEmptyObject(data.error)){
+                     if(data.code == 1){
+                         $(form)[0].reset();
+                         Toast.fire({
+					        icon: 'success',
+					        title: 'The User has been successfully registered!'
+					      })
+                         $("#create-user-btn").html("Create User");
+                         
+                     }else{
+                     }
+                 }else{
+                     $.each(data.error, function(prefix, val){
+                         $(form).find('span.'+prefix+'_error').text(val);
+                     });
+                 }
+           }
+        });
+   });
+</script>
 </body>
 
-<!-- Mirrored from adminlte.io/themes/v3/pages/examples/project-add.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Oct 2023 06:45:38 GMT -->
 </html>

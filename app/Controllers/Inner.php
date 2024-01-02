@@ -320,6 +320,8 @@ class Inner extends BaseController
     {
         $data['title'] = ucfirst('User Management');
         $data['page_heading'] = ucfirst('Register New System User');
+        $user_types = $this->db->table('user_types')->get()->getResult();
+        $data['user_types'] = $user_types;
         return view('innerpages/admin/new_user', $data);
     }
    

@@ -75,7 +75,7 @@ include "navigation.php";
 <tbody>
 <?php  foreach ($users as $key => $user) {?>
 <tr>
-<td><?php echo date('Y-m-d H:i:s', $user->date_created); ?></td>
+<td><?php echo $user->date_created; ?></td>
 <td><?php echo strtoupper($user->first_name.' '.$user->surname); ?></td>
 <td><?php echo strtoupper($user->username); ?></td>
 <td><?php echo strtoupper($user->username); ?></td>

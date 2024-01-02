@@ -62,4 +62,5 @@ $routes->post('createSize','SizeController::createSize',['as'=>'create.size']);
 $routes->post('createOption','OptionsController::createOption',['as'=>'create.option']);
 $routes->post('createOption','OptionsController::createOption',['as'=>'create.option']);
 $routes->post('createUserType','UserTypeController::createUserType',['as'=>'create.user-type']);
+$routes->post('createUser','UserController::createUser',['as'=>'create.user']);
 
