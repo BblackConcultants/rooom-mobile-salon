@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rooom Mobile Hair Salon</title>
+<title><?php echo $page_heading; ?></title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
 <link rel="icon" type="image/x-icon" href="assets/images/fav.png">
 
@@ -33,12 +33,12 @@ include "navigation.php";
 <div class="container-fluid">
 <div class="row mb-2">
 <div class="col-sm-6">
-<h1><?php echo $page_heading; ?></h1>
+<h1><?php echo $title; ?></h1>
 </div>
 <div class="col-sm-6">
 <ol class="breadcrumb float-sm-right">
 <li class="breadcrumb-item"><a href="<?php echo base_url('dashboard'); ?>">Home</a></li>
-<li class="breadcrumb-item active"><?php echo $title; ?></li>
+<li class="breadcrumb-item active"><?php echo $page_heading; ?></li>
 </ol>
 </div>
 </div>
@@ -56,7 +56,7 @@ include "navigation.php";
 
 <div class="card" style="margin-top: 10px;">
 <div class="card-header">
-	<div class="col-6"><h3 class="card-title"><?php echo $page_heading;?></h3></div>
+	<div class="col-6"><h3 class="card-title"><?php echo $title  ;?></h3></div>
 
 </div>
 
@@ -73,30 +73,16 @@ include "navigation.php";
 </tr>
 </thead>
 <tbody>
+<?php  foreach ($users as $key => $user) {?>
 <tr>
-<td>12 Dec 2023</td>
-<td>Maria Mncube</td>
-<td>Mamncube</td>
-<td>System Administrator</td>
-<td>Active</td>
+<td><?php echo date('Y-m-d H:i:s', $user->date_created); ?></td>
+<td><?php echo strtoupper($user->first_name.' '.$user->surname); ?></td>
+<td><?php echo strtoupper($user->username); ?></td>
+<td><?php echo strtoupper($user->username); ?></td>
+<td><?php echo $user->status; ?></td>
 <td><a href="<?php echo base_url('view_user'); ?>"><i class="fa fa-eye fa-2x text-primary"></i></a></td>
 </tr>
-<tr>
-<td>12 Dec 2023</td>
-<td>Mbongiseni Mgunu</td>
-<td>Mbongie</td>
-<td>Hairdresser</td>
-<td>Active</td>
-<td><a href="<?php echo base_url('view_user'); ?>"><i class="fa fa-eye fa-2x text-primary"></i></a></td>
-</tr>
-<tr class="disabled">
-<td>12 Dec 2023</td>
-<td>Mercy Dube</td>
-<td>Merciless</td>
-<td>Nail Specialist</td>
-<td>Active</td>
-<td><a href="<?php echo base_url('view_user'); ?>"><i class="fa fa-eye fa-2x text-primary"></i></a></td>
-</tr>
+<?php } ?>
 </tbody>
 </table>
 </div>

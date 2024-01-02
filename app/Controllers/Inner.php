@@ -302,8 +302,10 @@ class Inner extends BaseController
     }
          public function user_management()
     {
-        $data['title'] = ucfirst('User Management');
-        $data['page_heading'] = ucfirst('User Listing');
+        $data['title'] = ucfirst('User User Listing');
+        $data['page_heading'] = ucfirst('Rooom Mobile Salon User Management');
+        $users = $this->db->table('users')->get()->getResult();
+        $data['users'] = $users;
         return view('innerpages/admin/user_management', $data);
     }
         public function new_user()
