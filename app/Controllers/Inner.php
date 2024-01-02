@@ -4,9 +4,11 @@ namespace App\Controllers;
 use CodeIgniter\Exceptions\PageNotFoundException;
 use App\Models\ServiceCategories as CategoriesModel;
 use App\Models\Color as ColorsModel;
+use App\Models\Booking;
 
 class Inner extends BaseController
 {
+
     private $db;
     
     public function __construct()
@@ -23,13 +25,8 @@ class Inner extends BaseController
     public function dashboard()
     {
        
-        $colors = $this->db->table('hair_colors')->get()->getResult();
-        $data['colors'] = $colors;
-        $sizes = $this->db->table('hairstyle_sizes')->get()->getResult();
-        $data['sizes'] = $sizes;
-        $optional_services = $this->db->table('optional_services')->get()->getResult();
-        $data['optional_services'] = $optional_services;
-        $data['title'] = ucfirst('Rooom Mobile Salon Dashboard ');
+        $data['page_heading'] = ucfirst('Rooom Mobile Salon Dashboard ');
+        $data['title'] = ucfirst('Administrator Dashboard ');
         return view('innerpages/admin/dashboard', $data);
     }
     public function registration()
@@ -297,6 +294,9 @@ class Inner extends BaseController
 
         public function booking_processing()
     {
+        
+        $bookingModel = new Booking();
+        $data['all_bookings'] = $bookingModel->findAll();
         $data['title'] = ucfirst('Bookings In Progress');
         $data['page_heading'] = ucfirst('Bookings Being Processed');
         return view('innerpages/admin/booking_processing', $data);

@@ -16,7 +16,7 @@ require_once "left_sidebar.php";
 <div class="container-fluid">
 <div class="row mb-2">
 <div class="col-sm-6">
-<h1 class="m-0">Administrator Dashboard</h1>
+<h1 class="m-0"><?php echo $title; ?></h1>
 </div>
 <div class="col-sm-6">
 <ol class="breadcrumb float-sm-right">
@@ -55,7 +55,7 @@ require_once "left_sidebar.php";
 <span class="info-box-icon bg-info elevation-1"><img src="assets/images/calendar.png" alt=""></span>
 <a href="<?php echo base_url('booking_processing'); ?>">
 <div class="info-box-content">
-<span class="info-box-text">Bookings In Progress</span>
+<span class="info-box-text">All Bookings</span>
 <span class="info-box-number">10</span>
 </div>
 </a>

@@ -66,34 +66,28 @@ include "navigation.php";
 <tr>
 <th>Client Name</th>
 <th>Service</th>
-<th>Auto Allocated To</th>
+<th>Status</th>
 <th>Location</th>
 <th>Date</th>
+<th>Time</th>
 <th>View</th>
 </tr>
 </thead>
 <tbody>
+<?php  foreach ($all_bookings as $key => $booking) { ?>
 <tr>
-<td>Trish Moyo</td>
-<td>Knotless Braids
-</td>
-<td>Lala Jimmy</td>
-<td>345 Rhodes Street, Randburg, Johannesburg</td>
-<td>18-12-2023 : 1000Hrs</td>
+<td><?php echo $booking['first_name'].' '.$booking['surname'];  ?></td>
+<td><?php echo $booking['hairstyle']; ?></td>
+<td><?php echo $booking['status']; ?></td>
+<td><?php echo $booking['status']; ?></td>
+<td><?php echo $booking['booking_date']; ?></td>
+<td><?php echo $booking['booking_time']; ?></td>
 <td><a href="<?php echo base_url('booking_process'); ?>"><i class="fas fa-eye"></i></a></td>
 </tr>
-
+<?php } ?>
 
 </tbody>
-<!-- <tfoot>
-<tr>
-<th>Client Name</th>
-<th>Service</th>
-<th>Location</th>
-<th>Date</th>
-<th>View</th>
-</tr>
-</tfoot> -->
+
 </table>
 </div>
 

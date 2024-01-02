@@ -18,6 +18,13 @@
 <div class="col-md-10 ftco-animate">
 <form action="<?= route_to('make.booking'); ?>" method="post" id="make-booking" autocomplete="off" class="appointment-form">
 <div class="row">
+    <div class="col-sm-12">
+        <div class="form-group">
+            <input type="text" class="form-control" id="autocomplete_search" name="autocomplete_search" placeholder="First Name" required>
+        </div>
+    </div>
+</div>
+<div class="row">
 <div class="col-sm-6">
 <div class="form-group"
 ><input type="text" class="form-control" id="name" name="name" placeholder="First Name" required>
