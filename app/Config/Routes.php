@@ -40,6 +40,7 @@ $routes->get('nail_service_details', 'Inner::nail_service_details');
 $routes->get('profile', 'Inner::profile');
 $routes->get('active_clients', 'Inner::active_clients');
 $routes->get('add_hairstyle_color', 'Inner::add_hairstyle_color');
+$routes->get('add_user_type', 'Inner::add_user_type');
 $routes->get('add_hairstyle_size', 'Inner::add_hairstyle_size');
 $routes->get('add_hairstyle_options', 'Inner::add_hairstyle_options');
 $routes->get('new_service', 'Inner::new_service');
@@ -56,6 +57,7 @@ $routes->get('user_roles', 'Inner::user_roles');
 // make booking
 $routes->post('makeBooking','BookingController::makeBooking',['as'=>'make.booking']);
 $routes->post('createService','ServiceController::createService',['as'=>'create.service']);
+$routes->post('createUserType','UserTypeController::createUserType',['as'=>'create.user_type']);
 $routes->post('createColor','ColorController::createColor',['as'=>'create.color']);
 $routes->post('createSize','SizeController::createSize',['as'=>'create.size']);
 $routes->post('createOption','OptionsController::createOption',['as'=>'create.option']);

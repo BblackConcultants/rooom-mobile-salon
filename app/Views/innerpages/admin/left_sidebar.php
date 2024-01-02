@@ -75,6 +75,12 @@ Quick Links
 <p>Add Hairstyle Options</p>
 </a>
 </li>
+<li class="nav-item">
+<a href="<?php echo base_url('add_user_type'); ?>" class="nav-link">
+<i class="far fa-circle nav-icon"></i>
+<p>Add User Type</p>
+</a>
+</li>
 </ul>
 </li>
 <li class="nav-item menu-closed">

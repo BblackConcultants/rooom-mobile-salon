@@ -314,6 +314,14 @@ class Inner extends BaseController
         $data['page_heading'] = ucfirst('Register New System User');
         return view('innerpages/admin/new_user', $data);
     }
+       public function add_user_type()
+    {
+        $data['title'] = ucfirst('Add System User Type');
+        $data['page_heading'] = ucfirst('Rooom Mobile Salon User Management');
+        $user_types = $this->db->table('user_types')->get()->getResult();
+        $data['user_types'] = $user_types;
+        return view('innerpages/admin/add_user_type', $data);
+    }
          public function view_user()
     {
         $data['title'] = ucfirst('User Management');
