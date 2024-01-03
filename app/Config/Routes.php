@@ -41,6 +41,7 @@ $routes->get('profile', 'Inner::profile');
 $routes->get('active_clients', 'Inner::active_clients');
 $routes->get('add_hairstyle_color', 'Inner::add_hairstyle_color');
 $routes->get('add_user_type', 'Inner::add_user_type');
+$routes->get('add_service_category', 'Inner::add_service_category');
 $routes->get('add_hairstyle_size', 'Inner::add_hairstyle_size');
 $routes->get('add_hairstyle_options', 'Inner::add_hairstyle_options');
 $routes->get('new_service', 'Inner::new_service');
@@ -63,4 +64,5 @@ $routes->post('createOption','OptionsController::createOption',['as'=>'create.op
 $routes->post('createOption','OptionsController::createOption',['as'=>'create.option']);
 $routes->post('createUserType','UserTypeController::createUserType',['as'=>'create.user-type']);
 $routes->post('createUser','UserController::createUser',['as'=>'create.user']);
+$routes->post('createServiceCat','ServiceCatController::createServiceCat',['as'=>'create.service-cat']);
 

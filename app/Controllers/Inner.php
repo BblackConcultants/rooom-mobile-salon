@@ -92,6 +92,15 @@ class Inner extends BaseController
         return view('innerpages/admin/add_user_type', $data);
     }
 
+       public function add_service_category()
+    {
+        $data['page_heading'] = ucfirst('Rooom Mobile Salon Add Service Category');
+        $data['title'] = ucfirst('Add Service Category');
+        $service_categories = $this->db->table('service_category')->get()->getResult();
+        $data['service_categories'] = $service_categories;
+        return view('innerpages/admin/add_service_category', $data);
+    }
+
       public function add_hairstyle_size()
     {
         $data['title'] = ucfirst('Rooom Mobile Salon Add Hairstyle Size ');

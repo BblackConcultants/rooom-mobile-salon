@@ -189,4 +189,48 @@
            }
         });
    });
+
+   $('#create-service-cat').submit(function(e){
+        $('#add-cat-btn').html("Creating Service Category...");
+
+        e.preventDefault();
+         var Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000
+        });
+
+        var form = this;
+        $.ajax({
+           url:$(form).attr('action'),
+           method:$(form).attr('method'),
+           data:new FormData(form),
+           processData:false,
+           dataType:'json',
+           contentType:false,
+           beforeSend:function(){
+              $(form).find('span.error-text').text('');
+           },
+           success:function(data){
+                 if($.isEmptyObject(data.error)){
+                     if(data.code == 1){
+                         $(form)[0].reset();
+                         Toast.fire({
+                            icon: 'success',
+                            title: 'The service category has been successfully added!'
+                          })
+                         $("#add-cat-btn").html("Add Service Category");
+                         
+                     }else{
+                     }
+                 }else{
+                     $.each(data.error, function(prefix, val){
+                         $(form).find('span.'+prefix+'_error').text(val);
+                     });
+                 }
+           }
+        });
+   });
+
 </script>
