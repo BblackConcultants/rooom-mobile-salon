@@ -23,8 +23,9 @@ class Inner extends BaseController
     }
 
     public function dashboard()
-    {
-       
+    {   
+        $service_categories = $this->db->table('service_category')->get()->getResult();
+        $data['service_categories'] = $service_categories;
         $data['page_heading'] = ucfirst('Rooom Mobile Salon Dashboard ');
         $data['title'] = ucfirst('Administrator Dashboard ');
         return view('innerpages/admin/dashboard', $data);
@@ -208,12 +209,11 @@ class Inner extends BaseController
 
      public function hairdresser_services()
     {
-        $colorsModel = new \App\Models\Color();
-        // get all colors
-        $colors = $this->db->table('hair_colors')->get()->getResult();
-        $data['colors'] = $colors;
-        $data['title'] = ucfirst('Rooom Mobile Salon Hairdresser Services Listing');
-        $data['page_heading'] = ucfirst('Hairdresser Services Listing');
+        
+        $services = $this->db->table('services')->get()->getResult();
+        $data['services'] = $services;
+        $data['title'] = ucfirst('Rooom Mobile Salon Services Listing');
+        $data['page_heading'] = ucfirst('Services Listing');
         $data['button_text'] = ucfirst('Hairdresser');
         return view('innerpages/admin/hairdresser_services', $data);
     }

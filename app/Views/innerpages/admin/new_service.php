@@ -124,7 +124,8 @@ include "navigation.php";
 <div class="row">
 <div class="col-12">
 <a href="javascript:void(0);" class="btn btn-secondary">Cancel</a>
-<input id="create-btn" type="submit" value="Create Service" class="btn btn-success float-right submitting">
+<button id="create-btn" type="submit" class="btn btn-success float-right submitting">Create Service</button>
+
 </div>
 </form>
 </div>

@@ -66,7 +66,7 @@ include "navigation.php";
 <div class="col-md-12">
 <div class="card card-primary">
 <div class="card-header">
-<h3 class="card-title">Add New Servie Category</h3>
+<h3 class="card-title">Add New Service Category</h3>
 <div class="card-tools">
 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
 <i class="fas fa-minus"></i>
@@ -76,7 +76,7 @@ include "navigation.php";
 <div class="card-body">
 <form  action="<?= route_to('create.service-cat'); ?>" method="post" id="create-service-cat" autocomplete="off"  class="form-horizontal">
 <div class="form-group row">
-<label for="color" class="col-sm-2 col-form-label">User Type</label>
+<label for="color" class="col-sm-2 col-form-label">Service Category</label>
 <div class="col-sm-10">
 <input type="text" class="form-control" id="service_cat" name="service_cat" placeholder="Optional Service" required>
 </div>

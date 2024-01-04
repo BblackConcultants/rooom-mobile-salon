@@ -49,7 +49,7 @@ include "navigation.php";
 <div class="container-fluid">
 <div class="row">
 	<div class="col-4">
-	<a href="<?php echo base_url('new_service'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-user"></i>  &nbsp;&nbsp; Register New <?php echo $button_text;  ?> Service</a>
+	<a href="<?php echo base_url('new_service'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-user"></i>  &nbsp;&nbsp; Register New Service</a>
 </div>
 <div class="col-12">
 
@@ -66,45 +66,23 @@ include "navigation.php";
 <tr>
 <th>Date Registered</th>
 <th>Service Name</th>
-<th>Service Type</th>
-<th>Registered By</th>
-<th>Status</th>
+<th>Service Category</th>
+<th>Parent Service</th>
+<th>Fee (R)</th>
 <th>View</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>19 Oct 2023</td>
-<td>Braids</td>
-<td>Core</td>
-<td>Zweli Mkhize</td>
-<td><label class="text-success">Active</label></td>
-<td><a href="<?php echo base_url('service_details'); ?>"><i class="fas fa-eye"></i></a></td>
-</tr>
-<tr>
-<td>19 Jan 2023</td>
-<td>Locks</td>
-<td>Core</td>
-<td>Tariro Marufu</td>
-<td><label class="text-success">Active</label></td>
-<td><a href="<?php echo base_url('service_details'); ?>"><i class="fas fa-eye"></i></a></td>
-</tr>
-<tr>
-<td>19 Nov 2023</td>
-<td>Undo</td>
-<td>Optional</td>
-<td>Zweli Mkhize</td>
-<td><label class="text-success">Active</label></td>
-<td><a href="<?php echo base_url('service_details'); ?>"><i class="fas fa-eye"></i></a></td>
-</tr>
-<tr>
-<td>19 Feb 2023</td>
-<td>Twists</td>
-<td>Core</td>
-<td>Zweli Mkhize</td>
-<td><label class="text-success">Active</label></td>
-<td><a href="<?php echo base_url('service_details'); ?>"><i class="fas fa-eye"></i></a></td>
-</tr>
+<?php foreach ($services as $key => $service) {?>
+  <tr>
+  <td><?php echo $service->date_created; ?></td>
+  <td><?php echo $service->service_name; ?></td>
+  <td><?php echo $service->service_category; ?></td>
+  <td><?php echo $service->parent_service; ?></td>
+  <td><?php echo $service->fee; ?></td>
+  <td><a href="<?php echo base_url('service_details'); ?>"><i class="fas fa-eye"></i></a></td>
+  </tr>
+<?php } ?>
 </tbody>
 </table>
 </div>

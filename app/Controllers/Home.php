@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\Service as ServicesModel;
+use App\Models\Service as ServiceCategories;
 
 
 class Home extends BaseController {
@@ -23,6 +24,8 @@ class Home extends BaseController {
         $data['sizes'] = $sizes;
         $data['services'] = $services;
         $data['hair_colors'] = $hair_colors;
+        $service_cats = $this->db->table('service_category')->get()->getResult();
+        $data['service_cats'] = $service_cats;
         $optional_services = $this->db->table('optional_services')->get()->getResult();
         $data['optional_services'] = $optional_services;
 		echo view('innerpages/template', $data);

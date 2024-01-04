@@ -19,9 +19,18 @@
 </div>
 <div class="row justify-content-center">
 <div class="col-md-8 col-lg-6">
-  <h3>HAIRSTYLES</h3>
 <div id="accordion" class="myaccordion w-100">
-<?php { ?>
+  <h3 style="">HAIRSTYLES</h3>
+<?php 
+
+// foreach ($service_cats as $key => $cat) {
+//     echo "<h3>".strtoupper($cat->category)."</h3>";
+
+// }
+
+{ 
+
+?>
 <div class="card">
 <div class="card-header py-3 px-4" id="headingOne">
 <h2 class="mb-0">

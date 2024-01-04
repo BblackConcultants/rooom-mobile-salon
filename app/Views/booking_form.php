@@ -37,7 +37,8 @@
 </div>
 <div class="col-sm-6">
 <div class="form-group">
-<input type="text" class="form-control appointment_date" id="booking_date" name="booking_date" placeholder="Date" required>
+<!-- <input type="text" class="form-control appointment_date" id="booking_date" name="booking_date" placeholder="Date" required> -->
+<input id="date" data-provide="datepicker">
 </div>
 </div>
 <div class="col-sm-6">
@@ -188,4 +189,13 @@
            }
         });
    });
+
+   
+var date = new Date();
+date.setDate(date.getDate());
+
+$('#date').datepicker({ 
+    startDate: date
+});
+
 </script>
