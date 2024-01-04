@@ -148,14 +148,17 @@ Service Management
 </p>
 </a>
 <ul class="nav nav-treeview">
-<?php foreach ($service_categories as $key => $cat) {
-   echo '<li class="nav-item">
-<a href="'.base_url('nail_services').'" class="nav-link">
-<i class="far fa-circle nav-icon"></i>
-<p>'.$cat->category.'</p>
-</a>
-</li>';
-}  ?>
+<?php //foreach ($service_categories as $key => $cat) {
+//    echo '<li class="nav-item">
+// <a href="'.base_url('nail_services').'" class="nav-link">
+// <i class="far fa-circle nav-icon"></i>
+// <p>'.$cat->category.'</p>
+// </a>
+// </li>';
+//}  ?>
+<li class="nav-item">
+   To be fixed
+</li>
 </ul>
 </li>
 <li class="nav-item">

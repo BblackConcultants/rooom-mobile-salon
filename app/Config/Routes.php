@@ -65,4 +65,3 @@ $routes->post('createOption','OptionsController::createOption',['as'=>'create.op
 $routes->post('createUserType','UserTypeController::createUserType',['as'=>'create.user-type']);
 $routes->post('createUser','UserController::createUser',['as'=>'create.user']);
 $routes->post('createServiceCat','ServiceCatController::createServiceCat',['as'=>'create.service-cat']);
-

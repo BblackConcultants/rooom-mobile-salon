@@ -22,7 +22,7 @@
 <div class="wrapper">
 
 <?php 
-include "left_sidebar.php"; 
+include "side_bar.php"; 
 include "navigation.php"; 
 ?>
 

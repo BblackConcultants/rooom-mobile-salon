@@ -19,7 +19,7 @@
 
 <?php 
 include "admin_header_lite.php"; 
-include "left_sidebar.php"; 
+include "side_bar.php"; 
 include "navigation.php"; 
 ?>
 <div class="content-wrapper">

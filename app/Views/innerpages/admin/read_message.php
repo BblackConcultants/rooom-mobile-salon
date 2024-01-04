@@ -17,7 +17,7 @@
 
 <?php 
 	require_once "navigation.php";
-	require_once "left_sidebar.php";
+	require_once "side_bar.php";
 ?>
 
 

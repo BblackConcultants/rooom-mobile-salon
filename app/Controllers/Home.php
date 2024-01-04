@@ -32,9 +32,15 @@ class Home extends BaseController {
 	}
 
 	public function about() {
-		$data = [];
+		$services = $this->db->table('services')->get()->getResult();
+		$data['services'] = $services;
 		$data['title'] 		= 'Room Mobile Salon | About Us';
 		$data['heading']	= 'Welcome to Rooom Mobile Salon';
+		$sizes = $this->db->table('hairstyle_sizes')->get()->getResult();
+        $data['sizes'] = $sizes;
+        $data['services'] = $services;
+        $optional_services = $this->db->table('optional_services')->get()->getResult();
+        $data['optional_services'] = $optional_services;
 		$data['main_content']	= 'about';	// page name
 		echo view('innerpages/template', $data);
 	}
