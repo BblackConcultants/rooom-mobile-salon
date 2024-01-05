@@ -65,3 +65,11 @@ $routes->post('createOption','OptionsController::createOption',['as'=>'create.op
 $routes->post('createUserType','UserTypeController::createUserType',['as'=>'create.user-type']);
 $routes->post('createUser','UserController::createUser',['as'=>'create.user']);
 $routes->post('createServiceCat','ServiceCatController::createServiceCat',['as'=>'create.service-cat']);
+
+// auth
+$routes->get('/', 'SignupController::index');
+$routes->get('/signup', 'SignupController::index');
+$routes->match(['get', 'post'], 'SignupController/store', 'SignupController::store');
+$routes->match(['get', 'post'], 'SigninController/loginAuth', 'SigninController::loginAuth');
+$routes->get('/signin', 'SigninController::index');
+$routes->get('/profile', 'ProfileController::index',['filter' => 'authGuard']);

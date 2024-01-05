@@ -33,9 +33,14 @@
 </div>
 <div class="card-body">
 <p class="login-box-msg">Sign in to start your session</p>
-<form  method="post">
+<?php if(session()->getFlashdata('msg')):?>
+    <div class="alert alert-warning">
+       <?= session()->getFlashdata('msg') ?>
+    </div>
+<?php endif;?>
+<form  action="<?php echo base_url(); ?>/SigninController/loginAuth" method="post">
 <div class="input-group mb-3">
-<input type="email" class="form-control" placeholder="Email">
+    <input type="email" name="email" placeholder="Email" value="" class="form-control" >
 <div class="input-group-append">
 <div class="input-group-text">
 <span class="fas fa-envelope"></span>
@@ -43,7 +48,7 @@
 </div>
 </div>
 <div class="input-group mb-3">
-<input type="password" class="form-control" placeholder="Password">
+    <input type="password" name="password" placeholder="Password" class="form-control" >
 <div class="input-group-append">
 <div class="input-group-text">
 <span class="fas fa-lock"></span>
@@ -61,7 +66,7 @@ Remember Me
 </div>
 
 <div class="col-4">
-<a href="<?php echo base_url('dashboard'); ?>" class="btn btn-primary btn-block">Sign In</a>
+   <button type="submit" class="btn btn-success">Signin</button>
 </div>
 
 </div>
