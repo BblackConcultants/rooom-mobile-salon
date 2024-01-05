@@ -1,4 +1,9 @@
-<?php include "admin_header.php"; ?>
+<?php 
+include "admin_header.php"; 
+// print_r($this->session->all_userdata());exit();
+$session = session();
+?>
+
 <div class="wrapper">
 
 <div class="preloader flex-column justify-content-center align-items-center">
@@ -21,7 +26,7 @@ require_once "side_bar.php";
 <div class="col-sm-6">
 <ol class="breadcrumb float-sm-right">
 <li class="breadcrumb-item"><a href="<?php echo base_url('dashboard'); ?>">Home</a></li>
-<li class="breadcrumb-item active">Administrator Dashboard</li>
+<li class="breadcrumb-item active"><?php echo ucfirst($session->get('user_type')); ?> Dashboard</li>
 </ol>
 </div>
 </div>

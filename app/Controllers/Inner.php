@@ -23,11 +23,12 @@ class Inner extends BaseController
     }
 
     public function dashboard()
-    {   
+    {       
+        $session = session();
         $service_categories = $this->db->table('service_category')->get()->getResult();
         $data['service_categories'] = $service_categories;
         $data['page_heading'] = ucfirst('Rooom Mobile Salon Dashboard ');
-        $data['title'] = ucfirst('Administrator Dashboard ');
+        $data['title'] = ucfirst($session->get('username').'\'s Dashboard ');
         return view('innerpages/admin/dashboard', $data);
     }
     public function registration()
@@ -347,5 +348,18 @@ class Inner extends BaseController
         $data['title'] = ucfirst('User Management');
         $data['page_heading'] = ucfirst('Manage User Privilleges');
         return view('innerpages/admin/user_roles', $data);
+    }
+           public function logout()
+    {
+        $session = session();
+        $user_data = $session->get();
+        foreach ($user_data as $key => $value) {
+            if ($key != 'session_id' && $key != 'ip_address' && $key != 'user_agent' && $key != 'last_activity') {
+                $session->remove($key);
+            }
+        }
+        $session->destroy();
+        return redirect()->to('login');
+        
     }
 }

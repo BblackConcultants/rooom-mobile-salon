@@ -12,7 +12,7 @@
 <img src="assets/admin/dist/img/user.png" class="img-circle elevation-2" alt="User Image">
 </div>
 <div class="info">
-<a href="<?php echo base_url('profile'); ?>" class="d-block">Zweli Mkhize</a>
+<a href="<?php echo base_url('profile'); ?>" class="d-block" style="color: #fbf000;"><?php echo strtoupper($session->get('username')); ?></a>
 </div>
 </div>
 
