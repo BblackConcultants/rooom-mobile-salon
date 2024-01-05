@@ -32,6 +32,8 @@ class Inner extends BaseController
     }
     public function registration()
     {
+        $user_types = $this->db->table('user_types')->get()->getResult();
+        $data['user_types'] = $user_types;
         $data['title'] = ucfirst('Rooom Mobile Salon User Registration ');
         return view('innerpages/admin/registration', $data);
     }

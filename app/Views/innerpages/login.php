@@ -66,26 +66,26 @@ Remember Me
 </div>
 
 <div class="col-4">
-   <button type="submit" class="btn btn-success">Signin</button>
+   <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-lock"></i> Sign In</button>
 </div>
 
+</div>
+<div class="row" style="margin-top:10px;">
+<div class="col-8">
+    <p class="mb-1">
+        <a href="<?php echo base_url('forgot_password'); ?>">I forgot my password</a>
+    </p>
+</div>
+<div class="col-4">
+   <p class="mb-0">
+    <a href="<?php echo base_url('registration'); ?>" class="text-center">Register</a>
+</p>
+</div>
 </div>
 </form>
-<div class="social-auth-links text-center mt-2 mb-3">
-<a href="#" class="btn btn-block btn-primary" style="background-color: #4267B2; color: #fff; border-color: #fff;">
-<i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-</a>
-<a href="#" class="btn btn-block btn-danger" style="">
-<i class="fab fa-google mr-2"></i> Sign in using Google
-</a>
-</div>
 
-<p class="mb-1">
-<a href="<?php echo base_url('forgot_password'); ?>">I forgot my password</a>
-</p>
-<p class="mb-0">
-<a href="<?php echo base_url('registration'); ?>" class="text-center">Register</a>
-</p>
+
+
 </div>
 
 </div>
