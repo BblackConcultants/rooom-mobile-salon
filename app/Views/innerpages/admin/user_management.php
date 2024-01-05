@@ -73,14 +73,39 @@ include "navigation.php";
 </tr>
 </thead>
 <tbody>
-<?php  foreach ($users as $key => $user) {?>
+<?php  foreach ($users as $key => $user) {
+
+switch ($user->status) {
+  case 'Active':
+    $class = 'text-success';
+    break;
+  case 'Pending':
+    $class = 'text-info';
+    break;
+  case 'Suspended':
+    $class = 'text-warning';
+    break;
+  case 'Dismissed':
+    $class = 'text-danger';
+    break;
+  
+  default:
+    $class = '';
+    break;
+}
+
+?>
+
 <tr>
-<td><?php echo $user->date_created; ?></td>
+<td><?php echo $user->created_at; ?></td>
 <td><?php echo strtoupper($user->first_name.' '.$user->surname); ?></td>
 <td><?php echo strtoupper($user->username); ?></td>
 <td><?php echo strtoupper($user->user_type); ?></td>
-<td><?php echo $user->status; ?></td>
-<td><a href="<?php echo base_url('view_user'); ?>"><i class="fa fa-eye  text-primary"></i></a></td>
+<td class="<?php echo $class; ?>"><?php echo $user->status; ?></td>
+<td><a href="<?php echo base_url('view_user?id='.$user->id); ?>"><i class="fa fa-eye  text-primary"></i></a></td>
+<button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default">
+Launch Default Modal
+</button>
 </tr>
 <?php } ?>
 </tbody>

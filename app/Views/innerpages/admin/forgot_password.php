@@ -23,7 +23,11 @@
         border-color: #fbf000;
         box-shadow: none;
     }
-</style></head>
+    .login-box, .register-box {
+        width: 500px;
+    }
+</style>
+</head>
 <body class="hold-transition login-page">
 <div class="login-box">
 <div class="card card-outline card-primary">

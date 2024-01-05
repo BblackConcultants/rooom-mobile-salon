@@ -3,6 +3,7 @@
 <script src="assets/admin/plugins/jquery-validation/additional-methods.min.js"></script>
 <script src="assets/admin/plugins/sweetalert2/sweetalert2.min.js"></script>
 <script src="assets/admin/plugins/toastr/toastr.min.js"></script>
+
 <script type="text/javascript">
 	$(document).ready(function() {
 		  $('.decimal').keypress(function(event) {

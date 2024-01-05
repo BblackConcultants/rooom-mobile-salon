@@ -5,6 +5,8 @@ use CodeIgniter\Exceptions\PageNotFoundException;
 use App\Models\ServiceCategories as CategoriesModel;
 use App\Models\Color as ColorsModel;
 use App\Models\Booking;
+use App\Models\UserModel;
+
 
 class Inner extends BaseController
 {
@@ -322,6 +324,7 @@ class Inner extends BaseController
     }
          public function user_management()
     {
+        
         $data['title'] = ucfirst('User User Listing');
         $data['page_heading'] = ucfirst('Rooom Mobile Salon User Management');
         $users = $this->db->table('users')->get()->getResult();
@@ -339,6 +342,12 @@ class Inner extends BaseController
    
          public function view_user()
     {
+
+        $session = session();
+        $userModel = new UserModel();
+        $conditions = array('id' => $this->request->getVar('id'), );
+        $user_details = $userModel->where($conditions)->first();
+        $session->setFlashdata($user_details);
         $data['title'] = ucfirst('User Management');
         $data['page_heading'] = ucfirst('User Details');
         return view('innerpages/admin/user_details', $data);

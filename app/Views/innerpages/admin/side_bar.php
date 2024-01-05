@@ -1,3 +1,6 @@
+<?php  
+$session = session();
+?>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
 <a href="categoriesModel" class="brand-link">
@@ -13,6 +16,7 @@
 </div>
 <div class="info">
 <a href="<?php echo base_url('profile'); ?>" class="d-block" style="color: #fbf000;"><?php echo strtoupper($session->get('username')); ?></a>
+<span style="color: #fff;">(<?php echo $session->get('user_type'); ?>)</span>
 </div>
 </div>
 
@@ -190,6 +194,7 @@ Message Management
 </li>
 </ul>
 </li>
+<?php if(strcmp($session->get('user_type'), 'Super Administrator') == 0): ?>
 <li class="nav-item">
 <a href="#" class="nav-link">
 <i class="nav-icon fas fa-cog"></i>
@@ -219,6 +224,7 @@ System Configurations
 </li>
 </ul>
 </li>
+<?php endif; ?>
 <li class="nav-item">
 <a href="<?php echo base_url('logout'); ?>" class="nav-link">
 <i class="nav-icon fas fa-unlock"></i>
