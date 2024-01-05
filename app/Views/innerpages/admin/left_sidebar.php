@@ -291,7 +291,7 @@ System Configurations
 </li>
 
 <li class="nav-item">
-<a href="<?php echo base_url('login'); ?>" class="nav-link">
+<a href="<?php echo base_url('logout'); ?>" class="nav-link">
 <i class="nav-icon fas fa-unlock"></i>
 <p>
 Logout

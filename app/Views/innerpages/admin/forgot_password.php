@@ -49,7 +49,7 @@
 </div>
 </form>
 <p class="mt-3 mb-1">
-<a href="<?php echo base_url('login'); ?>">Login</a>
+<a href="<?php echo base_url('logout'); ?>">Login</a>
 </p>
 </div>
 

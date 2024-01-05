@@ -22,6 +22,9 @@
         border-color: #fbf000;
         box-shadow: none;
     }
+    .login-box, .register-box {
+            width: 500px;
+        }
 </style>
 </head>
 <body class="hold-transition login-page">
@@ -38,7 +41,7 @@
        <?= session()->getFlashdata('msg') ?>
     </div>
 <?php endif;?>
-<form  action="<?php echo base_url(); ?>/SigninController/loginAuth" method="post">
+<form id="login-form" action="<?php echo base_url(); ?>/SigninController/loginAuth" method="post">
 <div class="input-group mb-3">
     <input type="email" name="email" placeholder="Email" value="" class="form-control" >
 <div class="input-group-append">
@@ -66,7 +69,7 @@ Remember Me
 </div>
 
 <div class="col-4">
-   <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-lock"></i> Sign In</button>
+   <button id="log-in-btn" type="submit" class="btn btn-primary btn-block"><i class="fa fa-lock"></i> Sign In</button>
 </div>
 
 </div>
@@ -94,11 +97,48 @@ Remember Me
 
 
 <script src="assets/admin/plugins/jquery/jquery.min.js"></script>
-
 <script src="assets/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 <script src="assets/admin/dist/js/adminlte.min2167.js?v=3.2.0"></script>
-</body>
+<script src="assets/admin/plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="assets/admin/plugins/jquery-validation/additional-methods.min.js"></script>
+<script src="assets/admin/plugins/sweetalert2/sweetalert2.min.js"></script>
+<script src="assets/admin/plugins/toastr/toastr.min.js"></script>
+<script type="text/javascript">
+    $(function () {
 
-<!-- Mirrored from adminlte.io/themes/v3/pages/examples/login-v2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Oct 2023 06:45:39 GMT -->
+  $('#login-form').validate({
+    rules: {
+      email: {
+        required: true,
+      },
+      password: {
+        required: true,
+      },
+        
+    },
+    messages: {
+      name: {
+        required: "Please enter your registered email address"
+      },
+      surname: {
+        required: "Please enter your password"
+      },
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.form-group').append(error);
+      $('#log-in-btn').html('<i class="fa fa-user-lock"></i> Sign In');
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid');
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+    }
+  });
+});
+
+</script>
+</body>
 </html>

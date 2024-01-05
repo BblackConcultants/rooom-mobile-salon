@@ -18,7 +18,8 @@ class SigninController extends Controller
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
         
-        $data = $userModel->where('email', $email)->first();
+        $conditions = array('email' => $email, 'status' => 'Active' );
+        $data = $userModel->where($conditions)->first();
         
         if($data){
             $pass = $data['password'];
@@ -26,7 +27,10 @@ class SigninController extends Controller
             if($authenticatePassword){
                 $ses_data = [
                     'id' => $data['id'],
-                    'name' => $data['name'],
+                    'username' => $data['username'],
+                    'name' => $data['first_name'],
+                    'surname' => $data['surname'],
+                    'user_type' => $data['user_type'],
                     'email' => $data['email'],
                     'isLoggedIn' => TRUE
                 ];
