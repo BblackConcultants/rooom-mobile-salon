@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from adminlte.io/themes/v3/pages/examples/login-v2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 11 Oct 2023 06:45:39 GMT -->
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,6 +30,34 @@
     .login-box, .register-box {
         width: 500px;
     }
+/*  password validation  */
+.validation-span {
+  border-radius: 5px;
+  display: block;
+  font-size: 1.3em;
+  text-align: left;
+  position: absolute;
+  background: #fbf000;
+  left: 105%;
+  top: 25px;
+  width: 260px;
+  padding: 7px 10px;
+  color: #000;
+}
+.validation-span:after {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-right-color: #2F558E;
+  border-width: 8px;
+  margin-top: -8px;
+}
 </style>
 </head>
 <body class="hold-transition login-page">
@@ -62,7 +88,7 @@
 </div>
 <!-- email -->
 <div class="input-group mb-3">
-<input name="email" id="email" type="email" class="form-control" placeholder="Email Address">
+<input name="email" id="email" type="email" class="form-control" placeholder="Email Address" >
 <div class="input-group-append">
 <div class="input-group-text">
 <span class="fas fa-envelope"></span>
@@ -71,14 +97,23 @@
 </div>
 <!-- mobile -->
 <div class="input-group mb-3">
-<input name="phone" id="phone" type="text" class="form-control" placeholder="Phone Number">
+<input name="phone" id="phone" type="text" class="form-control num-only" placeholder="Phone Number" maxlength="10">
 <div class="input-group-append">
 <div class="input-group-text">
 <span class="fas fa-mobile-alt"></span>
 </div>
 </div>
 </div>
-<!-- services -->
+<!--  -->
+<div class="input-group mb-3">
+<input name="username" id="username" type="text" class="form-control" placeholder="Username">
+<div class="input-group-append">
+<div class="input-group-text">
+<span class="fas fa-user-tag"></span>
+</div>
+</div>
+</div>
+<!-- user type -->
 <div class="input-group mb-3">
 <select name="user_type" id="user_type" class="form-control">
     <option>Choose User Type</option>
@@ -97,6 +132,7 @@
 <!-- password -->
 <div class="input-group mb-3">
 <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+<span class="validation-span validation"><strong>Password Hints:</strong><br>&bull;&nbsp;Must be over 5 characters<br>&bull;&nbsp;Must contain at least 1 uppercase character<br>&bull;&nbsp;Must include a number</span>
 <div class="input-group-append">
 <div class="input-group-text">
 <span class="fas fa-lock"></span>
@@ -106,6 +142,7 @@
 <!-- pass confirmation -->
 <div class="input-group mb-3">
 <input name="password-confirmation" id="password-confirmation" type="password" class="form-control" placeholder="Retype password">
+<span class="validation validation-span">Please confirm your password</span>
 <div class="input-group-append">
 <div class="input-group-text">
 <span class="fas fa-lock"></span>
@@ -114,12 +151,9 @@
 </div>
 <div class="row">
 <div class="col-8">
-<div class="icheck-primary">
-<input type="checkbox" id="remember" name="remember">
-<label for="remember">
- <a href="javascript:void(0);">Terms & Conditions</a>
-</label>
-</div>
+<p class="mb-0">Have an account?
+<a href="<?php echo base_url('login') ?>" class="text-center"> Login</a>
+</p>
 </div>
 
 <div class="col-4">
@@ -129,9 +163,7 @@
 
 </div>
 </form>
-<p class="mb-0">Have ab account?
-<a href="<?php echo base_url('login') ?>" class="text-center"> Login</a>
-</p>
+
 </div>
 
 </div>
@@ -152,6 +184,7 @@
 <?php include "admin_footer_lite.php"; ?>
 
 <script type="text/javascript">
+
 $(function () {
 
   $('#register-user').validate({
@@ -213,6 +246,65 @@ $(function () {
     }
   });
 });
+
+// password check
+var $password = $("#password");
+var $confirmPassword = $("#password-confirmation");
+//Uppercase and number check variables
+var upperCase= new RegExp('[A-Z]');
+var numbers = new RegExp('[0-9]');
+
+$('.validation').hide();
+
+//Password rules
+function isPasswordValid() {    
+    //Check length and then check that password has an uppercase
+    return $password.val().length > 5 && 
+           $password.val().match(upperCase) &&
+           $password.val().match(numbers);
+}
+
+function arePasswordsMatching() {
+  return $password.val() === $confirmPassword.val();
+}
+
+//Can submit
+function canSubmit() {
+  return isPasswordValid() && arePasswordsMatching();
+}
+
+//Check password is over 8 characters
+function passwordEvent() {
+  
+  if(isPasswordValid()) {
+    $password.next().hide();
+  } else {
+    $password.next().show();
+  } 
+}
+
+//Check Passwords match
+function confirmPasswordEvent() {
+  
+  if(arePasswordsMatching()) {
+    $confirmPassword.next().hide();
+  } else {
+    $confirmPassword.next().show();
+  } 
+}
+//Enable or disablethe submit button 
+function enableSubmitEvent() {
+  $('input[type=submit]').prop("disabled", !canSubmit());
+}
+
+//Run passwords length check
+$password.focus(passwordEvent).keyup(passwordEvent).keyup(confirmPasswordEvent).keyup(enableSubmitEvent);
+
+//Run passwords match check
+$confirmPassword.focus(confirmPasswordEvent).keyup(confirmPasswordEvent).keyup(enableSubmitEvent);
+
+//Run submit button function code
+enableSubmitEvent();
 </script>
 </body>
 

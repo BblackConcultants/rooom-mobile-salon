@@ -65,11 +65,12 @@ class RegisterController extends BaseController
             echo json_encode(['code'=>0, 'error'=>$errors]);
         }else{
              $data = [
-                 'name'=>$this->request->getPost('first_name'),
-                 'email'=>$this->request->getPost('surname'),
-                 'password'=>password_hash($this->request->getPost('username'), PASSWORD_DEFAULT),
-                 'first_name'=>$this->request->getPost('user_type'),
-                 'surname'=>$this->request->getPost('user_type'),
+                 'username'=>$this->request->getPost('username'),
+                 'email'=>$this->request->getPost('email'),
+                 'phone'=>$this->request->getPost('phone'),
+                 'password'=>password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
+                 'first_name'=>$this->request->getPost('name'),
+                 'surname'=>$this->request->getPost('surname'),
                  'user_type'=>$this->request->getPost('user_type'),
                  'status'=>'Pending',
              ];

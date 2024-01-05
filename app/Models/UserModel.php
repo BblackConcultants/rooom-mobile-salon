@@ -18,6 +18,8 @@ class UserModel extends Model
         'password',
         'first_name',
         'surname',
+        'username',
+        'phone',
         'user_type',
         'status',
         'created_at'
