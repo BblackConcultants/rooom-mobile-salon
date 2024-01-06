@@ -177,7 +177,7 @@
                          $(form)[0].reset();
                          Toast.fire({
                             icon: 'success',
-                            title: 'The Hairstyle option has been successfully added!'
+                            title: 'The user type has been successfully added!'
                           })
                          $("#add-user-type").html("Add User Type");
                          
