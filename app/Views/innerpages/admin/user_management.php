@@ -85,7 +85,7 @@ switch ($user->status) {
   case 'Suspended':
     $class = 'text-warning';
     break;
-  case 'Dismissed':
+  case 'Disapproved':
     $class = 'text-danger';
     break;
   

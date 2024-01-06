@@ -1,7 +1,5 @@
 <?php 
 $session = session();
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -127,12 +125,12 @@ include "navigation.php";
         break;
       case 'Active':
         $status_class='text-success';
-        $action_btn = '<button id="disapprove-user" type="submit" class="btn btn-danger"><i class="fa fa-times"></i>  &nbsp;&nbsp;Disapprove User</button>';
+        $action_btn = '<button id="approve-user" type="submit" class="btn btn-danger"><i class="fa fa-times"></i>  &nbsp;&nbsp;Disapprove User</button>';
         $form_action = route_to('disapprove.user'); 
         break;
       case 'Disapproved':
         $status_class='text-danger';
-        $action_btn = '<button id="activate-user" type="submit" class="btn btn-info"><i class="fa fa-check"></i>  &nbsp;&nbsp;Activate User</button>';
+        $action_btn = '<button id="approve-user" type="submit" class="btn btn-info"><i class="fa fa-check"></i>  &nbsp;&nbsp;Activate User</button>';
         $form_action = route_to('approve.user'); 
         break;
       default:
@@ -217,7 +215,20 @@ All rights reserved. System Designed & Developed By <a href="https://bblack.co.z
   });
   //approve user
   $('#update-user').submit(function(e){
-        $('#approve-user').html('<i class="fa fa-spinner"></i>&nbsp;Approving User...');
+        
+        $('#approve-user').removeClass('btn-danger');
+        $('#approve-user').removeClass('btn-success');
+        var form = this;
+        console.log($(form).attr('action'));
+        if($(form).attr('action') == '/disapproveUser'){
+          $('#approve-user').html('<i class="fa fa-spinner"></i>&nbsp;Disapproving User...');
+          action = 'Disapproved';
+          status = 'Disapproved';
+          rm_class = 'text-danger';
+          add_class = 'text-danger';
+          btn_html = '<i class="fa fa-times"></i>  &nbsp;&nbsp;Approve User';
+          btn_class = 'btn-success';
+        }
 
         e.preventDefault();
         var Toast = Swal.mixin({
@@ -227,7 +238,6 @@ All rights reserved. System Designed & Developed By <a href="https://bblack.co.z
           timer: 4000
         });
 
-        var form = this;
         $.ajax({
            url:$(form).attr('action'),
            method:$(form).attr('method'),
@@ -244,15 +254,14 @@ All rights reserved. System Designed & Developed By <a href="https://bblack.co.z
                          $(form)[0].reset();
                          Toast.fire({
                             icon: 'success',
-                            title: 'The user has been approved!'
+                            title: 'The user has been '+action+'!'
                           })
-                         $('.status').html('Active');
-                         $('.status').removeClass('text-warning');
-                         $('.status').addClass('text-success');
-                         $("#approve-user").html('<i class="fa fa-times"></i>  &nbsp;&nbsp;Disapprove User');
-                         $("#approve-user").attr('id', 'disapprove-user');
-                         $('#disapprove-user').removeClass('btn-success');
-                         $('#disapprove-user').addClass('btn-danger');
+                         $('.status').html(status);
+                         $('.status').removeClass(rm_class);
+                         $('.status').addClass(add_class);
+                         $("#approve-user").html(btn_html);
+                         $("#approve-user").removeClass(add_class);
+                         $("#approve-user").addClass(btn_class);
 
                      }else{
                      }
