@@ -130,7 +130,7 @@ include "navigation.php";
         break;
       case 'Disapproved':
         $status_class='text-danger';
-        $action_btn = '<button id="approve-user" type="submit" class="btn btn-info"><i class="fa fa-check"></i>  &nbsp;&nbsp;Activate User</button>';
+        $action_btn = '<button id="approve-user" type="submit" class="btn btn-success"><i class="fa fa-check"></i>  &nbsp;&nbsp;Approve User</button>';
         $form_action = route_to('approve.user'); 
         break;
       default:
@@ -228,6 +228,16 @@ All rights reserved. System Designed & Developed By <a href="https://bblack.co.z
           add_class = 'text-danger';
           btn_html = '<i class="fa fa-times"></i>  &nbsp;&nbsp;Approve User';
           btn_class = 'btn-success';
+        }
+
+        if($(form).attr('action') == '/approveUser'){
+          $('#approve-user').html('<i class="fa fa-spinner"></i>&nbsp;Approving User...');
+          action = 'Approved';
+          status = 'Active';
+          rm_class = 'text-danger';
+          add_class = 'text-success';
+          btn_html = '<i class="fa fa-times"></i>  &nbsp;&nbsp;Disapprove User';
+          btn_class = 'btn-danger';
         }
 
         e.preventDefault();

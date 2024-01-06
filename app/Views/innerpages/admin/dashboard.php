@@ -1,6 +1,5 @@
 <?php 
 include "admin_header.php"; 
-// print_r($this->session->all_userdata());exit();
 $session = session();
 ?>
 

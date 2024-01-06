@@ -122,8 +122,8 @@ include "navigation.php";
 
 </div>
 <div class="row">
-<div class="col-12">
-<a href="javascript:void(0);" class="btn btn-secondary">Cancel</a>
+<div class="col-12" style="padding-bottom: 30px;">
+<button id="delete-user" type="button" class="btn btn-info" onclick="location.href='<?php echo base_url("dashboard"); ?>'"><i class="fa fa-arrow-left"></i>  &nbsp;&nbsp;Back</button>
 <button id="create-btn" type="submit" class="btn btn-success float-right submitting">Create Service</button>
 
 </div>

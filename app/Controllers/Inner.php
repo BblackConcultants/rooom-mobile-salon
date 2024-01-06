@@ -188,6 +188,27 @@ class Inner extends BaseController
         $data['button_text'] = ucfirst('Hairdresser');
         return view('innerpages/admin/hairdressers', $data);
     }
+     public function hairstyles()
+    {
+        $hairstyles = $this->db->table('services')
+                     ->where('service_category', 'Hairstyles')->get()->getResult();
+        $data['hairstyles'] = $hairstyles;
+        $data['page_heading'] = ucfirst('Rooom Mobile Salon Hairstyle Listing');
+        $data['title'] = ucfirst('Hairstyle Listing');
+        $data['button_text'] = ucfirst('Hairstyle');
+        return view('innerpages/admin/hairstyles', $data);
+    }
+
+     public function nails()
+    {
+        $nails = $this->db->table('services')
+                     ->where('service_category', 'Nails')->get()->getResult();
+        $data['nails'] = $nails;
+        $data['page_heading'] = ucfirst('Rooom Mobile Salon Hairstyle Listing');
+        $data['title'] = ucfirst('Nails Listing');
+        $data['button_text'] = ucfirst('Hairstyle');
+        return view('innerpages/admin/nails', $data);
+    }
 
     public function hairdresser_details()
     {

@@ -160,9 +160,18 @@ Service Management
 // </a>
 // </li>';
 //}  ?>
-<li class="nav-item">
-   To be fixed
-</li>
+   <li class="nav-item">
+   <a href="<?php echo base_url('hairstyles'); ?>" class="nav-link">
+   <i class="far fa-circle nav-icon"></i>
+   <p>Hairstyles</p>
+   </a>
+   </li>
+   <li class="nav-item">
+   <a href="<?php echo base_url('nails'); ?>" class="nav-link">
+   <i class="far fa-circle nav-icon"></i>
+   <p>Nails</p>
+   </a>
+   </li>
 </ul>
 </li>
 <li class="nav-item">

@@ -31,6 +31,8 @@ $routes->get('historical_booking_details', 'Inner::historical_booking_details');
 $routes->get('clients', 'Inner::clients');
 $routes->get('client_details', 'Inner::client_details');
 $routes->get('hairdressers', 'Inner::hairdressers');
+$routes->get('hairstyles', 'Inner::hairstyles');
+$routes->get('nails', 'Inner::nails');
 $routes->get('hairdresser_details', 'Inner::hairdresser_details');
 $routes->get('administrators', 'Inner::administrators');
 $routes->get('administrator_details', 'Inner::administrator_details');
