@@ -21,6 +21,8 @@ $session = session();
 <link rel="stylesheet" href="assets/admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
 <link rel="stylesheet" href="assets/admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 <link rel="stylesheet" href="assets/admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+<link rel="stylesheet" href="assets/admin/plugins/toastr/toastr.min.css">
+<link rel="stylesheet" href="assets/admin/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
 
@@ -72,41 +74,85 @@ include "navigation.php";
 <h3 class=""><?php  ?></h3>
 <br>
 <div class="text-muted">
-<p class="text-sm">First Name
-<b class="d-block"><?php echo session()->getFlashdata('first_name') ?></b>
-</p>
-<p class="text-sm">Surname
-<b class="d-block"><?php echo session()->getFlashdata('surname') ?></b>
-</p>
-<p class="text-sm">Username
-<b class="d-block"><?php echo session()->getFlashdata('username') ?></b>
-</p>
-<p class="text-sm">User Type
-<b class="d-block"><?php echo session()->getFlashdata('user_type') ?></b>
-</p>
-<p class="text-sm">Phone Number
-<b class="d-block"><?php echo session()->getFlashdata('phone') ?></b>
-</p>
-<p class="text-sm">Registration Date
-<b class="d-block"><?php echo session()->getFlashdata('created_at') ?></b>
-</p>
+  <div class="input-group">
+    <div class="col-md-3">
+    <p class="text-sm">First Name
+    <b class="d-block"><?php echo session()->get('sub_name') ?></b>
+    </p>
+  </div>
+  <div class="col-md-3">
+    <p class="text-sm">Surname
+    <b class="d-block"><?php echo session()->get('sub_surname') ?></b>
+    </p>
+  </div>
+  <div class="col-md-3">
+    <p class="text-sm">Username
+    <b class="d-block"><?php echo session()->get('sub_username') ?></b>
+    </p>
+  </div>
+  <div class="col-md-3">
+    <p class="text-sm">User Type
+    <b class="d-block"><?php echo session()->get('sub_user_type') ?></b>
+    </p>
+  </div>
+  <div class="col-md-3">
+    <p class="text-sm">Phone Number
+    <b class="d-block"><?php echo session()->get('sub_phone') ?></b>
+    </p>
+  </div>
+  <div class="col-md-3">
+    <p class="text-sm">Email Address
+    <b class="d-block"><?php echo session()->get('sub_email') ?></b>
+    </p>
+  </div>
+  <div class="col-md-3">
+    <p class="text-sm">Registration Date
+    <b class="d-block"><?php echo session()->get('created_at') ?></b>
+    </p>
+  </div>
+  <div class="col-md-3">
+    <p class="text-sm">Registration Date
+    <b class="d-block"><?php echo session()->get('created_at') ?></b>
+    </p>
+  </div>
+  </div>
 <p class="text-sm">Status
-<b class="d-block"><?php echo session()->getFlashdata('status') ?></b>
+  <?php  
+
+    switch (session()->get('sub_status')) {
+      case 'Pending':
+        $status_class='text-warning';
+        $action_btn = '<button id="approve-user" type="submit" class="btn btn-success"><i class="fa fa-check"></i>  &nbsp;&nbsp;Approve User</button>';
+        $form_action = route_to('approve.user'); 
+        break;
+      case 'Active':
+        $status_class='text-success';
+        $action_btn = '<button id="disapprove-user" type="submit" class="btn btn-danger"><i class="fa fa-times"></i>  &nbsp;&nbsp;Disapprove User</button>';
+        $form_action = route_to('disapprove.user'); 
+        break;
+      case 'Disapproved':
+        $status_class='text-danger';
+        $action_btn = '<button id="activate-user" type="submit" class="btn btn-info"><i class="fa fa-check"></i>  &nbsp;&nbsp;Activate User</button>';
+        $form_action = route_to('approve.user'); 
+        break;
+      default:
+        // code...
+        break;
+    }
+  ?>
+<b class="d-block <?php echo $status_class; ?> status"><?php echo session()->get('sub_status'); ?></b>
 </p>
 
 </div>
 <div class="text-left mt-5 mb-3">
-<a href="<?php echo base_url('user_management'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left"></i>  &nbsp;&nbsp; Back</a>
-<!-- <a id="approve-user" href="javascript:void(0);" class="btn btn-success btn-sm"><i class="fa fa-check"></i>  &nbsp;&nbsp; Approve </a> -->
-<form action="<?= route_to('approve.user'); ?>" method="post" id="update-user" autocomplete="off"  class="form-horizontal" >
- <input type="hidden" name="user_id" id="user_id" value="<?php echo session()->getFlashdata('id') ?>">
+<form action="<?= $form_action; ?>" method="post" id="update-user" autocomplete="off"  class="form-horizontal" >
+ <input type="hidden" name="user_id" id="user_id" value="<?php echo session()->get('sub_id') ?>">
 <div class="modal-footer justify-content-between">
-  <button id="approve-user" type="submit" class="btn btn-primary"><i class="fa fa-check"></i>  &nbsp;&nbsp;Approve User</button>
+  <button id="delete-user" type="button" class="btn btn-info" onclick="location.href='<?php echo base_url("user_management"); ?>'"><i class="fa fa-arrow-left"></i>  &nbsp;&nbsp;Back</button>
+  <?php echo $action_btn; ?>
 
 </div>
 </form>
-
-<a id="disapprove-user" href="javascript:void(0);" class="btn btn-danger btn-sm"><i class="fa fa-times"></i>  &nbsp;&nbsp; Disapprove</a>
 </div>
 </div>
 </div>
@@ -174,12 +220,12 @@ All rights reserved. System Designed & Developed By <a href="https://bblack.co.z
         $('#approve-user').html('<i class="fa fa-spinner"></i>&nbsp;Approving User...');
 
         e.preventDefault();
-         var Toast = Swal.mixin({
+        var Toast = Swal.mixin({
         toast: true,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: 4000
-      });
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 4000
+        });
 
         var form = this;
         $.ajax({
@@ -197,11 +243,17 @@ All rights reserved. System Designed & Developed By <a href="https://bblack.co.z
                      if(data.code == 1){
                          $(form)[0].reset();
                          Toast.fire({
-                  icon: 'success',
-                  title: 'The user has been approved!'
-                })
-                         $("#approve-user").html("Approve User");
-                         
+                            icon: 'success',
+                            title: 'The user has been approved!'
+                          })
+                         $('.status').html('Active');
+                         $('.status').removeClass('text-warning');
+                         $('.status').addClass('text-success');
+                         $("#approve-user").html('<i class="fa fa-times"></i>  &nbsp;&nbsp;Disapprove User');
+                         $("#approve-user").attr('id', 'disapprove-user');
+                         $('#disapprove-user').removeClass('btn-success');
+                         $('#disapprove-user').addClass('btn-danger');
+
                      }else{
                      }
                  }else{
@@ -212,6 +264,55 @@ All rights reserved. System Designed & Developed By <a href="https://bblack.co.z
            }
         });
    }); 
+  // disapprove user
+  $('#update-user').submit(function(e) {
+    e.preventDefault();
+    $('#disapprove-user').html('<i class="fa fa-spinner"></i>&nbsp;Disapproving User...');
+
+    e.preventDefault();
+    var Toast = Swal.mixin({
+    toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 4000
+    });
+    return false;
+    $.ajax({
+           url:$(form).attr('action'),
+           method:$(form).attr('method'),
+           data:new FormData(form),
+           processData:false,
+           dataType:'json',
+           contentType:false,
+           beforeSend:function(){
+              $(form).find('span.error-text').text('');
+           },
+           success:function(data){
+                 if($.isEmptyObject(data.error)){
+                     if(data.code == 1){
+                         $(form)[0].reset();
+                         Toast.fire({
+                            icon: 'success',
+                            title: 'The user has been disapproved!'
+                          })
+                         $('.status').html('Disapproved');
+                         $('.status').removeClass('text-success');
+                         $('.status').addClass('text-danger');
+                         $("#disapprove-user").html('<i class="fa fa-times"></i>  &nbsp;&nbsp;Approve User');
+                         $("#disapprove-user").attr('id', 'approve-user');
+                         $('#approve-user').removeClass('btn-danger');
+                         $('#disapprove-user').addClass('btn-success');
+
+                     }else{
+                     }
+                 }else{
+                     $.each(data.error, function(prefix, val){
+                         $(form).find('span.'+prefix+'_error').text(val);
+                     });
+                 }
+           }
+        });
+  })
 </script>
 </body>
 </html>

@@ -61,6 +61,7 @@ $routes->post('makeBooking','BookingController::makeBooking',['as'=>'make.bookin
 $routes->post('createService','ServiceController::createService',['as'=>'create.service']);
 $routes->post('createColor','ColorController::createColor',['as'=>'create.color']);
 $routes->post('approveUser','UserController::approveUser',['as'=>'approve.user']);
+$routes->post('disapproveUser','UserController::disapproveUser',['as'=>'disapprove.user']);
 $routes->post('createSize','SizeController::createSize',['as'=>'create.size']);
 $routes->post('createOption','OptionsController::createOption',['as'=>'create.option']);
 $routes->post('createOption','OptionsController::createOption',['as'=>'create.option']);

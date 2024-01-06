@@ -348,7 +348,19 @@ class Inner extends BaseController
         $userModel = new UserModel();
         $conditions = array('id' => $this->request->getVar('id'), );
         $user_details = $userModel->where($conditions)->first();
-        $session->setFlashdata($user_details);
+        $subject_data = [
+            'sub_id' => $user_details['id'],
+            'sub_username' => $user_details['username'],
+            'sub_name' => $user_details['first_name'],
+            'sub_surname' => $user_details['surname'],
+            'sub_user_type' => $user_details['user_type'],
+            'sub_email' => $user_details['email'],
+            'sub_phone' => $user_details['phone'],
+            'sub_status' => $user_details['status'],
+            'created_at' => $user_details['created_at'],
+            'isLoggedIn' => TRUE
+        ];
+        $session->set($subject_data);
         $data['title'] = ucfirst('User Management');
         $data['page_heading'] = ucfirst('User Details');
         return view('innerpages/admin/user_details', $data);

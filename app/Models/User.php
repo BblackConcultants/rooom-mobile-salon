@@ -11,7 +11,7 @@ class User extends Model
 
     public function update_user($where, $data) {
        $this->db->table($this->table)->update($data, $where);
-       print_r($this->db->getLastQuery());
+       // print_r($this->db->getLastQuery());
         return $this->db->affectedRows();
     }
 }

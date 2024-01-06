@@ -72,7 +72,29 @@ class UserController extends BaseController
         $data = array(
             'status' => 'Active',
         );
-        $userModel->update_user(array('id' => $this->request->getPost('user_id')), $data);
-        echo json_encode(array("status" => TRUE));
+        $query = $userModel->update_user(array('id' => $this->request->getPost('user_id')), $data);
+         
+         if($query){
+             echo json_encode(['code'=>1,'msg'=>'User has been approved']);
+
+         }else{
+             echo json_encode(['code'=>0,'msg'=>'Something went wrong']);
+         }
+    }
+
+     public function disapproveUser() {
+
+        $userModel = new \App\Models\User();
+        $data = array(
+            'status' => 'Disapproved',
+        );
+        $query = $userModel->update_user(array('id' => $this->request->getPost('user_id')), $data);
+         
+         if($query){
+             echo json_encode(['code'=>1,'msg'=>'User has been disapproved']);
+
+         }else{
+             echo json_encode(['code'=>0,'msg'=>'Something went wrong']);
+         }
     }
 }
