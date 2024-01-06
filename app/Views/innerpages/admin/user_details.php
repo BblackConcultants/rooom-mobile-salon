@@ -97,7 +97,15 @@ include "navigation.php";
 </div>
 <div class="text-left mt-5 mb-3">
 <a href="<?php echo base_url('user_management'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left"></i>  &nbsp;&nbsp; Back</a>
-<a id="approve-user" href="javascript:void(0);" class="btn btn-success btn-sm"><i class="fa fa-check"></i>  &nbsp;&nbsp; Approve </a>
+<!-- <a id="approve-user" href="javascript:void(0);" class="btn btn-success btn-sm"><i class="fa fa-check"></i>  &nbsp;&nbsp; Approve </a> -->
+<form action="<?= route_to('approve.user'); ?>" method="post" id="update-user" autocomplete="off"  class="form-horizontal" >
+ <input type="hidden" name="user_id" id="user_id" value="<?php echo session()->getFlashdata('id') ?>">
+<div class="modal-footer justify-content-between">
+  <button id="approve-user" type="submit" class="btn btn-primary"><i class="fa fa-check"></i>  &nbsp;&nbsp;Approve User</button>
+
+</div>
+</form>
+
 <a id="disapprove-user" href="javascript:void(0);" class="btn btn-danger btn-sm"><i class="fa fa-times"></i>  &nbsp;&nbsp; Disapprove</a>
 </div>
 </div>
@@ -143,6 +151,8 @@ All rights reserved. System Designed & Developed By <a href="https://bblack.co.z
 <script src="assets/admin/plugins/pdfmake/vfs_fonts.js"></script>
 <script src="assets/admin/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="assets/admin/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="assets/admin/plugins/sweetalert2/sweetalert2.min.js"></script>
+<script src="assets/admin/plugins/toastr/toastr.min.js"></script>
 <script>
   $(function () {
     $("#example1").DataTable({
@@ -159,6 +169,49 @@ All rights reserved. System Designed & Developed By <a href="https://bblack.co.z
       "responsive": true,
     });
   });
+  //approve user
+  $('#update-user').submit(function(e){
+        $('#approve-user').html('<i class="fa fa-spinner"></i>&nbsp;Approving User...');
+
+        e.preventDefault();
+         var Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 4000
+      });
+
+        var form = this;
+        $.ajax({
+           url:$(form).attr('action'),
+           method:$(form).attr('method'),
+           data:new FormData(form),
+           processData:false,
+           dataType:'json',
+           contentType:false,
+           beforeSend:function(){
+              $(form).find('span.error-text').text('');
+           },
+           success:function(data){
+                 if($.isEmptyObject(data.error)){
+                     if(data.code == 1){
+                         $(form)[0].reset();
+                         Toast.fire({
+                  icon: 'success',
+                  title: 'The user has been approved!'
+                })
+                         $("#approve-user").html("Approve User");
+                         
+                     }else{
+                     }
+                 }else{
+                     $.each(data.error, function(prefix, val){
+                         $(form).find('span.'+prefix+'_error').text(val);
+                     });
+                 }
+           }
+        });
+   }); 
 </script>
 </body>
 </html>

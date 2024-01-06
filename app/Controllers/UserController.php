@@ -66,4 +66,13 @@ class UserController extends BaseController
         }
     }
 
+    public function approveUser() {
+
+        $userModel = new \App\Models\User();
+        $data = array(
+            'status' => 'Active',
+        );
+        $userModel->update_user(array('id' => $this->request->getPost('user_id')), $data);
+        echo json_encode(array("status" => TRUE));
+    }
 }
